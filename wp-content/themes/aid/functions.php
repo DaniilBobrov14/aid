@@ -122,9 +122,13 @@ add_action( 'widgets_init', 'aid_widgets_init' );
 function aid_scripts() {
 	wp_enqueue_style( 'aid-style', get_stylesheet_uri() );
 
+	wp_enqueue_style('aid-bootstrap-js', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+
 	wp_enqueue_script( 'aid-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'aid-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	wp_enqueue_script('aid-bootstrap-js' , get_template_directory_uri() . '/js/bootstrap.min.js' , array() , '4.4.1' , true);
 
 	wp_enqueue_script('aid-popperJs' , 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js');
 
