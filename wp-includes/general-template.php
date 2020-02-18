@@ -3678,8 +3678,8 @@ function wp_get_code_editor_settings( $args ) {
 				case 'scss':
 					$type = 'text/x-scss';
 					break;
-				case 'sass':
-					$type = 'text/x-sass';
+				case 'scss':
+					$type = 'text/x-scss';
 					break;
 				case 'sh':
 				case 'bash':
@@ -3716,7 +3716,7 @@ function wp_get_code_editor_settings( $args ) {
 				'matchBrackets'     => true,
 			)
 		);
-	} elseif ( 'text/x-scss' === $type || 'text/x-less' === $type || 'text/x-sass' === $type ) {
+	} elseif ( 'text/x-scss' === $type || 'text/x-less' === $type || 'text/x-scss' === $type ) {
 		$settings['codemirror'] = array_merge(
 			$settings['codemirror'],
 			array(
