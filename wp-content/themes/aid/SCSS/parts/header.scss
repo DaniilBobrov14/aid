@@ -6,13 +6,33 @@ h1 {
   font-size: 25px;
 }
 
-.main-navigation {
-  background-color: #f54337;
-  .page_item {
-    a {
-      font-size: 16px;
-      font-family: $montserrat;
-      font-weight: $lightWeight;
+.main-red-menu {
+  background-color: $redMain;
+  .main-navigation {
+    min-height: 4rem;
+    ul {
+      .current_page_item {
+        a {
+          color: $white !important;
+        }
+        a:hover {
+          color: $white;
+        }
+      }
+      .page_item {
+        a {
+          color: $redDarkMain;
+          font-size: 16px;
+          font-family: $montserrat;
+          font-weight: $regularWeight;
+          padding: 1rem;
+          text-decoration: none;
+        }
+        a:hover {
+          transition: 0.2s ease-in;
+          color: $white;
+        }
+      }
     }
   }
 }

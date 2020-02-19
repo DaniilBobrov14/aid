@@ -30,7 +30,7 @@
                 <?php
                 wp_nav_menu([
                         'container' => 'nav',
-                        'menu_class' => 'main-navigation nav d-flex justify-content-center',
+                        'menu_class' => 'main-navigation nav d-flex align-items-center',
                         'items_wrap' => '<a class="nav-link">%3$s</a>',
                 ]);
                 ?>
