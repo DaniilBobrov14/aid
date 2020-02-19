@@ -43,5 +43,16 @@
 
 //variables
 
+//font-weight*
+
+$lightWeight : 300 ;
+$mediumWeight : 500;
+$regularWeight : normal;
+$semiBoldWeight : 600;
+$boldWeight : bold;
+
+//font-name*
+$montserrat : 'Montserrat';
+
 //import scss
-@import "header";
+@import "parts/header";
