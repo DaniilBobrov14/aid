@@ -39,15 +39,4 @@
         </div>
     </header>
 
-	<header id="masthead" class="site-header container">
-		<div class="site-branding row">
-            <div class="col-lg-12">
-                <?php the_custom_logo(); ?>
-                <h1 class="site-title">
-                    Автоматизированный информационный справочник
-                </h1>
-            </div>
-		</div><!-- .site-branding -->
-	</header><!-- #masthead -->
-
 	<div id="content" class="site-content">
