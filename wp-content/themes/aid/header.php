@@ -24,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'aid' ); ?></a>
 
-    <header class="container-fluid">
+    <header class="container-fluid main-red-menu">
         <div class="row">
             <div class="col-lg-12">
                 <?php
