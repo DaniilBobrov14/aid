@@ -24,6 +24,21 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'aid' ); ?></a>
 
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <?php
+                wp_nav_menu([
+                        'container' => 'nav',
+                        'menu_class' => 'main-navigation nav',
+                        'items_wrap' => '<a class="nav-link">%3$s</a>',
+                ]);
+                ?>
+                <!-- #site-navigation -->
+            </div>
+        </div>
+    </header>
+
 	<header id="masthead" class="site-header container">
 		<div class="site-branding row">
             <div class="col-lg-12">
@@ -33,16 +48,6 @@
                 </h1>
             </div>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'aid' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
