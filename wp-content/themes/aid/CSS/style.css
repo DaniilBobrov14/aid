@@ -28,6 +28,9 @@
   font-weight: normal;
   font-style: normal;
 }
+.content-slider {
+  margin-top: 2rem;
+}
 h1 {
   font-family: 'Montserrat';
   font-weight: bold;

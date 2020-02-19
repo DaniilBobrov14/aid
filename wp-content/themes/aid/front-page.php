@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 
-<div class="container content-slider">
-    <div class="row">
-        
-    </div>
-</div><!--content-slider -->
+<section content="content-slider">
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div><!--content-slider -->
+</section>
 
 <?php
 get_sidebar();
