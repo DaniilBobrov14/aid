@@ -12,6 +12,7 @@
       margin-left: 0;
       padding-left: 0;
       li {
+        margin-top: 1rem;
         margin-right: 1rem;
         button {
           background: none;
@@ -33,7 +34,6 @@
           content: '';
         }
       }
-
       .slick-active {
         button {
           background-color: $redMain;
@@ -41,4 +41,27 @@
       }
     }
   }
+}
+
+.upcoming-events {
+  .title-block {
+    font-family: $montserrat;
+    font-weight: $boldWeight;
+    font-size: 35px;
+    color: $black;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
 }
