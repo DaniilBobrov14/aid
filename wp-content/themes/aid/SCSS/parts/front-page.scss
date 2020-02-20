@@ -1,3 +1,44 @@
 .content-slider {
   margin-top: 2rem;
+  .slider-slick-wrapper {
+    .slider-slick-img {
+      width: 1140px;
+      height: 720px;
+    }
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+      li {
+        margin-right: 1rem;
+        button {
+          background: none;
+          border-radius: 50%;
+          border-color: $redMain;
+          outline: none;
+          font-size: 0;
+          width: 20px;
+          height: 20px;
+        }
+        button:hover {
+          border-color: $redDarkMain;
+          outline: none;
+        }
+        button:before {
+          content: '';
+        }
+        button:after {
+          content: '';
+        }
+      }
+
+      .slick-active {
+        button {
+          background-color: $redMain;
+        }
+      }
+    }
+  }
 }
