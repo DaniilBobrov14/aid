@@ -47,6 +47,7 @@
 $redMain : #f54337;
 $redDarkMain : #a51309;
 $white : #ffffff;
+$black : #000;
 
 //font-weight*
 $lightWeight : 300;
@@ -61,3 +62,5 @@ $montserrat : 'Montserrat';
 //import scss
 @import "parts/header";
 @import "parts/front-page";
+
+//

@@ -11,9 +11,24 @@
                 </div>
             </div>
         </div>
-    </div><!--content-slider -->
+    </div>
+</section><!--content-slider -->
+<section class="upcoming-events">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 justify-content-center">
+                <h2 class="title-block">
+                    Ближайшие Мероприятия
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <hr>
+            </div>
+        </div>
+    </div>
 </section>
-
 <?php
 get_sidebar();
 get_footer();

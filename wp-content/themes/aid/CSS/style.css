@@ -61,8 +61,8 @@ h1 {
   margin-top: 2rem;
 }
 .content-slider .slider-slick-wrapper .slider-slick-img {
-  width: 800px;
-  height: 600px;
+  width: 1140px;
+  height: 720px;
 }
 .content-slider .slider-slick-wrapper .slick-dots {
   display: flex;
@@ -72,6 +72,7 @@ h1 {
   padding-left: 0;
 }
 .content-slider .slider-slick-wrapper .slick-dots li {
+  margin-top: 1rem;
   margin-right: 1rem;
 }
 .content-slider .slider-slick-wrapper .slick-dots li button {
@@ -95,4 +96,23 @@ h1 {
 }
 .content-slider .slider-slick-wrapper .slick-dots .slick-active button {
   background-color: #f54337;
+}
+.upcoming-events .title-block {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 35px;
+  color: #000;
+  text-align: center;
+  margin-top: 1rem;
+}
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #eee -moz-use-text-color #fff;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
 }
