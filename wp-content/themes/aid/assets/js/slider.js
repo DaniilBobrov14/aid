@@ -1,4 +1,4 @@
-jQuery( document ).ready(function() {
+jQuery(document).ready(function() {
 
     jQuery('.slider-slick-wrapper').slick({
         arrows : false,
