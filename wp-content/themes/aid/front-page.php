@@ -45,7 +45,7 @@
                                 <img class="card-img-top" src='<?php the_post_thumbnail_url(); ?>'>
                             </a>
                             <h5 class="card-title"><?php the_title(); ?></h5>
-                            <p class="card-text"><?php the_excerpt(); ?></p>
+                            <?php the_excerpt(); ?>
                         </div>
                         <div class="card-footer">
                             <a href="<?php the_permalink(); ?>" class="btn btn-red">Перейти к мероприятию</a>

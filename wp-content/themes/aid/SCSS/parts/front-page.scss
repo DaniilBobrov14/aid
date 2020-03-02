@@ -52,18 +52,38 @@
     text-align: center;
     margin-top: 1rem;
   }
-  .btn {
-    width: 100%;
-    font-family: $montserrat;
-    font-weight: $boldWeight;
-    color: $white;
-  }
-  .btn-red {
-    background-color: $redMain;
-  }
-  .btn-red:hover {
-    background-color: $redDarkMain;
-    transition: 0.5s ease-in;
+  .card {
+    .card-body {
+      .card-title {
+        font-family: $montserrat;
+        font-weight: $semiBoldWeight;
+        margin-top: 1rem;
+      }
+      .card-text {
+        font-family: $montserrat;
+        font-weight: $regularWeight;
+      }
+
+      p {
+        font-family: $montserrat;
+        font-weight: $regularWeight;
+      }
+    }
+    .card-footer {
+      .btn {
+        width: 100%;
+        font-family: $montserrat;
+        font-weight: $boldWeight;
+        color: $white;
+      }
+      .btn-red {
+        background-color: $redMain;
+      }
+      .btn-red:hover {
+        background-color: $redDarkMain;
+        transition: 0.5s ease-in;
+      }
+    }
   }
 }
 

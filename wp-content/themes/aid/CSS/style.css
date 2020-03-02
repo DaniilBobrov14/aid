@@ -105,16 +105,29 @@ h1 {
   text-align: center;
   margin-top: 1rem;
 }
-.upcoming-events .btn {
+.upcoming-events .card .card-body .card-title {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.upcoming-events .card .card-body .card-text {
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+.upcoming-events .card .card-body p {
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+.upcoming-events .card .card-footer .btn {
   width: 100%;
   font-family: 'Montserrat';
   font-weight: bold;
   color: #fff;
 }
-.upcoming-events .btn-red {
+.upcoming-events .card .card-footer .btn-red {
   background-color: #f54337;
 }
-.upcoming-events .btn-red:hover {
+.upcoming-events .card .card-footer .btn-red:hover {
   background-color: #a51309;
   transition: 0.5s ease-in;
 }
