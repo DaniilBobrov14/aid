@@ -175,3 +175,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Filters for functions wordpress
+ */
+
+add_filter('excerpt_length' , function ($more) {
+    return 20;
+});
