@@ -41,8 +41,8 @@
                 <div class="col-lg-4 card-deck">
                     <div class="card">
                         <div class="card-body">
-                            <a class="card-img-top" href="<?php the_permalink();?>">
-                                <img class="card-img-top" src="<?php the_post_thumbnail();?>">
+                            <a class="card-img-top" href="<?php the_permalink(); ?>">
+                                <img class="card-img-top" src='<?php the_post_thumbnail_url(); ?>'>
                             </a>
                             <h5 class="card-title"><?php the_title(); ?></h5>
                             <p class="card-text"><?php the_excerpt(); ?></p>

@@ -105,6 +105,19 @@ h1 {
   text-align: center;
   margin-top: 1rem;
 }
+.upcoming-events .btn {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #fff;
+}
+.upcoming-events .btn-red {
+  background-color: #f54337;
+}
+.upcoming-events .btn-red:hover {
+  background-color: #a51309;
+  transition: 0.5s ease-in;
+}
 hr {
   -moz-border-bottom-colors: none;
   -moz-border-image: none;
