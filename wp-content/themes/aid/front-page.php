@@ -59,6 +59,23 @@
         </div>
     </div>
 </section>
+<section class="members-events">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="users-count-block">
+                    <div class="icon-users"></div>
+                    <span class="members-count">100+</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <span class="members-count-text">количество участников</span>
+            </div>
+        </div>
+    </div>
+</section>
 <?php
 get_footer();
 ?>

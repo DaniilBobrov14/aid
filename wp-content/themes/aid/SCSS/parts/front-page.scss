@@ -1,5 +1,5 @@
 .content-slider {
-  margin-top: 2rem;
+  margin-top: 6rem;
   .slider-slick-wrapper {
     .slider-slick-img {
       width: 1140px;
@@ -85,6 +85,41 @@
       }
     }
   }
+}
+
+.members-events {
+  background-color: $redMain;
+  margin-top: 2rem;
+  .users-count-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    .icon-users {
+      text-align: center;
+      font-size: 50px;
+      color: $white;
+    }
+    .members-count {
+      font-family: $montserrat;
+      font-weight: $boldWeight;
+      font-size: 35px;
+      text-align: center;
+      color: $white;
+    }
+  }
+  .members-count-text {
+    display: block;
+    width: 100%;
+    font-family: $montserrat;
+    font-weight: $lightWeight;
+    font-size: 20px;
+    text-align: center;
+    color: $redDarkMain;
+    margin-bottom: 2rem;
+  }
+
 }
 
 hr {

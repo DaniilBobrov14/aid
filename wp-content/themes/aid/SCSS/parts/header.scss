@@ -2,6 +2,8 @@
 
 .main-red-menu {
   background-color: $redMain;
+  position: fixed;
+  z-index: 9999;
   .main-navigation {
     min-height: 4rem;
     ul {
@@ -43,7 +45,6 @@
       color: $black;
       border-radius: 5px;
     }
-
     ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
       font-family: $montserrat;
       font-weight: $regularWeight;

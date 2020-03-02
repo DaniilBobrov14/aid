@@ -28,8 +28,58 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'fontello';
+  src: url('../assets/fonts/fontello.eot?72891410');
+  src: url('../assets/fonts/fontello.eot?72891410#iefix') format('embedded-opentype'), url('../assets/fonts/fontello.woff2?72891410') format('woff2'), url('../assets/fonts/fontello.woff?72891410') format('woff'), url('../assets/fonts/fontello.ttf?72891410') format('truetype'), url('../assets/fonts/fontello.svg?72891410#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+ @media screen and (-webkit-min-device-pixel-ratio:0) {
+ @font-face {
+ font-family: 'fontello';
+ src: url('../font/fontello.svg?72891410#fontello') format('svg');
+ }
+ }
+ */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.icon-users:before {
+  content: '\e800';
+}
+/* '' */
 .main-red-menu {
   background-color: #f54337;
+  position: fixed;
+  z-index: 9999;
 }
 .main-red-menu .main-navigation {
   min-height: 4rem;
@@ -65,6 +115,7 @@
   font-family: 'Montserrat';
   font-weight: normal;
   color: #000;
+  border-radius: 5px;
 }
 .main-red-menu #searchformheader ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
@@ -113,7 +164,7 @@
   opacity: 0;
 }
 .content-slider {
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 .content-slider .slider-slick-wrapper .slider-slick-img {
   width: 1140px;
@@ -185,6 +236,39 @@
 .upcoming-events .card .card-footer .btn-red:hover {
   background-color: #a51309;
   transition: 0.5s ease-in;
+}
+.members-events {
+  background-color: #f54337;
+  margin-top: 2rem;
+}
+.members-events .users-count-block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.members-events .users-count-block .icon-users {
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+}
+.members-events .users-count-block .members-count {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  color: #fff;
+}
+.members-events .members-count-text {
+  display: block;
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  color: #a51309;
+  margin-bottom: 2rem;
 }
 hr {
   -moz-border-bottom-colors: none;
