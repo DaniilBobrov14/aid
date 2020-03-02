@@ -28,11 +28,6 @@
   font-weight: normal;
   font-style: normal;
 }
-h1 {
-  font-family: 'Montserrat';
-  font-weight: bold;
-  font-size: 25px;
-}
 .main-red-menu {
   background-color: #f54337;
 }
@@ -56,6 +51,66 @@ h1 {
 .main-red-menu .main-navigation ul .page_item a:hover {
   transition: 0.2s ease-in;
   color: #fff;
+}
+.main-red-menu #searchformheader {
+  display: flex;
+  align-items: center;
+  width: 303px;
+}
+.main-red-menu #searchformheader .searchSubmitHeader {
+  display: none;
+}
+.main-red-menu #searchformheader .searchTypeHeader {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #000;
+}
+.main-red-menu #searchformheader ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #000;
+  opacity: 0.5;
+}
+.main-red-menu #searchformheader :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #000;
+  opacity: 0.5;
+}
+.main-red-menu #searchformheader ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #000;
+  opacity: 0.5;
+}
+.main-red-menu #searchformheader :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #000;
+  opacity: 0.5;
+}
+.main-red-menu #searchformheader ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #000;
+  opacity: 0.5;
+}
+.main-red-menu #searchformheader ::placeholder {
+  /* Most modern browsers support this now. */
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #000;
+  opacity: 0.5;
+}
+.main-red-menu #searchformheader :focus::placeholder {
+  transition: 0.7s ease-in;
+  opacity: 0;
 }
 .content-slider {
   margin-top: 2rem;

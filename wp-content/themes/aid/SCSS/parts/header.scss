@@ -1,11 +1,5 @@
 //header
 
-h1 {
-  font-family: $montserrat;
-  font-weight: $boldWeight;
-  font-size: 25px;
-}
-
 .main-red-menu {
   background-color: $redMain;
   .main-navigation {
@@ -33,6 +27,62 @@ h1 {
           color: $white;
         }
       }
+    }
+  }
+  #searchformheader {
+    display: flex;
+    align-items: center;
+    width: 303px;
+    .searchSubmitHeader {
+      display: none;
+    }
+    .searchTypeHeader {
+      width: 100%;
+      font-family: $montserrat;
+      font-weight: $regularWeight;
+      color: $black;
+      border-radius: 5px;
+    }
+
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      font-family: $montserrat;
+      font-weight: $regularWeight;
+      color: $black;
+      opacity: 0.5;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      font-family: $montserrat;
+      font-weight: $regularWeight;
+      color: $black;
+      opacity: 0.5;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      font-family: $montserrat;
+      font-weight: $regularWeight;
+      color: $black;
+      opacity: 0.5;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      font-family: $montserrat;
+      font-weight: $regularWeight;
+      color: $black;
+      opacity: 0.5;
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      font-family: $montserrat;
+      font-weight: $regularWeight;
+      color: $black;
+      opacity: 0.5;
+    }
+    ::placeholder { /* Most modern browsers support this now. */
+      font-family: $montserrat;
+      font-weight: $regularWeight;
+      color: $black;
+      opacity: 0.5;
+    }
+    :focus::placeholder {
+      transition: 0.7s ease-in;
+      opacity: 0;
     }
   }
 }

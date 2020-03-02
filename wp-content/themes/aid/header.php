@@ -26,13 +26,14 @@
 
     <header class="container-fluid main-red-menu">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 d-flex">
                 <?php
                 wp_nav_menu([
                         'container' => 'nav',
                         'menu_class' => 'main-navigation nav d-flex align-items-center',
                         'items_wrap' => '<a class="nav-link">%3$s</a>',
                 ]);
+                get_search_form();
                 ?>
                 <!-- #site-navigation -->
             </div>
