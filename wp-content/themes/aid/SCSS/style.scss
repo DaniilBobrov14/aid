@@ -1,5 +1,7 @@
 //fonts
 
+//montserrat*
+
 @font-face {
   font-family: 'Montserrat';
   src: url('../assets/fonts/Montserrat-Light.woff2') format('woff2'),
@@ -121,7 +123,8 @@ $boldWeight : bold;
 $montserrat : 'Montserrat';
 
 //import scss
-@import "parts/header";
+@import "parts/footer";
 @import "parts/front-page";
-///
+@import "parts/header";
 
+//
