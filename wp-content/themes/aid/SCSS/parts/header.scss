@@ -4,18 +4,19 @@
   background-color: $redMain;
   position: fixed;
   z-index: 9999;
-  .main-navigation {
+  min-height: 4rem;
+  .menu-menu-1-container {
     min-height: 4rem;
-    ul {
-      .current_page_item {
-        a {
-          color: $white !important;
-        }
-        a:hover {
-          color: $white;
-        }
-      }
-      .page_item {
+    display: flex;
+    align-items: center;
+    .menu {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 0;
+      margin-bottom: 0;
+      .menu-item {
         a {
           color: $redDarkMain;
           font-size: 16px;
@@ -26,6 +27,14 @@
         }
         a:hover {
           transition: 0.2s ease-in;
+          color: $white;
+        }
+      }
+      .current_page_item {
+        a {
+          color: $white !important;
+        }
+        a:hover {
           color: $white;
         }
       }
