@@ -311,3 +311,6 @@ hr {
   transition: 0.7s ease-in;
   opacity: 0;
 }
+.upcoming-events-list {
+  margin-top: 6rem;
+}
