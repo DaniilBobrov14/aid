@@ -15,45 +15,46 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<section class="upcoming-events-list">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 justify-content-center">
+                <h2 class="title-block">
+                    Все Ближайшие Мероприятия
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card-deck">
+                    <?php
+                    global $post;
+                    $posts = get_posts(array(
+                            'category' => 2
+                    ));
+                    foreach ($posts as $post) {
+                        setup_postdata($post);
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+                    ?>
+                    <div class="card">
+                        <a class="card-img-top" href="<?php the_permalink(); ?>">
+                            <img class="card-img-top" src='<?php the_post_thumbnail_url(); ?>'>
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title"><?php the_title(); ?></h5>
+                            <?php the_excerpt(); ?>
+                        </div>
+                        <div class="card-footer">
+                            <p class="card-text"><small class="text-muted"><span class="date-post"><?php the_date(); ?></span><span class="time-post"> <?php the_time(); ?></span></small></p>
+                        </div>
+                    </div>
+                    <?php
+                    }
+                    wp_reset_postdata();
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<?php get_footer(); ?>
