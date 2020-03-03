@@ -76,6 +76,142 @@
   content: '\e800';
 }
 /* '' */
+.site-footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.site-footer .copyright-footer {
+  color: #000;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 16px;
+}
+.content-slider {
+  margin-top: 6rem;
+}
+.content-slider .slider-slick-wrapper .slider-slick-img {
+  width: 1140px;
+  height: 720px;
+}
+.content-slider .slider-slick-wrapper .slick-dots {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.content-slider .slider-slick-wrapper .slick-dots li {
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+.content-slider .slider-slick-wrapper .slick-dots li button {
+  background: none;
+  border-radius: 50%;
+  border-color: #f54337;
+  outline: none;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+}
+.content-slider .slider-slick-wrapper .slick-dots li button:hover {
+  border-color: #a51309;
+  outline: none;
+}
+.content-slider .slider-slick-wrapper .slick-dots li button:before {
+  content: '';
+}
+.content-slider .slider-slick-wrapper .slick-dots li button:after {
+  content: '';
+}
+.content-slider .slider-slick-wrapper .slick-dots .slick-active button {
+  background-color: #f54337;
+}
+.upcoming-events .link-title-block {
+  text-decoration: none;
+  color: #000;
+}
+.upcoming-events .link-title-block .title-block {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 35px;
+  color: #000;
+  text-align: center;
+  margin-top: 1rem;
+}
+.upcoming-events .link-title-block:hover {
+  color: lightgrey;
+  transition: 0.5s ease-in;
+}
+.upcoming-events .card .card-body .card-title {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.upcoming-events .card .card-body .card-text {
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+.upcoming-events .card .card-body p {
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+.upcoming-events .card .card-footer .btn {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #fff;
+}
+.upcoming-events .card .card-footer .btn-red {
+  background-color: #f54337;
+}
+.upcoming-events .card .card-footer .btn-red:hover {
+  background-color: #a51309;
+  transition: 0.5s ease-in;
+}
+.members-events {
+  background-color: #f54337;
+  margin-top: 2rem;
+}
+.members-events .users-count-block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.members-events .users-count-block .icon-users {
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+}
+.members-events .users-count-block .members-count {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  color: #fff;
+}
+.members-events .members-count-text {
+  display: block;
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  color: #a51309;
+  margin-bottom: 2rem;
+}
+hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #eee -moz-use-text-color #fff;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
+}
 .main-red-menu {
   background-color: #f54337;
   position: fixed;
@@ -162,122 +298,4 @@
 .main-red-menu #searchformheader :focus::placeholder {
   transition: 0.7s ease-in;
   opacity: 0;
-}
-.content-slider {
-  margin-top: 6rem;
-}
-.content-slider .slider-slick-wrapper .slider-slick-img {
-  width: 1140px;
-  height: 720px;
-}
-.content-slider .slider-slick-wrapper .slick-dots {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-.content-slider .slider-slick-wrapper .slick-dots li {
-  margin-top: 1rem;
-  margin-right: 1rem;
-}
-.content-slider .slider-slick-wrapper .slick-dots li button {
-  background: none;
-  border-radius: 50%;
-  border-color: #f54337;
-  outline: none;
-  font-size: 0;
-  width: 20px;
-  height: 20px;
-}
-.content-slider .slider-slick-wrapper .slick-dots li button:hover {
-  border-color: #a51309;
-  outline: none;
-}
-.content-slider .slider-slick-wrapper .slick-dots li button:before {
-  content: '';
-}
-.content-slider .slider-slick-wrapper .slick-dots li button:after {
-  content: '';
-}
-.content-slider .slider-slick-wrapper .slick-dots .slick-active button {
-  background-color: #f54337;
-}
-.upcoming-events .title-block {
-  font-family: 'Montserrat';
-  font-weight: bold;
-  font-size: 35px;
-  color: #000;
-  text-align: center;
-  margin-top: 1rem;
-}
-.upcoming-events .card .card-body .card-title {
-  font-family: 'Montserrat';
-  font-weight: 600;
-  margin-top: 1rem;
-}
-.upcoming-events .card .card-body .card-text {
-  font-family: 'Montserrat';
-  font-weight: normal;
-}
-.upcoming-events .card .card-body p {
-  font-family: 'Montserrat';
-  font-weight: normal;
-}
-.upcoming-events .card .card-footer .btn {
-  width: 100%;
-  font-family: 'Montserrat';
-  font-weight: bold;
-  color: #fff;
-}
-.upcoming-events .card .card-footer .btn-red {
-  background-color: #f54337;
-}
-.upcoming-events .card .card-footer .btn-red:hover {
-  background-color: #a51309;
-  transition: 0.5s ease-in;
-}
-.members-events {
-  background-color: #f54337;
-  margin-top: 2rem;
-}
-.members-events .users-count-block {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-}
-.members-events .users-count-block .icon-users {
-  text-align: center;
-  font-size: 50px;
-  color: #fff;
-}
-.members-events .users-count-block .members-count {
-  font-family: 'Montserrat';
-  font-weight: bold;
-  font-size: 35px;
-  text-align: center;
-  color: #fff;
-}
-.members-events .members-count-text {
-  display: block;
-  width: 100%;
-  font-family: 'Montserrat';
-  font-weight: 300;
-  font-size: 20px;
-  text-align: center;
-  color: #a51309;
-  margin-bottom: 2rem;
-}
-hr {
-  -moz-border-bottom-colors: none;
-  -moz-border-image: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  border-color: #eee -moz-use-text-color #fff;
-  border-style: solid none;
-  border-width: 1px 0;
-  margin: 18px 0;
 }

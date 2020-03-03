@@ -17,9 +17,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 justify-content-center">
-                <h2 class="title-block">
-                    Ближайшие Мероприятия
-                </h2>
+                <a class="link-title-block" href="">
+                    <h2 class="title-block">
+                        Ближайшие Мероприятия
+                    </h2>
+                </a>
             </div>
         </div>
         <div class="row">
