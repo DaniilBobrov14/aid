@@ -331,6 +331,14 @@
   font-weight: normal;
   font-style: italic;
 }
+.single-post-aid .content-col .wp-block-image img {
+  border-radius: 0.25rem !important;
+}
+.single-post-aid .content-col .wp-block-image figcaption {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: italic;
+}
 .upcoming-events-list {
   margin-top: 6rem;
 }
