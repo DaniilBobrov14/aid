@@ -202,17 +202,6 @@
   color: #a51309;
   margin-bottom: 2rem;
 }
-hr {
-  -moz-border-bottom-colors: none;
-  -moz-border-image: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  border-color: #eee -moz-use-text-color #fff;
-  border-style: solid none;
-  border-width: 1px 0;
-  margin: 18px 0;
-}
 .main-red-menu {
   background-color: #f54337;
   position: fixed;
@@ -348,4 +337,15 @@ hr {
 .upcoming-events-list .card .card-footer .card-text .event-start, .upcoming-events-list .card .card-footer .card-text .event-end {
   color: #f54337;
   font-style: italic;
+}
+.stroke-hr {
+  -moz-border-bottom-colors: none;
+  -moz-border-image: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  border-color: #eee -moz-use-text-color #fff;
+  border-style: solid none;
+  border-width: 1px 0;
+  margin: 18px 0;
 }

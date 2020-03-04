@@ -16,7 +16,7 @@ $titlePost = $post->post_title;
 $contentPost = $post->post_content;
 $authorPost = the_author();
 $dateTimePost = $post->post_date;
-$imgPost = get_the_post_thumbnail();
+$imgPost = get_the_post_thumbnail_url();
 ?>
 
 
@@ -34,6 +34,20 @@ $imgPost = get_the_post_thumbnail();
                 <p class="author-post">
                     <?php var_dump($authorPost); ?>
                 </p>
+                <hr class="stroke-hr">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="date-time-post">
+                    <?php echo $dateTimePost; ?>
+                </p>
+                <hr class="stroke-hr">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="preview-img-post img-fluid rounded" src="<?php echo $imgPost ?>" alt="">
                 <hr class="stroke-hr">
             </div>
         </div>
