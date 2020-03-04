@@ -50,7 +50,7 @@ get_header();
                             <p class="card-text">
                                 <small class="text-muted">
                                     C
-                                    <span class="event-start"> <? the_field('event_start')?></span>
+                                    <span class="event-start"> <?php the_field('event_start')?></span>
                                     по
                                     <span class="event-end"> <?php the_field('event_end')?></span>
                                 </small>
