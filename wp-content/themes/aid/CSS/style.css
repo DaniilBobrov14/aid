@@ -300,6 +300,37 @@
   transition: 0.7s ease-in;
   opacity: 0;
 }
+.single-post-aid {
+  margin-top: 6rem;
+}
+.single-post-aid .post-title {
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+.single-post-aid .author-post {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: italic;
+  margin-bottom: 0;
+}
+.single-post-aid .date-time-post {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.single-post-aid .content-col strong {
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+.single-post-aid .content-col p {
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+.single-post-aid .content-col li {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: italic;
+}
 .upcoming-events-list {
   margin-top: 6rem;
 }
