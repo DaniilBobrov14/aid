@@ -12,9 +12,42 @@
     font-family: $montserrat;
     font-weight: $regularWeight;
     font-style: italic;
+    margin-bottom: 0;
   }
   .date-time-post {
     font-family: $montserrat;
     font-weight: $lightWeight;
+    margin-bottom: 0;
+  }
+
+  .content-col {
+    h2 {
+      margin-bottom: 2rem;
+      font-family: $montserrat;
+      font-weight: $semiBoldWeight;
+    }
+    strong {
+      font-family: $montserrat;
+      font-weight: $semiBoldWeight;
+    }
+    p {
+      font-family: $montserrat;
+      font-weight: $regularWeight;
+    }
+    li {
+      font-family: $montserrat;
+      font-weight: $regularWeight;
+      font-style: italic;
+    }
+    .wp-block-image {
+      img {
+        border-radius: .25rem !important;
+      }
+      figcaption {
+        font-family: $montserrat;
+        font-weight: $regularWeight;
+        font-style: italic;
+      }
+    }
   }
 }
