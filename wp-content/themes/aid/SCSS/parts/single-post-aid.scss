@@ -1,0 +1,20 @@
+//single-post-aid
+
+.single-post-aid {
+
+  margin-top: 6rem;
+
+  .post-title {
+    font-family: $montserrat;
+    font-weight: $boldWeight;
+  }
+  .author-post {
+    font-family: $montserrat;
+    font-weight: $regularWeight;
+    font-style: italic;
+  }
+  .date-time-post {
+    font-family: $montserrat;
+    font-weight: $lightWeight;
+  }
+}
