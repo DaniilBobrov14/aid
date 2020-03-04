@@ -310,13 +310,18 @@
 .single-post-aid .author-post {
   font-family: 'Montserrat';
   font-weight: normal;
-  font-style: italic;
   margin-bottom: 0;
 }
 .single-post-aid .date-time-post {
   font-family: 'Montserrat';
   font-weight: 300;
   margin-bottom: 0;
+  font-style: italic;
+}
+.single-post-aid .content-col h2 {
+  margin-bottom: 2rem;
+  font-family: 'Montserrat';
+  font-weight: 600;
 }
 .single-post-aid .content-col strong {
   font-family: 'Montserrat';

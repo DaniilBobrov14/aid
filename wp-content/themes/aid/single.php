@@ -14,8 +14,8 @@ global $post;
 $post = get_post();
 $titlePost = $post->post_title;
 $contentPost = $post->post_content;
-$authorPost = the_author();
-$dateTimePost = $post->post_date;
+$authorIDPost = $post->post_author;
+$dateTimePost = get_the_date();
 $imgPost = get_the_post_thumbnail_url();
 ?>
 
@@ -49,7 +49,7 @@ $imgPost = get_the_post_thumbnail_url();
         <div class="row">
             <div class="col-lg-12 d-flex justify-content-between">
                 <p class="author-post">
-                    <?php var_dump($authorPost); ?>
+                    <?php the_author_meta('display_name' , '2');  ?>
                 </p>
                 <p class="date-time-post">
                     Дата публикации: <?php echo $dateTimePost; ?>
