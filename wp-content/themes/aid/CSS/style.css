@@ -314,3 +314,38 @@ hr {
 .upcoming-events-list {
   margin-top: 6rem;
 }
+.upcoming-events-list .title-block {
+  margin-bottom: 2rem;
+}
+.upcoming-events-list .card .card-body .link-card-title {
+  color: #000;
+  text-decoration: none;
+}
+.upcoming-events-list .card .card-body .link-card-title .card-title {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.upcoming-events-list .card .card-body .link-card-title:hover {
+  color: #f54337;
+  transition: 0.3s ease-in;
+}
+.upcoming-events-list .card .card-body .link-card-title:active {
+  color: #a51309;
+}
+.upcoming-events-list .card .card-body .card-text {
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+.upcoming-events-list .card .card-body p {
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+.upcoming-events-list .card .card-footer .card-text {
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+.upcoming-events-list .card .card-footer .card-text .event-start, .upcoming-events-list .card .card-footer .card-text .event-end {
+  color: #f54337;
+  font-style: italic;
+}

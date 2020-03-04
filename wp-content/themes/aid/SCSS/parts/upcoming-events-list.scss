@@ -1,3 +1,47 @@
 .upcoming-events-list {
   margin-top: 6rem;
+
+  .title-block {
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    .card-body {
+      .link-card-title {
+        color: $black;
+        text-decoration: none;
+        .card-title {
+          font-family: $montserrat;
+          font-weight: $semiBoldWeight;
+          margin-top: 1rem;
+        }
+      }
+      .link-card-title:hover {
+        color: $redMain;
+        transition: 0.3s ease-in;
+      }
+      .link-card-title:active {
+        color: $redDarkMain;
+      }
+      .card-text {
+        font-family: $montserrat;
+        font-weight: $regularWeight;
+      }
+
+      p {
+        font-family: $montserrat;
+        font-weight: $regularWeight;
+      }
+    }
+    .card-footer {
+      .card-text {
+        font-family: $montserrat;
+        font-weight: $lightWeight;
+        .event-start , .event-end {
+          color: $redMain;
+          font-style: italic;
+        }
+      }
+    }
+  }
 }

@@ -41,11 +41,20 @@ get_header();
                             <img class="card-img-top" src='<?php the_post_thumbnail_url(); ?>'>
                         </a>
                         <div class="card-body">
-                            <h5 class="card-title"><?php the_title(); ?></h5>
+                            <a class="link-card-title" href="<?php the_permalink(); ?>">
+                                <h5 class="card-title"><?php the_title(); ?></h5>
+                            </a>
                             <?php the_excerpt(); ?>
                         </div>
                         <div class="card-footer">
-                            <p class="card-text"><small class="text-muted"><span class="date-post"><?php the_date(); ?></span><span class="time-post"> <?php the_time(); ?></span></small></p>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    C
+                                    <span class="event-start"> <? the_field('event_start')?></span>
+                                    по
+                                    <span class="event-end"> <?php the_field('event_end')?></span>
+                                </small>
+                            </p>
                         </div>
                     </div>
                     <?php
