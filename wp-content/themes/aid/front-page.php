@@ -26,7 +26,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <hr>
+                <hr class="stroke-hr">
             </div>
         </div>
         <div class="row">
