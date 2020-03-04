@@ -40,7 +40,7 @@ $imgPost = get_the_post_thumbnail_url();
         <div class="row">
             <div class="col-lg-12">
                 <p class="date-time-post">
-                    <?php echo $dateTimePost; ?>
+                   Дата публикации:  <?php echo $dateTimePost; ?>
                 </p>
                 <hr class="stroke-hr">
             </div>
