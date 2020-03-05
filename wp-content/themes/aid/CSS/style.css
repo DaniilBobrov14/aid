@@ -300,6 +300,16 @@
   transition: 0.7s ease-in;
   opacity: 0;
 }
+.program {
+  margin-top: 6rem;
+}
+.program .page-title {
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+.program .table {
+  font-family: 'Montserrat';
+}
 .single-post-aid {
   margin-top: 6rem;
 }
