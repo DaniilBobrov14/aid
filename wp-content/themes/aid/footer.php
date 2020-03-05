@@ -17,7 +17,7 @@
 		<div class="row">
             <div class="col-lg-12 d-flex justify-content-center">
                 <span class="copyright-footer">
-                    © ЭРА 2019
+                    © ЭРА 2020
                 </span>
             </div>
         </div>
