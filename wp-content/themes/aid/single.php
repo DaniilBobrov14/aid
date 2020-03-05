@@ -49,7 +49,7 @@ $imgPost = get_the_post_thumbnail_url();
         <div class="row">
             <div class="col-lg-12 d-flex justify-content-between">
                 <p class="author-post">
-                    <?php the_author_meta('display_name' , '2');  ?>
+                    <?php the_author_meta('display_name' , $authorIDPost);  ?>
                 </p>
                 <p class="date-time-post">
                     Дата публикации: <?php echo $dateTimePost; ?>
