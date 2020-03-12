@@ -25,11 +25,11 @@ jQuery(document).ready(function() {
 
         let dayNow = dateTimeNow.getUTCDate().toLocaleString('ru');
 
-        let mouthNow = dateTimeNow.getUTCMonth().toLocaleString('ru');
+        let monthNow = dateTimeNow.getUTCMonth().toLocaleString('ru');
 
-        let mouthName = mouthsKeys[mouthNow];
+        let monthNowNumber = Number(monthNow) + 1;
 
-        console.log(mouthNow);
+        let monthNameNow = mouthsKeys[monthNowNumber]; //добавляет +1 к текущему месяцу, чтобы всего было 12
 
         let reMonths = new RegExp('января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря');
 
@@ -39,7 +39,21 @@ jQuery(document).ready(function() {
 
             if (array) {
 
+                let htmlMonth = array[0];
 
+                if (htmlMonth == monthNameNow) {
+
+                    console.log('сейчас ' + monthNameNow);
+                    console.log('сработало');
+
+                }
+
+                else {
+
+                    console.log('сейчас не тот месяц');
+                    console.log(monthNameNow);
+                    console.log(htmlMonth);
+                }
 
             }
 
