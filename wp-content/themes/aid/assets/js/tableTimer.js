@@ -53,7 +53,7 @@ jQuery(document).ready(function() {
 
                         jQuery(this).parent().addClass('table-primary');//устанавливает для tr подсветку по текущему месяцу
 
-                        jQuery(this).parent().attr('data-current-date' , dayNumberHtml + '.' + monthNowNumber + '.' + yearNow);
+                        jQuery(this).parent().attr('data-current-date' , dayNumberHtml + '.' + monthNowNumber + '.' + yearNow); //добавляет дата атрибут для tr. В нем указывается текущая дата
 
                     }
 
