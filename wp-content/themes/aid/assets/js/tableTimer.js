@@ -6,7 +6,7 @@ jQuery(document).ready(function() {
 
         let dateTimeNow = new Date();
 
-        let mouthsKeys = {
+        let monthsKeys = {
 
             1 : 'января',
             2 : 'февраля',
@@ -27,9 +27,11 @@ jQuery(document).ready(function() {
 
         let monthNow = dateTimeNow.getUTCMonth().toLocaleString('ru');
 
+        let yearNow = dateTimeNow.getUTCFullYear();
+
         let monthNowNumber = Number(monthNow) + 1;
 
-        let monthNameNow = mouthsKeys[monthNowNumber]; //добавляет +1 к текущему месяцу, чтобы всего было 12
+        let monthNameNow = monthsKeys[monthNowNumber]; //добавляет +1 к текущему месяцу, чтобы всего было 12
 
         let reMonths = new RegExp('января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря');
 
@@ -45,11 +47,13 @@ jQuery(document).ready(function() {
 
                 if (htmlMonth == monthNameNow) {
 
-                    let dayNumber = reDayNumber.exec(jQuery(this).html());
+                    let dayNumberHtml = reDayNumber.exec(jQuery(this).html());
 
-                    if (dayNow == dayNumber) {
+                    if (dayNow == dayNumberHtml) {
 
                         jQuery(this).parent().addClass('table-primary');//устанавливает для tr подсветку по текущему месяцу
+
+                        jQuery(this).parent().attr('data-current-date' , dayNumberHtml + '.' + monthNowNumber + '.' + yearNow);
 
                     }
 
