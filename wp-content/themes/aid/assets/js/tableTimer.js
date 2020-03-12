@@ -33,9 +33,11 @@ jQuery(document).ready(function() {
 
         let reMonths = new RegExp('января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря');
 
+        let reDayNumber = new RegExp('^[0-9].');
+
         jQuery('td').each(function () {
 
-            let array = reMonths.exec(jQuery(this).html()); //регулярное выражение ищет в html число
+            let array = reMonths.exec(jQuery(this).html()); //регулярное выражение ищет в html число месяца
 
             if (array) {
 
@@ -43,16 +45,14 @@ jQuery(document).ready(function() {
 
                 if (htmlMonth == monthNameNow) {
 
-                    console.log('сейчас ' + monthNameNow);
-                    console.log('сработало');
+                    let dayNumber = reDayNumber.exec(jQuery(this).html());
 
-                }
+                    if (dayNow == dayNumber) {
 
-                else {
+                        jQuery(this).parent().addClass('table-primary');//устанавливает для tr подсветку по текущему месяцу
 
-                    console.log('сейчас не тот месяц');
-                    console.log(monthNameNow);
-                    console.log(htmlMonth);
+                    }
+
                 }
 
             }
