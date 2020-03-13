@@ -53,7 +53,7 @@ jQuery(document).ready(function() {
 
                         jQuery(this).parent().addClass('table-primary');//устанавливает для tr подсветку по текущему месяцу
 
-                        jQuery(this).parent().attr('data-current-date' , dayNumberHtml + '.' + monthNowNumber + '.' + yearNow); //добавляет дата атрибут для tr. В нем указывается текущая дата
+                        jQuery(this).parent().attr('data-current-date' , dayNumberHtml + '.' + monthNowNumber + '.' + yearNow); //добавляет дата атрибут для tr/
 
                     }
 
@@ -61,9 +61,18 @@ jQuery(document).ready(function() {
 
             }
 
-        })
+        });
+
+        jQuery('tr').each(function () {
+
+            if (jQuery(this).attr('data-current-date') !== undefined) {
+
+                console.log(jQuery(this).attr('data-current-date'));
+                console.log('существует');
+
+            }
+
+        })//Определяем время внутри нужных строк. Подчеркивает время нужным цветом (зеленым), если событие проходит сейчас
     }
 
 });
-
-//подчеркнуть время, если будет подчеркнута дата
