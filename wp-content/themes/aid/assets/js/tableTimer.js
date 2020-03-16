@@ -65,14 +65,13 @@ jQuery(document).ready(function() {
 
         jQuery('tr').each(function () {
 
-            if (jQuery(this).attr('data-current-date') !== undefined) {
+            if (jQuery(this).hasClass('table-primary')) {
 
-                console.log(jQuery(this).attr('data-current-date'));
-                console.log('существует');
+                console.log(jQuery(this).siblings());
 
             }
 
-        })//Определяем время внутри нужных строк. Подчеркивает время нужным цветом (зеленым), если событие проходит сейчас
+        });
     }
 
 });
