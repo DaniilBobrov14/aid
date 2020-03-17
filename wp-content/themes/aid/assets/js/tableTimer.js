@@ -23,6 +23,12 @@ jQuery(document).ready(function() {
 
         };
 
+        let hourNow = dateTimeNow.getHours().toLocaleString('ru');
+
+        let minutesNow = dateTimeNow.getMinutes().toLocaleString('ru');
+
+        console.log(hourNow + '.' + minutesNow);
+
         let dayNow = dateTimeNow.getUTCDate().toLocaleString('ru');
 
         let monthNow = dateTimeNow.getUTCMonth().toLocaleString('ru');
@@ -34,6 +40,10 @@ jQuery(document).ready(function() {
         let monthNameNow = monthsKeys[monthNowNumber]; //добавляет +1 к текущему месяцу, чтобы всего было 12
 
         let reMonths = new RegExp('января|февраля|марта|апреля|мая|июня|июля|августа|сентября|октября|ноября|декабря');
+
+        let reHourStart = new RegExp('^[0-9]....');
+
+        let reHourEnd = new RegExp('....[0-9]$');
 
         let reDayNumber = new RegExp('^[0-9].');
 
@@ -67,7 +77,25 @@ jQuery(document).ready(function() {
 
             if (jQuery(this).hasClass('table-primary')) {
 
-                console.log(jQuery(this).siblings());
+                let siblingsTr = jQuery(this).siblings();
+                let siblingsTrNext = siblingsTr['context']['nextSibling'];
+                // let hourStart = reHourStart.exec(jQuery(siblingsTrNext['firstChild']).html());
+                // let hourEnd = reHourEnd.exec(jQuery(siblingsTrNext['firstChild']).html());
+                let hourStart = reHourStart.exec(jQuery(this).children().html()) ;
+                let hourEnd = reHourEnd.exec(jQuery(this).children().html());
+
+                console.log(hourStart);
+
+
+                console.log(jQuery(this).children());
+
+                jQuery(this).children().attr('data-start-event' , hourStart[0]);
+
+                jQuery(this).children().attr('data-end-event' , hourEnd[0]);
+
+                // jQuery(siblingsTrNext['firstChild']).attr('data-start-event' , hourStart[0]); //добавление часа начала ивента
+                //
+                // jQuery(siblingsTrNext['firstChild']).attr('data-end-event' , hourEnd[0]);
 
             }
 
