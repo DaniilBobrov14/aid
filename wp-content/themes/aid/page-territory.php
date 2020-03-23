@@ -7,12 +7,14 @@ $contentPost = $post->post_content;
 $authorIDPost = $post->post_author;
 ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <?php echo $contentPost; ?>
+<section class="territory-scheme">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <?php echo $contentPost; ?>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php get_footer(); ?>
