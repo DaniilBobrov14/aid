@@ -27,8 +27,6 @@ jQuery(document).ready(function() {
 
         let minutesNow = dateTimeNow.getMinutes().toLocaleString('ru');
 
-        console.log(hourNow + '.' + minutesNow);
-
         let dayNow = dateTimeNow.getUTCDate().toLocaleString('ru');
 
         let monthNow = dateTimeNow.getUTCMonth().toLocaleString('ru');
@@ -47,6 +45,8 @@ jQuery(document).ready(function() {
 
         let reDayNumber = new RegExp('^[0-9].');
 
+        let reFindNumber = new RegExp('[0-9]');
+
         jQuery('td').each(function () {
 
             let array = reMonths.exec(jQuery(this).html()); //регулярное выражение ищет в html число месяца
@@ -55,9 +55,9 @@ jQuery(document).ready(function() {
 
                 let htmlMonth = array[0];
 
-                if (htmlMonth == monthNameNow) {
+                let dayNumberHtml = reDayNumber.exec(jQuery(this).html());
 
-                    let dayNumberHtml = reDayNumber.exec(jQuery(this).html());
+                if (htmlMonth == monthNameNow) {
 
                     if (dayNow == dayNumberHtml) {
 
@@ -65,7 +65,31 @@ jQuery(document).ready(function() {
 
                         jQuery(this).parent().attr('data-current-date' , dayNumberHtml + '.' + monthNowNumber + '.' + yearNow); //добавляет дата атрибут для tr/
 
+                        jQuery(this).parent().attr('data-current-status-date' , 'yes'); // добавляет статус текущего месяца
+
                     }
+
+                }
+
+                else {
+
+                    jQuery(this).parent().attr('data-current-date' , dayNumberHtml + '.' + monthNowNumber + '.' + yearNow); //добавляет дата атрибут для tr/
+
+                    jQuery(this).parent().attr('data-current-status-date' , 'no'); //добавляет для tr атрибут не текущего месяца
+
+                }
+
+            }
+
+            else {
+
+                if (jQuery(this).parent().attr('data-current-date')) {
+
+                }
+
+                else {
+
+                    jQuery(this).parent().attr('data-current-status-date' , 'cell');
 
                 }
 
@@ -73,33 +97,17 @@ jQuery(document).ready(function() {
 
         });
 
-        jQuery('tr').each(function () {
+        jQuery('[data-current-status-date="cell"]').each(function() {
 
-            if (jQuery(this).hasClass('table-primary')) {
+            if (jQuery(this).prev().data('current-status-date') == 'yes') {
 
-                let siblingsTr = jQuery(this).siblings();
-                let siblingsTrNext = siblingsTr['context']['nextSibling'];
-                // let hourStart = reHourStart.exec(jQuery(siblingsTrNext['firstChild']).html());
-                // let hourEnd = reHourEnd.exec(jQuery(siblingsTrNext['firstChild']).html());
-                let hourStart = reHourStart.exec(jQuery(this).children().html()) ;
-                let hourEnd = reHourEnd.exec(jQuery(this).children().html());
+                jQuery(this).attr('data-status-event' , 'event');
 
-                console.log(hourStart);
-
-
-                console.log(jQuery(this).children());
-
-                jQuery(this).children().attr('data-start-event' , hourStart[0]);
-
-                jQuery(this).children().attr('data-end-event' , hourEnd[0]);
-
-                // jQuery(siblingsTrNext['firstChild']).attr('data-start-event' , hourStart[0]); //добавление часа начала ивента
-                //
-                // jQuery(siblingsTrNext['firstChild']).attr('data-end-event' , hourEnd[0]);
+                jQuery(this).next().attr('data-status-event' , 'event');
 
             }
 
-        });
+        })
     }
 
 });
