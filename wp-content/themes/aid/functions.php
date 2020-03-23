@@ -136,8 +136,6 @@ function aid_scripts() {
 
 	wp_enqueue_script('aid-bootstrap-js' , get_template_directory_uri() . '/assets/js/bootstrap.min.js' , array() , '4.4.1' , true);
 
-	wp_enqueue_script('aid-popperJs' , 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js');
-
 	wp_enqueue_script('aid-slick-slider' , get_template_directory_uri() . '/assets/js/slick.min.js' , array() , '1.8.1' , true );
 
 	wp_enqueue_script('aid-slider-js' , get_template_directory_uri() . '/assets/js/slider.js');
