@@ -5,5 +5,15 @@
 
   .wp-block-image {
     text-align: center;
+
+    figcaption {
+
+      font-family: $montserrat;
+      font-weight: $regularWeight;
+      font-style: italic;
+      font-size: 16px;
+      color: $black;
+
+    }
   }
 }

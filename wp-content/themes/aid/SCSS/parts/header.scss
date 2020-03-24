@@ -17,6 +17,13 @@
       margin-left: 0;
       margin-bottom: 0;
       .menu-item {
+        .home-link {
+          font-family: $montserrat;
+          font-weight: $boldWeight;
+          font-size: 30px;
+          color: $white;
+          text-transform: uppercase;
+        }
         a {
           color: $redDarkMain;
           font-size: 16px;

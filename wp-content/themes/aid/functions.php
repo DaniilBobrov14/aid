@@ -182,3 +182,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 add_filter('excerpt_length' , function ($more) {
     return 20;
 });
+
+add_filter('wp_nav_menu_items' , 'add_new_menu_item', 10, 2);
+
+function add_new_menu_item($nav, $args) {
+
+    $newmenuitem = '<li class="menu-item"><a class="home-link" href="'. home_url() . '">Эра</a></li>';
+    $nav = $newmenuitem.$nav;
+    return $nav ;
+}
