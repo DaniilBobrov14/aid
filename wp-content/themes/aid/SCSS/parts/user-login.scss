@@ -1,7 +1,23 @@
 //user-login
 
 .user-login {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
 
+  .icon-left-circle {
+    color: $secondary;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  .icon-left-circle:hover {
+    color: $dark;
+    transition: 0.1s ease-in;
+  }
+}
 
-
+.post, .page {
+  margin-bottom: 0;
 }
