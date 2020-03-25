@@ -32,7 +32,23 @@
                         'container' => 'nav',
                          'menu' => 'Menu 1',
                 ]);
-                get_search_form();
+//                get_search_form();
+                ?>
+                <?php
+                if (is_user_logged_in() ) {
+
+                    echo '
+                    
+                    ';
+
+                }
+
+                else {
+
+                    echo '
+                    <div></div>
+                    ';
+                }
                 ?>
                 <!-- #site-navigation -->
             </div>
