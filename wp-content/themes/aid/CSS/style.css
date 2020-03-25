@@ -30,8 +30,8 @@
 }
 @font-face {
   font-family: 'fontello';
-  src: url('../assets/fonts/fontello.eot?72891410');
-  src: url('../assets/fonts/fontello.eot?72891410#iefix') format('embedded-opentype'), url('../assets/fonts/fontello.woff2?72891410') format('woff2'), url('../assets/fonts/fontello.woff?72891410') format('woff'), url('../assets/fonts/fontello.ttf?72891410') format('truetype'), url('../assets/fonts/fontello.svg?72891410#fontello') format('svg');
+  src: url('../assets/fonts/fontello.eot?55545640');
+  src: url('../assets/fonts/fontello.eot?55545640#iefix') format('embedded-opentype'), url('../assets/fonts/fontello.woff2?55545640') format('woff2'), url('../assets/fonts/fontello.woff?55545640') format('woff'), url('../assets/fonts/fontello.ttf?55545640') format('truetype'), url('../assets/fonts/fontello.svg?55545640#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -41,7 +41,7 @@
  @media screen and (-webkit-min-device-pixel-ratio:0) {
  @font-face {
  font-family: 'fontello';
- src: url('../font/fontello.svg?72891410#fontello') format('svg');
+ src: url('../font/fontello.svg?55545640#fontello') format('svg');
  }
  }
  */
@@ -72,10 +72,14 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-.icon-users:before {
+.icon-left-circle:before {
   content: '\e800';
 }
 /* '' */
+.icon-users:before {
+  content: '\e801';
+}
+/* '' */
 .site-footer {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -85,6 +89,11 @@
   font-family: 'Montserrat';
   font-weight: 300;
   font-size: 16px;
+}
+.site-footer-dark .copyright-footer {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 20px;
 }
 .content-slider {
   margin-top: 6rem;
@@ -411,6 +420,25 @@
   font-style: italic;
   font-size: 16px;
   color: #000;
+}
+.user-login {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.user-login .icon-left-circle {
+  color: #6c757d;
+  cursor: pointer;
+  font-size: 25px;
+}
+.user-login .icon-left-circle:hover {
+  color: #343a40;
+  transition: 0.1s ease-in;
+}
+.post, .page {
+  margin-bottom: 0;
 }
 .stroke-hr {
   -moz-border-bottom-colors: none;
