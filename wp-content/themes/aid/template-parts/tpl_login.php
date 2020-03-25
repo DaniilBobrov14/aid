@@ -6,7 +6,7 @@ Template Post Type: page
 get_header();
 ?>
 
-<section class="login-user">
+<section class="user-login">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
