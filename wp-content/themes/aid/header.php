@@ -22,11 +22,12 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'aid' ); ?></a>
-
+<?php
+$userData = get_userdata(get_current_user_id())->data;
+?>
     <header class="container-fluid main-red-menu">
         <div class="row">
-            <div class="col-lg-12 d-flex justify-content-between">
+            <div class="col-lg-10 d-flex justify-content-between">
                 <?php
                 wp_nav_menu([
                         'container' => 'nav',
@@ -34,6 +35,9 @@
                 ]);
 //                get_search_form();
                 ?>
+                <!-- #site-navigation -->
+            </div>
+            <div class="col-lg-2 d-flex align-items-center">
                 <?php
                 if (is_user_logged_in() ) {
 
@@ -46,12 +50,17 @@
                 else {
 
                     echo '
-                    <div></div>
+                    <div class="login-in">
+                   <a href="'. get_page_uri(140) .'" class="login-in-link registration-link btn rounded">
+                   Войти
+                   <span class="icon-login"></span>
+                   </a>
+                    </div>
                     ';
                 }
                 ?>
-                <!-- #site-navigation -->
             </div>
+            <!-- #site-login -->
         </div>
     </header>
 
