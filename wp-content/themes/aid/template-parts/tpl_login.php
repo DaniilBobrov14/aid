@@ -13,7 +13,27 @@ Template Post Type: page
 
     <?php wp_head(); ?>
 </head>
+<?php
+$args = array (
 
+        'echo' => true,
+        'redirect' => site_url(),
+        'form_id' => 'loginform',
+        'label_username' => __('Username'),
+        'label_password' => __('Password'),
+        'label_remember' => __('Remember Me'),
+        'label_log_in' => __('Log In'),
+        'id_username' => 'user_login',
+        'id_password' => 'user_pass',
+        'id_remember' => 'rememberme',
+        'id_submit' => 'wp-submit',
+        'remember' => true,
+        'value_username' => NULL,
+        'value_remember' => false
+
+);
+
+?>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
@@ -22,7 +42,7 @@ Template Post Type: page
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <form name="loginform" action="<?php bloginfo('url') ?>/wp-login.php" method="post">
+                        <form id="loginform" name="loginform" action="<?php bloginfo('url') ?>/wp-login.php" method="post">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header align-items-center">
@@ -30,23 +50,7 @@ Template Post Type: page
                                         <a href="#" class="modal-title text-primary">Регистрация</a>
                                     </div>
                                     <div class="modal-body">
-                                            <div class="form-group">
-                                                <label name="log" for="formGroupExampleInput">Имя пользователя или email</label>
-                                                <input id="user_login" type="text" class="form-control" placeholder="">
-                                            </div>
-                                            <div class="form-group">
-                                                <label name="pwd" for="formGroupExampleInput2">Пароль</label>
-                                                <input type="password" class="form-control" id="user_pass" placeholder="">
-                                            </div>
-                                            <div class="form-group">
-                                                <input id="rememberme" name="rememberme" class="checkbox" type="checkbox" value="forever">
-                                                <label class="label-text" for="checkbox">запомнить меня</label>
-                                            </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <input type="submit" class="btn button-login" name="wp-submit" id="wp-submit" value="Войти" />
-                                        <input type="hidden" name="redirect_to" value="<?php bloginfo('url')?>" />
-                                        <input type="hidden" name="testcookie" value="1" />
+                                        <?php wp_login_form($args); ?>
                                     </div>
                                 </div>
                             </div>
