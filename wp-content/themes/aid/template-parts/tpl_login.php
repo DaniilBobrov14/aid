@@ -22,30 +22,35 @@ Template Post Type: page
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header align-items-center">
-                                    <div class="icon-left-circle"></div>
-                                    <a href="#" class="modal-title text-primary">Регистрация</a>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="formGroupExampleInput">Имя пользователя или email</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="formGroupExampleInput2">Пароль</label>
-                                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <form name="loginform" action="<?php bloginfo('url') ?>/wp-login.php" method="post">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header align-items-center">
+                                        <div class="icon-left-circle"></div>
+                                        <a href="#" class="modal-title text-primary">Регистрация</a>
+                                    </div>
+                                    <div class="modal-body">
+                                            <div class="form-group">
+                                                <label name="log" for="formGroupExampleInput">Имя пользователя или email</label>
+                                                <input id="user_login" type="text" class="form-control" placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <label name="pwd" for="formGroupExampleInput2">Пароль</label>
+                                                <input type="password" class="form-control" id="user_pass" placeholder="">
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="rememberme" name="rememberme" class="checkbox" type="checkbox" value="forever">
+                                                <label class="label-text" for="checkbox">запомнить меня</label>
+                                            </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="submit" class="btn button-login" name="wp-submit" id="wp-submit" value="Войти" />
+                                        <input type="hidden" name="redirect_to" value="<?php bloginfo('url')?>" />
+                                        <input type="hidden" name="testcookie" value="1" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
