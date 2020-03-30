@@ -428,6 +428,23 @@
   height: 100vh;
   overflow-x: hidden;
 }
+.user-login .modal-dialog .modal-content .modal-body .label-text {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 16px;
+}
+.user-login .modal-dialog .modal-content .modal-footer .button-login {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 16px;
+  width: 100%;
+  background-color: #f54337;
+  color: #fff;
+}
+.user-login .modal-dialog .modal-content .modal-footer .button-login:hover {
+  transition: 0.2s;
+  background-color: #a51309;
+}
 .user-login .icon-left-circle {
   color: #6c757d;
   cursor: pointer;

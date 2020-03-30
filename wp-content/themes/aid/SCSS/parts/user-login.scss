@@ -7,6 +7,32 @@
   height: 100vh;
   overflow-x: hidden;
 
+  .modal-dialog {
+    .modal-content {
+      .modal-body {
+        .label-text {
+          font-family: $montserrat;
+          font-weight: $regularWeight;
+          font-size: 16px;
+        }
+      }
+      .modal-footer {
+        .button-login {
+          font-family: $montserrat;
+          font-weight: $regularWeight;
+          font-size: 16px;
+          width: 100%;
+          background-color: $redMain;
+          color: $white;
+        }
+        .button-login:hover {
+          transition: 0.2s;
+          background-color: $redDarkMain;
+        }
+      }
+    }
+  }
+
   .icon-left-circle {
     color: $secondary;
     cursor: pointer;
