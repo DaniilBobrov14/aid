@@ -2,7 +2,11 @@
 /**Template Name: Авторизация
 Template Post Type: page
  */
+if (is_user_logged_in()) {
 
+    wp_redirect(home_url());
+    die;
+}
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -32,6 +36,10 @@ $args = array (
         'value_remember' => false
 
 );
+?>
+
+<?php
+if (! is_user_logged_in()) {
 
 ?>
 <body <?php body_class(); ?>>
@@ -79,3 +87,5 @@ $args = array (
 
 </body>
 </html>
+<?php }
+?>
