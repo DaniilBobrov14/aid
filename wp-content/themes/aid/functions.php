@@ -148,6 +148,20 @@ function aid_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'aid_scripts' );
 
+/** restrict admin  **/
+
+function restrict_admin() {
+
+    if (! current_user_can('manage_options') && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF']) {
+
+        wp_redirect(site_url());
+
+    }
+
+}
+
+add_action('admin_init' , 'restrict_admin' , 1);
+
 /**
  * Implement the Custom Header feature.
  */
