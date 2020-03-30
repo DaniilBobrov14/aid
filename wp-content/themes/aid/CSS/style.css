@@ -428,20 +428,52 @@
   height: 100vh;
   overflow-x: hidden;
 }
-.user-login .modal-dialog .modal-content .modal-body .label-text {
+.user-login .modal-dialog .modal-content .modal-body .login-username {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-login .modal-dialog .modal-content .modal-body .login-username label {
+  width: 100%;
   font-family: 'Montserrat';
   font-weight: normal;
   font-size: 16px;
 }
-.user-login .modal-dialog .modal-content .modal-footer .button-login {
+.user-login .modal-dialog .modal-content .modal-body .login-username .input {
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.user-login .modal-dialog .modal-content .modal-body .login-password {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-login .modal-dialog .modal-content .modal-body .login-password label {
+  width: 100%;
   font-family: 'Montserrat';
   font-weight: normal;
   font-size: 16px;
+}
+.user-login .modal-dialog .modal-content .modal-body .login-password .input {
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.user-login .modal-dialog .modal-content .modal-body .login-remember label {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 16px;
+  font-style: italic;
+}
+.user-login .modal-dialog .modal-content .modal-body .login-submit .button {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 18px;
   width: 100%;
   background-color: #f54337;
   color: #fff;
+  border-radius: 10px;
 }
-.user-login .modal-dialog .modal-content .modal-footer .button-login:hover {
+.user-login .modal-dialog .modal-content .modal-body .login-submit .button:hover {
   transition: 0.2s;
   background-color: #a51309;
 }
