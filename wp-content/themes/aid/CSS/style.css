@@ -80,6 +80,10 @@
   content: '\e801';
 }
 /* '' */
+.icon-login:before {
+  content: '\e802';
+}
+/* '' */
 .site-footer {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -315,6 +319,44 @@
 .main-red-menu #searchformheader :focus::placeholder {
   transition: 0.7s ease-in;
   opacity: 0;
+}
+.main-red-menu .login-in {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.main-red-menu .login-in .login-in-link {
+  outline: none;
+  text-decoration: none;
+}
+.main-red-menu .login-in .registration-link {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+}
+.main-red-menu .login-in .registration-link .icon-login {
+  color: #fff;
+  font-size: 18px;
+}
+.main-red-menu .login-in .registration-link .icon-login:hover {
+  transition: 0.2s ease-in;
+  color: #f54337;
+}
+.main-red-menu .login-in .registration-link:hover {
+  transition: 0.2s ease-in;
+  background-color: #fff;
+  color: #f54337;
+}
+.main-red-menu .login-in .registration-link:hover .icon-login {
+  transition: 0.2s ease-in;
+  color: #f54337;
+}
+.main-red-menu .login-in .login-in-link {
+  color: #fff;
+  font-size: 18px;
 }
 .program {
   margin-top: 6rem;

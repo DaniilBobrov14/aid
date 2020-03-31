@@ -102,4 +102,42 @@
       opacity: 0;
     }
   }
+  .login-in {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    .login-in-link {
+      outline: none;
+      text-decoration: none;
+    }
+    .registration-link {
+      width: 100%;
+      font-family: $montserrat;
+      font-weight: $regularWeight;
+      font-size: 16px;
+      text-transform: uppercase;
+      border: 1px solid $white;
+      .icon-login {
+        color: $white;
+        font-size: 18px;
+      }
+      .icon-login:hover {
+        transition: 0.2s ease-in;
+        color: $redMain;
+      }
+    }
+    .registration-link:hover {
+      transition: 0.2s ease-in;
+      background-color: $white;
+      color: $redMain;
+      .icon-login {
+        transition: 0.2s ease-in;
+        color: $redMain;
+      }
+    }
+    .login-in-link {
+      color: $white;
+      font-size: 18px;
+    }
+  }
 }
