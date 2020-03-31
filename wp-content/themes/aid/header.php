@@ -41,22 +41,14 @@ $userData = get_userdata(get_current_user_id())->data;
                 <?php
                 if (is_user_logged_in() ) {
 
-                    echo '
-                    
-                    ';
+                    get_template_part('template-parts/login_in_user');
 
                 }
 
                 else {
 
-                    echo '
-                    <div class="login-in">
-                   <a href="'. get_page_uri(140) .'" class="login-in-link registration-link btn rounded">
-                   Войти
-                   <span class="icon-login"></span>
-                   </a>
-                    </div>
-                    ';
+                    get_template_part('template-parts/login_in');
+
                 }
                 ?>
             </div>
