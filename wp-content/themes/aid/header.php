@@ -22,9 +22,6 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-<?php
-$userData = get_userdata(get_current_user_id())->data;
-?>
     <header class="container-fluid main-red-menu">
         <div class="row">
             <div class="col-lg-10 d-flex justify-content-between">
@@ -37,7 +34,7 @@ $userData = get_userdata(get_current_user_id())->data;
                 ?>
                 <!-- #site-navigation -->
             </div>
-            <div class="col-lg-2 d-flex align-items-center">
+            <div class="col-lg-2 d-flex align-items-center justify-content-end">
                 <?php
                 if (is_user_logged_in() ) {
 
