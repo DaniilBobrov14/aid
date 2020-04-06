@@ -29,7 +29,7 @@
 <script>
     jQuery(function ($) {
 
-        $('.login-in-link').click(function () {
+        if ($('.registration-link').hasClass('login-in-link')) {
 
             $.ajax({
 
@@ -39,19 +39,23 @@
                     action : 'prevUrl',
                     prevUrl : document.location.href
                 },
-                success: function (data) {
-
-                    console.log('успех');
-                    console.log(data);
-
-                }
 
             })
 
-        });
+        }
     })
 </script><!--script for getting previous url-->
 
+<script>
+    jQuery(function ($) {
 
+        if ($('footer').hasClass('site-footer-dark')) {
+
+            $('.site-footer').remove();
+
+        }
+
+    })
+</script> <!--script for deleting light theme footer-->
 </body>
 </html>

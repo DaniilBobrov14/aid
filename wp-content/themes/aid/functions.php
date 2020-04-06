@@ -162,6 +162,19 @@ function restrict_admin() {
 
 add_action('admin_init' , 'restrict_admin' , 1);
 
+
+add_action('wp_ajax_prevUrl' , 'getPrevUrl');
+add_action('wp_ajax_nopriv_prevUrl' , 'getPrevUrl');
+//первый хук для авторизованных, второй для не авторизованных пользователей
+
+function getPrevUrl () {
+
+    $prevUrl = $_POST['prevUrl'];
+
+    setcookie('prevUrl' , $prevUrl , time() + 60 * 60 * 24 * 36 , '/login');
+
+}
+
 /**
  * Implement the Custom Header feature.
  */
