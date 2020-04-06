@@ -57,7 +57,7 @@ if (! is_user_logged_in()) {
                                         <a href="<?php echo $_COOKIE['prevUrl']; ?>">
                                             <div class="icon-left-circle"></div>
                                         </a>
-                                        <a href="#" class="modal-title text-primary">Регистрация</a>
+                                        <span class="modal-title text-primary registration-link">Регистрация</span>
                                     </div>
                                     <div class="modal-body">
                                         <?php wp_login_form($args); ?>
