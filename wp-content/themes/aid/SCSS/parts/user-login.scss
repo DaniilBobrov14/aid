@@ -9,6 +9,14 @@
 
   .modal-dialog {
     .modal-content {
+      .modal-header {
+        .registration-link {
+          cursor: pointer;
+        }
+        .registration-link:hover {
+          text-decoration: underline
+        }
+      }
       .modal-body {
         .login-username {
           display: flex;

@@ -483,6 +483,12 @@
   height: 100vh;
   overflow-x: hidden;
 }
+.user-login .modal-dialog .modal-content .modal-header .registration-link {
+  cursor: pointer;
+}
+.user-login .modal-dialog .modal-content .modal-header .registration-link:hover {
+  text-decoration: underline;
+}
 .user-login .modal-dialog .modal-content .modal-body .login-username {
   display: flex;
   flex-wrap: wrap;
