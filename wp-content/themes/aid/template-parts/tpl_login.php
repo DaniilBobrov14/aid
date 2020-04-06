@@ -54,7 +54,9 @@ if (! is_user_logged_in()) {
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header align-items-center">
-                                        <div class="icon-left-circle"></div>
+                                        <a href="<?php echo $_COOKIE['prevUrl']; ?>">
+                                            <div class="icon-left-circle"></div>
+                                        </a>
                                         <a href="#" class="modal-title text-primary">Регистрация</a>
                                     </div>
                                     <div class="modal-body">
@@ -85,7 +87,8 @@ if (! is_user_logged_in()) {
 
 <?php wp_footer(); ?>
 
-</body>
-</html>
+    <?php get_footer(); ?>
+
+
 <?php }
 ?>
