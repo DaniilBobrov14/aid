@@ -16,6 +16,12 @@
         .registration-link:hover {
           text-decoration: underline
         }
+        .login-link {
+          cursor: pointer;
+        }
+        .registration-link:hover {
+          text-decoration: underline;
+        }
       }
       .modal-body {
         .login-username {
@@ -32,6 +38,11 @@
             border-radius: 10px;
             padding-left: 10px;
           }
+          .input:focus {
+            border-color: rgba(245, 67, 55, 0.9);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+            outline: 0 none;
+          }
         }
         .login-password {
           display:flex;
@@ -46,6 +57,11 @@
             width: 100%;
             border-radius: 10px;
             padding-left: 10px;
+          }
+          .input:focus {
+            border-color: rgba(245, 67, 55, 0.9);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+            outline: 0 none;
           }
         }
         .login-remember {
@@ -69,6 +85,36 @@
           .button:hover {
             transition: 0.2s;
             background-color: $redDarkMain;
+          }
+        }
+        .registration-username {
+          display: flex;
+          flex-wrap: wrap;
+          label {
+            width: 100%;
+            font-family: $montserrat;
+            font-weight: $regularWeight;
+            font-size: 16px;
+          }
+          .input {
+            width: 100%;
+            border-radius: 10px;
+            padding-left: 10px;
+          }
+        }
+        .registration-email {
+          display: flex;
+          flex-wrap: wrap;
+          label {
+            width: 100%;
+            font-family: $montserrat;
+            font-weight: $regularWeight;
+            font-size: 16px;
+          }
+          .input {
+            width: 100%;
+            border-radius: 10px;
+            padding-left: 10px;
           }
         }
       }

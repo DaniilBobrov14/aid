@@ -489,6 +489,12 @@
 .user-login .modal-dialog .modal-content .modal-header .registration-link:hover {
   text-decoration: underline;
 }
+.user-login .modal-dialog .modal-content .modal-header .login-link {
+  cursor: pointer;
+}
+.user-login .modal-dialog .modal-content .modal-header .registration-link:hover {
+  text-decoration: underline;
+}
 .user-login .modal-dialog .modal-content .modal-body .login-username {
   display: flex;
   flex-wrap: wrap;
@@ -504,6 +510,11 @@
   border-radius: 10px;
   padding-left: 10px;
 }
+.user-login .modal-dialog .modal-content .modal-body .login-username .input:focus {
+  border-color: rgba(245, 67, 55, 0.9);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+  outline: 0 none;
+}
 .user-login .modal-dialog .modal-content .modal-body .login-password {
   display: flex;
   flex-wrap: wrap;
@@ -518,6 +529,11 @@
   width: 100%;
   border-radius: 10px;
   padding-left: 10px;
+}
+.user-login .modal-dialog .modal-content .modal-body .login-password .input:focus {
+  border-color: rgba(245, 67, 55, 0.9);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+  outline: 0 none;
 }
 .user-login .modal-dialog .modal-content .modal-body .login-remember label {
   font-family: 'Montserrat';
@@ -537,6 +553,36 @@
 .user-login .modal-dialog .modal-content .modal-body .login-submit .button:hover {
   transition: 0.2s;
   background-color: #a51309;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-username {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-username label {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 16px;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-username .input {
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-email {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-email label {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 16px;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-email .input {
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 10px;
 }
 .user-login .icon-left-circle {
   color: #6c757d;
