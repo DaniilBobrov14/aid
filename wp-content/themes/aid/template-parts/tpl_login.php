@@ -65,6 +65,39 @@ if (! is_user_logged_in()) {
                                 </div>
                             </div>
                         </form>
+                        <form hidden id="registerform" action="<?php echo site_url('wp-login.php?action=register'); ?>" method="post">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header align-items-center">
+                                        <a href="<?php echo $_COOKIE['prevUrl']; ?>">
+                                            <div class="icon-left-circle"></div>
+                                        </a>
+                                        <span class="modal-title text-primary login-link">Авторизоваться</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="registration-username">
+                                            <label for="user_login">
+                                                Имя пользователя<br>
+                                                <input type="text" name="user_login" id="user_login" class="input" value="" size="20" style="" placeholder="Введите имя пользователя">
+                                            </label>
+                                        </p>
+                                        <p class="registration-email">
+                                            <label for="user_email">
+                                                E-mail<br>
+                                                <input type="email" name="user_email" id="user_email" class="input" value="" size="25" placeholder="Введите адрес электронной почты">
+                                            </label>
+                                        </p>
+
+                                        <p id="reg_passmail">Подтверждение регистрации будет отправлено на ваш e-mail.</p>
+
+                                        <br class="clear">
+                                        <input type="hidden" name="redirect_to" value="">
+
+                                        <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Регистрация"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
