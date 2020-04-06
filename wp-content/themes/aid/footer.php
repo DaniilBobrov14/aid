@@ -26,5 +26,32 @@
 
 <?php wp_footer(); ?>
 
+<script>
+    jQuery(function ($) {
+
+        $('.login-in-link').click(function () {
+
+            $.ajax({
+
+                url : '<?php echo admin_url("admin-ajax.php") ?>',
+                type : 'POST',
+                data : {
+                    action : 'prevUrl',
+                    prevUrl : document.location.href
+                },
+                success: function (data) {
+
+                    console.log('успех');
+                    console.log(data);
+
+                }
+
+            })
+
+        });
+    })
+</script><!--script for getting previous url-->
+
+
 </body>
 </html>
