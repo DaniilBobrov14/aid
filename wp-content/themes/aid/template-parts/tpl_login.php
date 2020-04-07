@@ -76,24 +76,31 @@ if (! is_user_logged_in()) {
                                     </div>
                                     <div class="modal-body">
                                         <p class="registration-username">
-                                            <label for="user_login">
-                                                Имя пользователя<br>
-                                                <input type="text" name="user_login" id="user_login" class="input" value="" size="20" style="" placeholder="Введите имя пользователя">
-                                            </label>
+                                            <label for="user_login">Имя пользователя</label>
+                                            <input type="text" name="user_login" id="user_login" class="input" value="" size="20" style="" placeholder="Придумайте имя пользователя">
+
+                                        </p>
+                                        <p class="registration-fullname">
+                                            <label for="user_fullname">ФИО</label>
+                                            <input type="text" name="user_fullname" id="user_fullname" class="input" value="" size="20" style="" placeholder="Иванов Иван Иванович">
                                         </p>
                                         <p class="registration-email">
-                                            <label for="user_email">
-                                                E-mail<br>
-                                                <input type="email" name="user_email" id="user_email" class="input" value="" size="25" placeholder="Введите адрес электронной почты">
-                                            </label>
+                                            <label for="user_email">E-mail</label>
+                                            <input type="email" name="user_email" id="user_email" class="input" value="" size="25" placeholder="Введите адрес электронной почты">
                                         </p>
-
-                                        <p id="reg_passmail">Подтверждение регистрации будет отправлено на ваш e-mail.</p>
-
-                                        <br class="clear">
-                                        <input type="hidden" name="redirect_to" value="">
-
-                                        <p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Регистрация"></p>
+                                        <input type="hidden" name="redirect_to" value="<?php echo site_url('/login'); ?>">
+                                        <p class="registration-password">
+                                            <label for="user_password">Пароль</label>
+                                            <input type="password" name="user_password" id="user_password" class="input" value="" size="25" placeholder="Придумайте пароль">
+                                        </p>
+                                        <p class="registration-passwordVerify">
+                                            <label for="user_passwordVerify">Подтвердите пароль</label>
+                                            <input type="password" name="user_passwordVerify" id="user_passwordVerify" class="input" value="" size="25" placeholder="Подтвердите пароль">
+                                        </p>
+                                        <p id="reg_passmail" class="text-muted">Подтверждение регистрации будет отправлено на ваш e-mail.</p>
+                                        <p class="submit">
+                                            <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Зарегистрироваться">
+                                        </p>
                                     </div>
                                 </div>
                             </div>
