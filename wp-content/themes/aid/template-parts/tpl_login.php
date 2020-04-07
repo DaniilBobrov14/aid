@@ -54,7 +54,7 @@ if (! is_user_logged_in()) {
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header align-items-center">
-                                        <a href="<?php echo $_COOKIE['prevUrl']; ?>">
+                                        <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">
                                             <div class="icon-left-circle"></div>
                                         </a>
                                         <span class="modal-title text-primary registration-link">Регистрация</span>
@@ -69,7 +69,7 @@ if (! is_user_logged_in()) {
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header align-items-center">
-                                        <a href="<?php echo $_COOKIE['prevUrl']; ?>">
+                                        <a href="<?php echo $_SERVER['HTTP_REFERER'] ?>">
                                             <div class="icon-left-circle"></div>
                                         </a>
                                         <span class="modal-title text-primary login-link">Авторизоваться</span>
