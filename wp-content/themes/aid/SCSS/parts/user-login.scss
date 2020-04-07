@@ -19,7 +19,7 @@
         .login-link {
           cursor: pointer;
         }
-        .registration-link:hover {
+        .login-link:hover {
           text-decoration: underline;
         }
       }
@@ -95,11 +95,17 @@
             font-family: $montserrat;
             font-weight: $regularWeight;
             font-size: 16px;
+            margin-bottom: .5rem;
           }
           .input {
             width: 100%;
             border-radius: 10px;
             padding-left: 10px;
+          }
+          .input:focus {
+            border-color: rgba(245, 67, 55, 0.9);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+            outline: 0 none;
           }
         }
         .registration-email {
@@ -110,11 +116,101 @@
             font-family: $montserrat;
             font-weight: $regularWeight;
             font-size: 16px;
+            margin-bottom: .5rem;
           }
           .input {
             width: 100%;
             border-radius: 10px;
             padding-left: 10px;
+          }
+          .input:focus {
+            border-color: rgba(245, 67, 55, 0.9);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+            outline: 0 none;
+          }
+        }
+        .registration-fullname {
+          display: flex;
+          flex-wrap: wrap;
+          label {
+            width: 100%;
+            font-family: $montserrat;
+            font-weight: $regularWeight;
+            font-size: 16px;
+            margin-bottom: .5rem;
+          }
+          .input {
+            width: 100%;
+            border-radius: 10px;
+            padding-left: 10px;
+          }
+          .input:focus {
+            border-color: rgba(245, 67, 55, 0.9);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+            outline: 0 none;
+          }
+        }
+        .registration-password {
+          display: flex;
+          flex-wrap: wrap;
+          label {
+            width: 100%;
+            font-family: $montserrat;
+            font-weight: $regularWeight;
+            font-size: 16px;
+            margin-bottom: .5rem;
+          }
+          .input {
+            width: 100%;
+            border-radius: 10px;
+            padding-left: 10px;
+          }
+          .input:focus {
+            border-color: rgba(245, 67, 55, 0.9);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+            outline: 0 none;
+          }
+        }
+        .registration-passwordVerify {
+          display: flex;
+          flex-wrap: wrap;
+          label {
+            width: 100%;
+            font-family: $montserrat;
+            font-weight: $regularWeight;
+            font-size: 16px;
+            margin-bottom: .5rem;
+          }
+          .input {
+            width: 100%;
+            border-radius: 10px;
+            padding-left: 10px;
+          }
+          .input:focus {
+            border-color: rgba(245, 67, 55, 0.9);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+            outline: 0 none;
+          }
+        }
+        #reg_passmail {
+          font-family: $montserrat;
+          font-weight: $lightWeight;
+          font-style: italic;
+          font-size: 14px;
+        }
+        .submit {
+          .button {
+            font-family: $montserrat;
+            font-weight: $boldWeight;
+            font-size: 18px;
+            width: 100%;
+            background-color: $redMain;
+            color: $white;
+            border-radius: 10px;
+          }
+          .button:hover {
+            transition: 0.2s;
+            background-color: $redDarkMain;
           }
         }
       }

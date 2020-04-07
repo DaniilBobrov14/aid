@@ -492,7 +492,7 @@
 .user-login .modal-dialog .modal-content .modal-header .login-link {
   cursor: pointer;
 }
-.user-login .modal-dialog .modal-content .modal-header .registration-link:hover {
+.user-login .modal-dialog .modal-content .modal-header .login-link:hover {
   text-decoration: underline;
 }
 .user-login .modal-dialog .modal-content .modal-body .login-username {
@@ -563,11 +563,17 @@
   font-family: 'Montserrat';
   font-weight: normal;
   font-size: 16px;
+  margin-bottom: 0.5rem;
 }
 .user-login .modal-dialog .modal-content .modal-body .registration-username .input {
   width: 100%;
   border-radius: 10px;
   padding-left: 10px;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-username .input:focus {
+  border-color: rgba(245, 67, 55, 0.9);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+  outline: 0 none;
 }
 .user-login .modal-dialog .modal-content .modal-body .registration-email {
   display: flex;
@@ -578,11 +584,99 @@
   font-family: 'Montserrat';
   font-weight: normal;
   font-size: 16px;
+  margin-bottom: 0.5rem;
 }
 .user-login .modal-dialog .modal-content .modal-body .registration-email .input {
   width: 100%;
   border-radius: 10px;
   padding-left: 10px;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-email .input:focus {
+  border-color: rgba(245, 67, 55, 0.9);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+  outline: 0 none;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-fullname {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-fullname label {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-fullname .input {
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-fullname .input:focus {
+  border-color: rgba(245, 67, 55, 0.9);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+  outline: 0 none;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-password {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-password label {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-password .input {
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-password .input:focus {
+  border-color: rgba(245, 67, 55, 0.9);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+  outline: 0 none;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-passwordVerify {
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-passwordVerify label {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-passwordVerify .input {
+  width: 100%;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.user-login .modal-dialog .modal-content .modal-body .registration-passwordVerify .input:focus {
+  border-color: rgba(245, 67, 55, 0.9);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 67, 55, 0.6);
+  outline: 0 none;
+}
+.user-login .modal-dialog .modal-content .modal-body #reg_passmail {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-style: italic;
+  font-size: 14px;
+}
+.user-login .modal-dialog .modal-content .modal-body .submit .button {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  background-color: #f54337;
+  color: #fff;
+  border-radius: 10px;
+}
+.user-login .modal-dialog .modal-content .modal-body .submit .button:hover {
+  transition: 0.2s;
+  background-color: #a51309;
 }
 .user-login .icon-left-circle {
   color: #6c757d;
