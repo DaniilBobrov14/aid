@@ -215,3 +215,32 @@ function my_front_end_login_fail($username) {
         exit;
     }
 }
+
+// предварительная проверка поля
+add_filter( 'registration_errors', 'my_validate_user_data' );
+function my_validate_user_data( $errors ){
+    $referrer = $_SERVER['HTTP_REFERER'];
+    if (empty($_POST['user_fullname']))
+    {
+        wp_redirect( add_query_arg('register', 'failed=fullname', $referrer ) );  // редиркетим и добавим параметр запроса ?login=failed
+
+    }
+    elseif (empty($_POST['user_login']))
+    {
+        wp_redirect(add_query_arg('register' , 'failed=login', $referrer));
+    }
+    elseif (empty($_POST['user_email']))
+    {
+        wp_redirect(add_query_arg('register' , 'failed=email' , $referrer));
+    }
+
+    return $errors;
+}
+
+// обновление метаданных пользователя
+add_action( 'user_register', 'my_user_registration' );
+function my_user_registration( $user_id ) {
+//     $_POST['user_fullname'] проверена заранее...
+    update_user_meta( $user_id, 'user_fullname', $_POST['user_fullname']);//ФИО
+    update_user_meta($user_id , 'nickname' , $_POST['user_login']);//отображаемый никнейм
+}
