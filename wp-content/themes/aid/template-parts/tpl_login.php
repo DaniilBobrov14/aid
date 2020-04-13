@@ -49,61 +49,74 @@ if (! is_user_logged_in()) {
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <form id="loginform" name="loginform" action="<?php bloginfo('url') ?>/wp-login.php" method="post">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header align-items-center">
-                                        <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">
-                                            <div class="icon-left-circle"></div>
-                                        </a>
-                                        <span class="modal-title text-primary registration-link">Регистрация</span>
-                                    </div>
-                                    <div class="modal-body">
-                                        <?php wp_login_form($args); ?>
+                        <?php
+                        if (! isset($_GET['action']) or $_GET['action'] !== 'register')
+                        {
+                           ?>
+                            <form id="loginform" name="loginform" action="<?php bloginfo('url') ?>/wp-login.php" method="post">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header align-items-center">
+                                            <a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">
+                                                <div class="icon-left-circle"></div>
+                                            </a>
+                                            <a href="<?php echo site_url('/login?action=register') ?>" class="modal-title text-primary registration-link">Регистрация</a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <?php wp_login_form($args); ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                        <form hidden id="registerform" action="<?php echo site_url('wp-login.php?action=register'); ?>" method="post">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header align-items-center">
-                                        <a href="<?php echo $_SERVER['HTTP_REFERER'] ?>">
-                                            <div class="icon-left-circle"></div>
-                                        </a>
-                                        <span class="modal-title text-primary login-link">Авторизоваться</span>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p class="registration-username">
-                                            <label for="user_login">Имя пользователя</label>
-                                            <input type="text" name="user_login" id="user_login" class="input" value="" size="20" style="" placeholder="Придумайте имя пользователя">
+                            </form>
+                            <?php
+                        }
+                        else
+                            {
+                             ?>
+                                <form id="registerform" action="<?php echo site_url('wp-login.php?action=register'); ?>" method="post">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header align-items-center">
+                                                <a href="<?php echo $_SERVER['HTTP_REFERER'] ?>">
+                                                    <div class="icon-left-circle"></div>
+                                                </a>
+                                                <a href="<?php echo site_url('/login'); ?>" class="modal-title text-primary login-link">Авторизоваться</a>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="registration-username">
+                                                    <label for="user_login">Имя пользователя</label>
+                                                    <input type="text" name="user_login" id="user_login" class="input" value="" size="20" style="" placeholder="Придумайте имя пользователя">
 
-                                        </p>
-                                        <p class="registration-fullname">
-                                            <label for="user_fullname">ФИО</label>
-                                            <input type="text" name="user_fullname" id="user_fullname" class="input" value="" size="20" style="" placeholder="Иванов Иван Иванович">
-                                        </p>
-                                        <p class="registration-email">
-                                            <label for="user_email">E-mail</label>
-                                            <input type="email" name="user_email" id="user_email" class="input" value="" size="25" placeholder="Введите адрес электронной почты">
-                                        </p>
-                                        <input type="hidden" name="redirect_to" value="<?php echo site_url('/login'); ?>">
-                                        <p class="registration-password">
-                                            <label for="user_password">Пароль</label>
-                                            <input type="password" name="user_password" id="user_password" class="input" value="" size="25" placeholder="Придумайте пароль">
-                                        </p>
-                                        <p class="registration-passwordVerify">
-                                            <label for="user_passwordVerify">Подтвердите пароль</label>
-                                            <input type="password" name="user_passwordVerify" id="user_passwordVerify" class="input" value="" size="25" placeholder="Подтвердите пароль">
-                                        </p>
-                                        <p id="reg_passmail" class="text-muted">Подтверждение регистрации будет отправлено на ваш e-mail.</p>
-                                        <p class="submit">
-                                            <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Зарегистрироваться">
-                                        </p>
+                                                </p>
+                                                <p class="registration-fullname">
+                                                    <label for="user_fullname">ФИО</label>
+                                                    <input type="text" name="user_fullname" id="user_fullname" class="input" value="" size="20" style="" placeholder="Иванов Иван Иванович">
+                                                </p>
+                                                <p class="registration-email">
+                                                    <label for="user_email">E-mail</label>
+                                                    <input type="email" name="user_email" id="user_email" class="input" value="" size="25" placeholder="Введите адрес электронной почты">
+                                                </p>
+                                                <input type="hidden" name="redirect_to" value="<?php echo site_url('/login'); ?>">
+                                                <p class="registration-password">
+                                                    <label for="user_password">Пароль</label>
+                                                    <input type="password" name="user_password" id="user_password" class="input" value="" size="25" placeholder="Придумайте пароль">
+                                                </p>
+                                                <p class="registration-passwordVerify">
+                                                    <label for="user_passwordVerify">Подтвердите пароль</label>
+                                                    <input type="password" name="user_passwordVerify" id="user_passwordVerify" class="input" value="" size="25" placeholder="Подтвердите пароль">
+                                                </p>
+                                                <p id="reg_passmail" class="text-muted">Подтверждение регистрации будет отправлено на ваш e-mail.</p>
+                                                <p class="submit">
+                                                    <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Зарегистрироваться">
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </form>
+                                </form>
+
+                                <?php
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
