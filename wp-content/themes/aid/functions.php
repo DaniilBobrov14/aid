@@ -233,6 +233,14 @@ function my_validate_user_data( $errors ){
     {
         wp_redirect(add_query_arg('register' , 'failed=email' , $referrer));
     }
+    elseif (empty($_POST['user_password']) or empty($_POST['user_passwordVerify']))
+    {
+        wp_redirect(add_query_arg('register' , 'failed=password' , $referrer));
+    }
+    elseif ($_POST['user_password'] !== $_POST['user_passwordVerify'])
+    {
+        wp_redirect(add_query_arg('register' , 'failed=passwordVerify', $referrer));
+    }
 
     return $errors;
 }
