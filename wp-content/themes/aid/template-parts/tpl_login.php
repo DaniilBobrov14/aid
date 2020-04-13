@@ -44,7 +44,6 @@ if (! is_user_logged_in()) {
 ?>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-
     <div id="content" class="site-content">
         <section style="background-image: url('<?php echo wp_get_attachment_url(18); ?>')" class="user-login">
             <div class="container">

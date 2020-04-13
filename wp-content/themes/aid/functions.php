@@ -210,7 +210,7 @@ function add_new_menu_item($nav, $args) {
 
 ## Оставляет пользователя на той же странице при вводе неверного логина/пароля в форме авторизации wp_login_form()
 add_action( 'wp_login_failed', 'my_front_end_login_fail' );
-function my_front_end_login_fail( $username ) {
+function my_front_end_login_fail($username) {
     $referrer = $_SERVER['HTTP_REFERER'];  // откуда пришел запрос
 
     // Если есть referrer и это не страница wp-login.php
