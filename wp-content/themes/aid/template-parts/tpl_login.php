@@ -96,7 +96,7 @@ if (! is_user_logged_in()) {
                                                     <label for="user_email">E-mail</label>
                                                     <input type="email" name="user_email" id="user_email" class="input" value="" size="25" placeholder="Введите адрес электронной почты">
                                                 </p>
-                                                <input type="hidden" name="redirect_to" value="<?php echo site_url('/login'); ?>">
+                                                <input type="hidden" name="redirect_to" value="<?php echo site_url(); ?>">
                                                 <p class="registration-password">
                                                     <label for="user_password">Пароль</label>
                                                     <input type="password" name="user_password" id="user_password" class="input" value="" size="25" placeholder="Придумайте пароль">
