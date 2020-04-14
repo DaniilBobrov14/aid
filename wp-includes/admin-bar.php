@@ -311,7 +311,7 @@ function wp_admin_bar_my_account_menu( $wp_admin_bar ) {
 			'parent' => 'user-actions',
 			'id'     => 'logout',
 			'title'  => __( 'Log Out' ),
-			'href'   => wp_logout_url(),
+			'href'   => wp_logout_url(home_url()),
 		)
 	);
 }
