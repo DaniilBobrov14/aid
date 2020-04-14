@@ -148,6 +148,14 @@ function aid_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'aid_scripts' );
 
+/** include style and script to admin-bar **/
+add_action('admin_enqueue_scripts' , 'aid_admin_scripts');
+
+function aid_admin_scripts()
+{
+    wp_enqueue_script('aid-users-js', get_template_directory_uri() . '/assets/js/admin-bar/users.js');
+}
+
 /** restrict admin  **/
 
 function restrict_admin() {
