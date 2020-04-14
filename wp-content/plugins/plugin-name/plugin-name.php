@@ -10,18 +10,13 @@
  *
  * @link              http://example.com
  * @since             1.0.0
- * @package           Plugin_Name
+ * @package           Setup Several Users
  *
  * @wordpress-plugin
  * Plugin Name:       Setup Several Users
  * Description:       Added several users from wp-admin to current site
  * Version:           1.0.0
- * Author:            Your Name or Your Company
- * Author URI:        http://example.com/
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       plugin-name
- * Domain Path:       /languages
+ * Author:            Bobrov Daniil
  */
 
 // If this file is called directly, abort.
@@ -34,7 +29,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PLUGIN_NAME_VERSION', '1.0.0' );
+define( 'Setup_Several_Users_Version', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
