@@ -588,6 +588,69 @@ if ( strlen( $usersearch ) ) {
 		<?php $wp_list_table->display(); ?>
 </form>
 
+        <?php
+        if (current_user_can('create_users'))
+        {
+            ?>
+            <form id="registerform" action="<?php echo site_url('wp-login.php?action=register') ?>" method="post">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3>Создать нескольких пользователей</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>
+                                        <label for="user_login">Имя пользователя</label>
+                                    </th>
+                                    <th>
+                                        <label for="user_fullname">ФИО</label>
+                                    </th>
+                                    <th>
+                                        <label for="user_email">E-mail</label>
+                                    </th>
+                                    <th>
+                                        <label for="user_passwordVerify">Пароль</label>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="text" name="user_login" id="user_login" class="input" size="20" value="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="user_fullname" id="user_fullname" class="input" size="20" value="">
+                                    </td>
+                                    <td>
+                                        <input type="email" name="user_email" id="user_email" size="20" value="">
+                                    </td>
+                                    <td>
+                                        <input type="password" name="user_passwordVerify" id="user_passwordVerify" size="20" value="">
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="tablenav top">
+                                <input type="submit" name="wp-submit" class="button action" value="Добавить пользователей">
+                                <input type="hidden" name="redirect_to" value="<?php echo admin_url('users.php'); ?>">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <?php
+        }
+        ?>
+
 <br class="clear" />
 </div>
 		<?php
