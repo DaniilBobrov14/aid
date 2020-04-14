@@ -140,6 +140,8 @@ function aid_scripts() {
 
 	wp_enqueue_script('aid-slider-js' , get_template_directory_uri() . '/assets/js/slider.js');
 
+	wp_enqueue_script('aid-formValidate-js' , get_template_directory_uri() . '/assets/js/formValidate.js');
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -220,27 +222,27 @@ function my_front_end_login_fail($username) {
 add_filter( 'registration_errors', 'my_validate_user_data' );
 function my_validate_user_data( $errors ){
     $referrer = $_SERVER['HTTP_REFERER'];
-    if (empty($_POST['user_fullname']))
-    {
-        wp_redirect( add_query_arg('register', 'failed=fullname', $referrer ) );  // редиркетим и добавим параметр запроса ?login=failed
-
-    }
-    elseif (empty($_POST['user_login']))
-    {
-        wp_redirect(add_query_arg('register' , 'failed=login', $referrer));
-    }
-    elseif (empty($_POST['user_email']))
-    {
-        wp_redirect(add_query_arg('register' , 'failed=email' , $referrer));
-    }
-    elseif (empty($_POST['user_password']) or empty($_POST['user_passwordVerify']))
-    {
-        wp_redirect(add_query_arg('register' , 'failed=password' , $referrer));
-    }
-    elseif ($_POST['user_password'] !== $_POST['user_passwordVerify'])
-    {
-        wp_redirect(add_query_arg('register' , 'failed=passwordVerify', $referrer));
-    }
+//    if (empty($_POST['user_fullname']))
+//    {
+//        wp_redirect( add_query_arg('register', 'failed=fullname', $referrer ) );  // редиркетим и добавим параметр запроса ?login=failed
+//
+//    }
+//    elseif (empty($_POST['user_login']))
+//    {
+//        wp_redirect(add_query_arg('register' , 'failed=login', $referrer));
+//    }
+//    elseif (empty($_POST['user_email']))
+//    {
+//        wp_redirect(add_query_arg('register' , 'failed=email' , $referrer));
+//    }
+//    elseif (empty($_POST['user_password']) or empty($_POST['user_passwordVerify']))
+//    {
+//        wp_redirect(add_query_arg('register' , 'failed=password' , $referrer));
+//    }
+//    elseif ($_POST['user_password'] !== $_POST['user_passwordVerify'])
+//    {
+//        wp_redirect(add_query_arg('register' , 'failed=passwordVerify', $referrer));
+//    }
 
     return $errors;
 }
