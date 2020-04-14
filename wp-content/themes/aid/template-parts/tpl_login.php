@@ -86,24 +86,28 @@ if (! is_user_logged_in()) {
                                                 <p class="registration-username">
                                                     <label for="user_login">Имя пользователя</label>
                                                     <input type="text" name="user_login" id="user_login" class="input" value="" size="20" style="" placeholder="Придумайте имя пользователя">
-
+                                                    <span hidden class="text-danger user_login_empty">Имя пользователя не введено</span>
                                                 </p>
                                                 <p class="registration-fullname">
                                                     <label for="user_fullname">ФИО</label>
                                                     <input type="text" name="user_fullname" id="user_fullname" class="input" value="" size="20" style="" placeholder="Иванов Иван Иванович">
+                                                    <span hidden class="text-danger user_fullname_empty">ФИО не введено</span>
                                                 </p>
                                                 <p class="registration-email">
                                                     <label for="user_email">E-mail</label>
                                                     <input type="email" name="user_email" id="user_email" class="input" value="" size="25" placeholder="Введите адрес электронной почты">
+                                                    <span hidden class="text-danger user_email_empty">Электронная почта не введена</span>
                                                 </p>
                                                 <input type="hidden" name="redirect_to" value="<?php echo site_url(); ?>">
                                                 <p class="registration-password">
                                                     <label for="user_password">Пароль</label>
                                                     <input type="password" name="user_password" id="user_password" class="input" value="" size="25" placeholder="Придумайте пароль">
+                                                    <span hidden class="text-danger user_password_empty">Пароль не введен</span>
                                                 </p>
                                                 <p class="registration-passwordVerify">
                                                     <label for="user_passwordVerify">Подтвердите пароль</label>
                                                     <input type="password" name="user_passwordVerify" id="user_passwordVerify" class="input" value="" size="25" placeholder="Подтвердите пароль">
+                                                    <span hidden class="text-danger user_passwordVerify_empty">Пароль не подтвержден</span>
                                                 </p>
                                                 <p id="reg_passmail" class="text-muted">Подтверждение регистрации будет отправлено на ваш e-mail.</p>
                                                 <p class="submit">

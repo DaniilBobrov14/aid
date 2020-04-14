@@ -33,7 +33,11 @@ jQuery(function ($) {
                 $('.user_passwordVerify_empty').removeAttr('hidden');
             }
 
-            console.log('действие совершено');
+            else if (! $('#user_login').val())
+            {
+                event.preventDefault();
+                $('.user_login_empty').attr('hidden');
+            }
 
         });
     }
