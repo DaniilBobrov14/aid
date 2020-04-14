@@ -618,8 +618,8 @@ if ( strlen( $usersearch ) ) {
                                     </th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
+                                <tbody class="tbody-data-user">
+                                <tr class="row-data-user">
                                     <td>
                                         <input type="text" name="user_login" id="user_login" class="input" size="20" value="">
                                     </td>
@@ -632,9 +632,6 @@ if ( strlen( $usersearch ) ) {
                                     <td>
                                         <input type="password" name="user_passwordVerify" id="user_passwordVerify" size="20" value="">
                                     </td>
-                                    <td>
-                                        <input type="button" class="button" value="+">
-                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -644,6 +641,7 @@ if ( strlen( $usersearch ) ) {
                         <div class="col-lg-12">
                             <div class="tablenav top">
                                 <input type="submit" name="wp-submit" class="button action" value="Добавить всех пользователей">
+                                <input type="button" class="button add-button" value="+">
                                 <input type="hidden" name="redirect_to" value="<?php echo admin_url('users.php'); ?>">
                             </div>
                         </div>
