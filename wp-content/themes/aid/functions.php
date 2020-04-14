@@ -222,27 +222,11 @@ function my_front_end_login_fail($username) {
 add_filter( 'registration_errors', 'my_validate_user_data' );
 function my_validate_user_data( $errors ){
     $referrer = $_SERVER['HTTP_REFERER'];
-//    if (empty($_POST['user_fullname']))
-//    {
-//        wp_redirect( add_query_arg('register', 'failed=fullname', $referrer ) );  // редиркетим и добавим параметр запроса ?login=failed
-//
-//    }
-//    elseif (empty($_POST['user_login']))
-//    {
-//        wp_redirect(add_query_arg('register' , 'failed=login', $referrer));
-//    }
-//    elseif (empty($_POST['user_email']))
-//    {
-//        wp_redirect(add_query_arg('register' , 'failed=email' , $referrer));
-//    }
-//    elseif (empty($_POST['user_password']) or empty($_POST['user_passwordVerify']))
-//    {
-//        wp_redirect(add_query_arg('register' , 'failed=password' , $referrer));
-//    }
-//    elseif ($_POST['user_password'] !== $_POST['user_passwordVerify'])
-//    {
-//        wp_redirect(add_query_arg('register' , 'failed=passwordVerify', $referrer));
-//    }
+
+    if (empty($_POST['user_passwordVerify']))
+    {
+        wp_redirect(add_query_arg('register' , 'failed=passwordVerify', $referrer)); // редиректим и добавим параметр запроса ?failed=passwordVerify
+    }
 
     return $errors;
 }
