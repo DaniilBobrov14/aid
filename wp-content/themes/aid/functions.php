@@ -223,11 +223,6 @@ add_filter( 'registration_errors', 'my_validate_user_data' );
 function my_validate_user_data( $errors ){
     $referrer = $_SERVER['HTTP_REFERER'];
 
-    if (empty($_POST['user_passwordVerify']))
-    {
-        wp_redirect(add_query_arg('register' , 'failed=passwordVerify', $referrer)); // редиректим и добавим параметр запроса ?failed=passwordVerify
-    }
-
     return $errors;
 }
 
