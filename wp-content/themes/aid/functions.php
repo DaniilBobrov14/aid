@@ -254,31 +254,40 @@ function register_several_users () {
 
             event.preventDefault();
 
-            let userDataArray = $(this).serializeArray();
+            $('.row-data-user').each(function () { //проходимся по каждой строке с классом .row-data-user
 
-            let data =
-                {
-                    action : 'register_user',
-                    userData : userDataArray
-                };
+                let data =
+                    {
+                        action : 'register_user',
+                        user_data :
+                            {
+                                // user_id : $('.user_id_input').val(),
+                                user_login : $(this).find('.user_login_input').val(), //по такому алгоритму собирать данные
+                                // user_fullname : $('.user_fullname_input').val(),
+                                // user_email : $('.user_email_input').val(),
+                                // user_password : $('.user_passwordVerify').val()
+                            }
+                    };
 
-            $.ajax({
+                $.ajax({
 
-                type : 'post',
-                url : '<?php echo admin_url('admin-ajax.php'); ?>' ,
-                data : data,
-                success: function (data) {
+                    type : 'post',
+                    url : '<?php echo admin_url('admin-ajax.php'); ?>' ,
+                    data : data,
+                    success: function (data) {
 
-                    console.log(data);
+                        console.log(data);
 
-                },
-                error: function (data) {
+                    },
+                    error: function (data) {
 
-                    console.log('провал');
-                    console.log(data);
+                        console.log('не подключается к ajax');
+                        console.log(data);
 
-                }
-            })
+                    }
+                })
+
+            });
 
         });
 
@@ -287,9 +296,13 @@ function register_several_users () {
 <?php
 }
 
-add_action('wp_ajax_register_user' , 'register_user_callback');
+add_action('wp_ajax_register_user' , 'register_user_callback'); //действие вызывает коллбэк в admin-ajax.php
 
 function register_user_callback() {
 
-    echo var_dump($_POST);
+    foreach ($_POST['user_data'] as $userData)
+    {
+        echo $userData;
+    }
+
 }
