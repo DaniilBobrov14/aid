@@ -242,3 +242,54 @@ function my_user_registration( $user_id ) {
     update_user_meta($user_id , 'nickname' , $_POST['user_login']);//отображаемый никнейм
     wp_set_password($_POST['user_passwordVerify'] , $user_id);//устанавливает пароль
 }
+
+add_action('admin_print_footer_scripts' , 'register_several_users');
+function register_several_users () {
+
+    ?>
+<script>
+    jQuery(function ($) {
+
+        $('#registerform').submit(function () {
+
+            event.preventDefault();
+
+            let userDataArray = $(this).serializeArray();
+
+            let data =
+                {
+                    action : 'register_user',
+                    userData : userDataArray
+                };
+
+            $.ajax({
+
+                type : 'post',
+                url : '<?php echo admin_url('admin-ajax.php'); ?>' ,
+                data : data,
+                success: function (data) {
+
+                    console.log(data);
+
+                },
+                error: function (data) {
+
+                    console.log('провал');
+                    console.log(data);
+
+                }
+            })
+
+        });
+
+    });
+</script>
+<?php
+}
+
+add_action('wp_ajax_register_user' , 'register_user_callback');
+
+function register_user_callback() {
+
+    echo var_dump($_POST);
+}
