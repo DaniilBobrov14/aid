@@ -592,7 +592,7 @@ if ( strlen( $usersearch ) ) {
         if (current_user_can('create_users'))
         {
             ?>
-            <form id="registerform" action="<?php echo site_url('wp-login.php?action=register') ?>" method="post">
+            <form id="registerform" action="<?php echo admin_url('admin-ajax.php'); ?>" method="post">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -642,7 +642,6 @@ if ( strlen( $usersearch ) ) {
                             <div class="tablenav top">
                                 <input type="submit" name="wp-submit" class="button action" value="Добавить всех пользователей">
                                 <input type="button" class="button add-button" value="+">
-                                <input type="hidden" name="redirect_to" value="<?php echo admin_url('users.php'); ?>">
                             </div>
                         </div>
                     </div>
