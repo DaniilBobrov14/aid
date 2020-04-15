@@ -614,23 +614,26 @@ if ( strlen( $usersearch ) ) {
                                         <label for="user_email">E-mail</label>
                                     </th>
                                     <th>
-                                        <label for="user_passwordVerify">Пароль</label>
+                                        <label for="user_passwordVerify">Пароль (не обязательно)</label>
                                     </th>
                                 </tr>
                                 </thead>
                                 <tbody class="tbody-data-user">
                                 <tr class="row-data-user">
                                     <td>
-                                        <input type="text" name="user_login" id="user_login" class="input" size="20" value="">
+                                        <input type="text" name="user_login" id="user_login" class="input user_login_input" size="20" value="">
                                     </td>
                                     <td>
-                                        <input type="text" name="user_fullname" id="user_fullname" class="input" size="20" value="">
+                                        <input type="text" name="user_fullname" id="user_fullname" class="input user_fullname_input" size="20" value="">
                                     </td>
                                     <td>
-                                        <input type="email" name="user_email" id="user_email" size="20" value="">
+                                        <input type="email" name="user_email" class="user_email_input" id="user_email" size="20" value="">
                                     </td>
                                     <td>
-                                        <input type="password" name="user_passwordVerify" id="user_passwordVerify" size="20" value="">
+                                        <input type="password" name="user_passwordVerify" class="user_passwordVerify_input" id="user_passwordVerify" size="20" value="">
+                                    </td>
+                                    <td hidden>
+                                        <input id="user_id" name="user_id" class="user_id_input" value="1" hidden>
                                     </td>
                                 </tr>
                                 </tbody>
