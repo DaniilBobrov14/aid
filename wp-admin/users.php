@@ -614,7 +614,7 @@ if ( strlen( $usersearch ) ) {
                                         <label for="user_email">E-mail</label>
                                     </th>
                                     <th>
-                                        <label for="user_passwordVerify">Пароль (не обязательно)</label>
+                                        <label for="user_passwordVerify">Пароль</label>
                                     </th>
                                 </tr>
                                 </thead>
