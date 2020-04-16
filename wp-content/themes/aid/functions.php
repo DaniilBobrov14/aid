@@ -261,11 +261,11 @@ function register_several_users () {
                         action : 'register_user',
                         user_data :
                             {
-                                // user_id : $('.user_id_input').val(),
+                                user_id : $(this).find('.user_id_input').val(),
                                 user_login : $(this).find('.user_login_input').val(), //по такому алгоритму собирать данные
-                                // user_fullname : $('.user_fullname_input').val(),
-                                // user_email : $('.user_email_input').val(),
-                                // user_password : $('.user_passwordVerify').val()
+                                user_fullname : $(this).find('.user_fullname_input').val(),
+                                user_email : $(this).find('.user_email_input').val(),
+                                user_password : $(this).find('.user_passwordVerify').val()
                             }
                     };
 
@@ -300,9 +300,6 @@ add_action('wp_ajax_register_user' , 'register_user_callback'); //действи
 
 function register_user_callback() {
 
-    foreach ($_POST['user_data'] as $userData)
-    {
-        echo $userData;
-    }
+    var_dump($_POST['user_data']);
 
 }
