@@ -300,15 +300,15 @@ add_action('wp_ajax_register_user' , 'register_user_callback'); //действи
 
 function register_user_callback() {
 
-//    var_dump($_POST['user_data']);
-
-    $user_name = $_POST['user_data']['user_login'];
+    $user_login = $_POST['user_data']['user_login'];
 
     $user_password = $_POST['user_data']['user_password'];
 
     $user_email = $_POST['user_data']['user_email'];
 
-    $user_id = wp_create_user($user_name , $user_password, $user_email);
+    $user_fullname = $_POST['user_data']['user_fullname'];
+
+    $user_id = wp_create_user($user_login , $user_password, $user_email); //создается юзер
 
     if (is_wp_error($user_id) ) {
 
@@ -317,7 +317,15 @@ function register_user_callback() {
 
     else {
 
-        echo 'пользователь с логином ' . $user_name . ' создан';
+        ##После успешной регистрации обновляются мета данные юзера
+
+        echo 'успех';
+
+        update_user_meta( $user_id, 'user_fullname', $user_fullname);//ФИО
+
+        update_user_meta($user_id , 'nickname' , $user_login);//Никнейм
+
+//        wp_redirect( add_query_arg('register', 'success', admin_url('users.php') ) );
     }
 
 }
