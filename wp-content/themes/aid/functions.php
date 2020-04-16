@@ -265,7 +265,7 @@ function register_several_users () {
                                 user_login : $(this).find('.user_login_input').val(), //по такому алгоритму собирать данные
                                 user_fullname : $(this).find('.user_fullname_input').val(),
                                 user_email : $(this).find('.user_email_input').val(),
-                                user_password : $(this).find('.user_passwordVerify').val()
+                                user_password : $(this).find('.user_passwordVerify_input').val()
                             }
                     };
 
