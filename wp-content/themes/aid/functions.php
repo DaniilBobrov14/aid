@@ -274,9 +274,9 @@ function register_several_users () {
                     type : 'post',
                     url : '<?php echo admin_url('admin-ajax.php'); ?>' ,
                     data : data,
-                    success: function (data) {
+                    success: function () {
 
-                        console.log(data);
+                        $('.wrap').prepend('<div class="alert alert-success" role="alert">Успех!</div>')
 
                     },
                     error: function (data) {
@@ -319,13 +319,11 @@ function register_user_callback() {
 
         ##После успешной регистрации обновляются мета данные юзера
 
-        echo 'успех';
-
         update_user_meta( $user_id, 'user_fullname', $user_fullname);//ФИО
 
         update_user_meta($user_id , 'nickname' , $user_login);//Никнейм
 
-//        wp_redirect( add_query_arg('register', 'success', admin_url('users.php') ) );
+        echo 'true';
     }
 
 }
