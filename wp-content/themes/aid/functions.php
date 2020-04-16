@@ -300,6 +300,24 @@ add_action('wp_ajax_register_user' , 'register_user_callback'); //действи
 
 function register_user_callback() {
 
-    var_dump($_POST['user_data']);
+//    var_dump($_POST['user_data']);
+
+    $user_name = $_POST['user_data']['user_login'];
+
+    $user_password = $_POST['user_data']['user_password'];
+
+    $user_email = $_POST['user_data']['user_email'];
+
+    $user_id = wp_create_user($user_name , $user_password, $user_email);
+
+    if (is_wp_error($user_id) ) {
+
+        echo $user_id->get_error_message();
+    }
+
+    else {
+
+        echo 'пользователь с логином ' . $user_name . ' создан';
+    }
 
 }
