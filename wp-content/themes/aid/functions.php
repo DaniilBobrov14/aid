@@ -278,7 +278,7 @@ function register_several_users () {
                     data : data,
                     success: function () {
 
-                        $('.wp-header-end').after('<div class="alert alert-success" role="alert">Успех! <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button></div>')
+                        $('.wp-header-end').after('<div id="message" class="notice notice-success is-dismissible"><p>Пользователи зарегистрированы .</p><a href="<?php echo admin_url('users.php'); ?>"> Обновить страницу</div>');
 
                     },
                     error: function (data) {
@@ -324,8 +324,6 @@ function register_user_callback() {
         update_user_meta( $user_id, 'user_fullname', $user_fullname);//ФИО
 
         update_user_meta($user_id , 'nickname' , $user_login);//Никнейм
-
-        echo 'true';
     }
 
 }
