@@ -278,7 +278,7 @@ function register_several_users () {
                     data : data,
                     success: function () {
 
-                        $('.wrap').prepend('<div class="alert alert-success" role="alert">Успех!</div>')
+                        $('.wp-header-end').after('<div class="alert alert-success" role="alert">Успех! <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button></div>')
 
                     },
                     error: function (data) {
