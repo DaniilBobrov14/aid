@@ -122,7 +122,7 @@ add_action( 'widgets_init', 'aid_widgets_init' );
 function aid_scripts() {
 	wp_enqueue_style( 'aid-style', get_stylesheet_uri() );
 
-	wp_enqueue_style('aid-bootstrap-js', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+	wp_enqueue_style('aid-bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
 
 	wp_enqueue_style('aid-scss-style' , get_template_directory_uri() . '/css/style.css');
 
