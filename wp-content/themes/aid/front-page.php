@@ -68,7 +68,12 @@
             <div class="col-lg-12">
                 <div class="users-count-block">
                     <div class="icon-users"></div>
-                    <span class="members-count">100+</span>
+                    <span class="members-count">
+                        <?php
+                        $result = count_users();
+                        echo '+' . $result['avail_roles']['subscriber'];
+                        ?>
+                    </span>
                 </div>
             </div>
         </div>
