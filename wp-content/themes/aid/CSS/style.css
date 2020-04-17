@@ -362,11 +362,13 @@
   font-family: 'Montserrat';
   font-weight: bold;
   font-size: 16px;
-  color: #fff;
   display: flex;
   justify-content: end;
 }
-.main-red-menu .user-profile .user-pic {
+.main-red-menu .user-profile .nav-link {
+  color: #fff;
+}
+.main-red-menu .user-profile .nav-link .user-pic {
   width: 30px;
   height: 30px;
   margin-right: 0.3rem;
