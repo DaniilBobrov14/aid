@@ -7,7 +7,7 @@
                 <span class="user-login-name"><?php echo $userData->user_login; ?></span>
             </a>
             <div class="dropdown-menu">
-                <a href="<?php echo admin_url('profile.php'); ?>" class="dropdown-item">adminAid</a>
+                <a href="<?php echo admin_url('profile.php'); ?>" class="dropdown-item"><?php echo $userData->user_login; ?></a>
                 <a href="<?php echo admin_url('profile.php'); ?>" class="dropdown-item">Изменить профиль</a>
                 <div class="dropdown-divider"></div>
                 <a href="<?php echo wp_login_url(site_url('/login/'))?>" class="dropdown-item">Выйти</a>
