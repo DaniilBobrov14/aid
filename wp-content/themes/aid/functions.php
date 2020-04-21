@@ -280,7 +280,7 @@ function register_several_users () {
                     data : data,
                     success: function () {
 
-                        $('.wp-header-end').after('<div id="message" class="notice notice-success is-dismissible"><p>Пользователи зарегистрированы .</p><a href="<?php echo admin_url('users.php'); ?>"> Обновить страницу</div>');
+                        $('.wp-header-end').after('<div id="message" class="notice notice-success is-dismissible"><p>Пользователь зарегистрирован ' + data['user_data']['user_login'] + ' .</p><a href="<?php echo admin_url('users.php'); ?>"> Обновить страницу</div>');
 
                     },
                     error: function (data) {
