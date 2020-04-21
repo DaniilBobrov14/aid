@@ -650,6 +650,10 @@ if ( strlen( $usersearch ) ) {
                     </div>
                 </div>
             </form>
+            <form id="excelForm" action="<?php echo admin_url('admin-ajax.php'); ?>" enctype="multipart/form-data" method="post">
+                <img class="import-excel-img" src="<?php echo wp_get_attachment_image_url(151 ); ?>">
+                <input class="import-excel-input" name="excel_file" type="file" accept=".xlsx , .exl">
+            </form>
             <?php
         }
         ?>
