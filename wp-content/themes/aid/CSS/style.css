@@ -692,6 +692,14 @@
 .post, .page {
   margin-bottom: 0;
 }
+.import-excel-img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.import-excel-input {
+  display: none;
+}
 .stroke-hr {
   -moz-border-bottom-colors: none;
   -moz-border-image: none;
