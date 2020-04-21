@@ -295,6 +295,16 @@ function register_several_users () {
 
         });
 
+        var files ;
+
+        $('.import-excel-input').on('change' , function () {
+
+            files = this.files;
+
+            $('.file-data').css('display' , 'block').append(files[0]['name']); // отображает название добавленного файла
+
+        });
+
     });
 </script>
 <?php
