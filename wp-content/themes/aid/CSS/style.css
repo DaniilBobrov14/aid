@@ -696,10 +696,22 @@
   width: 32px;
   height: 32px;
   cursor: pointer;
-  margin-top: 1rem;
 }
 .import-excel-input {
+  display: none !important;
+}
+.import-excel-input-view {
+  color: #fff;
+}
+.file-data {
   display: none;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 1rem;
+}
+.submit-excel {
+  background-color: #016087 !important;
+  color: #fff !important;
 }
 .stroke-hr {
   -moz-border-bottom-colors: none;
