@@ -34,11 +34,13 @@ if (isset($_POST['excel_file_upload'])) {
 
     $data = $done_files ? array('files' => $done_files ) : array('error' => 'Ошибка загрузки файлов.');
 
-    $filePath = "$uploadPath/$file_name";
+    $filePath = "$uploadPath/$file_name"; //конечный путь до загруженного файла
 
-    $fileType = wp_check_filetype($filePath , null);
+    $fileType = wp_check_filetype($filePath , null); //проверка типа файла
 
     $wp_upload_dir = wp_upload_dir();
+
+    /** Добавление загруженного файла в mysql и в медиатеку wordpress */
 
     $attachment = array (
 
@@ -50,13 +52,11 @@ if (isset($_POST['excel_file_upload'])) {
 
     );
 
-    $attach_id = wp_insert_attachment($attachment , $filePath);
+    $attach_id = wp_insert_attachment($attachment , $filePath); //функция добавления файла в медиатеку
 
-    require_once( ABSPATH . 'wp-admin/includes/file.php' );
+    $attach_data = wp_generate_attachment_metadata($attach_id , $filePath); //генерация метаданных в mysql
 
-    $attach_data = wp_generate_attachment_metadata($attach_id , $filePath);
-
-    wp_update_attachment_metadata($attach_id , $attach_data);
+    wp_update_attachment_metadata($attach_id , $attach_data); //обновление метаданных в mysql
 
     die( json_encode( $data ) );
 
