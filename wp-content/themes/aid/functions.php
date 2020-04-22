@@ -305,6 +305,44 @@ function register_several_users () {
 
         });
 
+        $('.submit-excel').click(function (event) {
+
+            event.stopPropagation(); // остановка всех текущих JS событий
+            event.preventDefault(); // остановка дефолтного события для текущего элемента
+
+            if (typeof files == 'undefined') return;
+
+            var data = new FormData();
+
+            $.each(files , function (key, value) {
+                data.append(key,value);
+            });
+
+            data.append('excel_file_upload' , 1);
+
+            $.ajax({
+
+                url : '<?php echo admin_url('upload-excel.php'); ?>',
+                type : 'POST',
+                data : data,
+                cache : false,
+                dataType : 'json',
+                processData : false,
+                contentType : false,
+                success: function (data) {
+                    console.log(data);
+                    console.log('успех');
+                },
+                error : function (data) {
+
+                    console.log(data);
+                    console.log('провал');
+                }
+
+            });
+
+        });
+
     });
 </script>
 <?php
