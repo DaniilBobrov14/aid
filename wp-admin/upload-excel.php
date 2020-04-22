@@ -1,12 +1,20 @@
 <?php
 
+/**
+ * Upload excel file to wordpress directory and registration on mysql
+ *
+ */
+
+/** Load WordPress Bootstrap */
+require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
+
 $currentYear = date('Y');
 
 $currentMonth = date('m');
 
 if (isset($_POST['excel_file_upload'])) {
 
-    $uploadPath = __DIR__ . "/../wp-content/uploads/$currentYear/$currentMonth";
+    $uploadPath = __DIR__ . "/../wp-content/uploads/$currentYear/$currentMonth"; //загрузка файла по текущему году и месяцу
 
     $files = $_FILES;
 
@@ -26,31 +34,29 @@ if (isset($_POST['excel_file_upload'])) {
 
     $data = $done_files ? array('files' => $done_files ) : array('error' => 'Ошибка загрузки файлов.');
 
-//    $filePath = "$uploadPath/$file_name";
-//
-//    $fileType = wp_check_filetype(basename($filePath) , null);
-//
-//    var_dump($fileType);
-//
-//    $wp_upload_dir = wp_upload_dir();
-//
-//    $attachment = array (
-//
-//        'guid' => $wp_upload_dir['url'] . '/' . basename($filePath),
-//        'post_mime_type' => $fileType['type'],
-//        'post_title' => preg_replace('/\.[^.]+$/', '', basename( $filePath )),
-//        'post_content' => '',
-//        'post_status' => 'inherit'
-//
-//    );
-//
-//    $attach_id = wp_insert_attachment($attachment , $filePath);
-//
-//    require_once( ABSPATH . 'wp-admin/includes/file.php' );
-//
-//    $attach_data = wp_generate_attachment_metadata($attach_id , $filePath);
-//
-//    wp_update_attachment_metadata($attach_id , $attach_data);
+    $filePath = "$uploadPath/$file_name";
+
+    $fileType = wp_check_filetype($filePath , null);
+
+    $wp_upload_dir = wp_upload_dir();
+
+    $attachment = array (
+
+        'guid' => $wp_upload_dir['url'] . '/' . basename($filePath),
+        'post_mime_type' => $fileType['type'],
+        'post_title' => preg_replace('/\.[^.]+$/', '', basename( $filePath )),
+        'post_content' => '',
+        'post_status' => 'inherit'
+
+    );
+
+    $attach_id = wp_insert_attachment($attachment , $filePath);
+
+    require_once( ABSPATH . 'wp-admin/includes/file.php' );
+
+    $attach_data = wp_generate_attachment_metadata($attach_id , $filePath);
+
+    wp_update_attachment_metadata($attach_id , $attach_data);
 
     die( json_encode( $data ) );
 
