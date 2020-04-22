@@ -10,10 +10,10 @@ jQuery(function ($) {
 
     });
 
-    $('.import-excel-img').click(function () {
+    $('.import-excel-input-view').click(function () {
 
         $('.import-excel-input').click();
 
-    });
+    })
 
 });
