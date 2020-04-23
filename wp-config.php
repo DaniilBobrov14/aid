@@ -77,6 +77,9 @@ $table_prefix = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define( 'WP_DEBUG', true );
+define('WP_DEBUG_LOG' , true);
+define('WP_DEBUG_DISPLAY' , false);
+@ini_set('display_errors' , 0);
 
 /* Это всё, дальше не редактируем. Успехов! */
 
