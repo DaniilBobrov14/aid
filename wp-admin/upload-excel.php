@@ -54,6 +54,8 @@ if (isset($_POST['excel_file_upload'])) {
 
     $attach_id = wp_insert_attachment($attachment , $filePath); //функция добавления файла в медиатеку
 
+    require_once( ABSPATH . 'wp-admin/includes/image.php' );
+
     $attach_data = wp_generate_attachment_metadata($attach_id , $filePath); //генерация метаданных в mysql
 
     wp_update_attachment_metadata($attach_id , $attach_data); //обновление метаданных в mysql
