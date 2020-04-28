@@ -383,7 +383,7 @@ function register_user_callback() {
 
         update_user_meta( $user_id, 'user_fullname', $user_fullname);//ФИО
 
-        update_user_meta($user_id , 'nickname' , $user_login);//Никнейм
+        update_user_meta($user_id , 'nickname' , $user_login);//Никнейм или логин
     }
 
 }
