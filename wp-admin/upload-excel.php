@@ -8,6 +8,8 @@
 /** Load WordPress Bootstrap */
 require_once( $_SERVER['DOCUMENT_ROOT'] . '/wp-load.php' );
 
+/** Load Composer */
+
 require_once ($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
 
 $currentYear = date('Y');
@@ -79,7 +81,11 @@ if (isset($_POST['excel_file_upload'])) {
             // TODO: Implement readCell() method.
 
             if ($row >= 2) {
+
+                //чтобы задать фильтр по колонне нужно прописать условие in_array($column, range('A' , 'A')) в if
+
                 return true ;
+
             }
 
             return false ;
@@ -87,20 +93,46 @@ if (isset($_POST['excel_file_upload'])) {
 
     }
 
-    $filterSubset = new ReadFiler();
+    $readFilter = new ReadFiler();
 
     $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 
-    $reader->setReadFilter($filterSubset);
+    $reader->setReadFilter($readFilter);
 
     $spreadSheet = $reader->load($inputFileName);
 
     $dataExcel = $spreadSheet->getActiveSheet()->toArray(); //данные из excel файла разбитые в массиве
 
-    ///*добавить импорт определенных данных из экспеля. Например только логин
-    /// возможно нужно делать по колонкам и в массив
-    /// *посмотреть создание пользователей в файле functions.php (функция register_user_callback())
-    /// данные из excel перенести в регистрацию и сделать соответствующее отображение в файле users.php
+    foreach ($dataExcel as $row) {
 
+        $login = $row[0];
+
+        $fullName = $row[1];
+
+        $email = $row[2];
+
+        $password = $row[3];
+
+        if ($login != NULL or $fullName != NULL or $email != NULL or $password != NULL or $fullName != NULL) {
+
+            $user_id = wp_create_user($login , $password, $email); //создается юзер
+
+            if (is_wp_error($user_id) ) {
+
+                echo $user_id->get_error_message();
+            }
+
+            else {
+
+                ##После успешной регистрации обновляются мета данные юзера
+
+                update_user_meta( $user_id, 'user_fullname', $fullName);//ФИО
+
+                update_user_meta($user_id , 'nickname' , $login);//Никнейм или логин
+            }
+
+        }
+
+    }
 
 }
