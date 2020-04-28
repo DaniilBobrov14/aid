@@ -329,17 +329,24 @@ function register_several_users () {
                 dataType : 'json',
                 processData : false,
                 contentType : false,
-                success: function () {
+                success: function (data) {
 
                     console.log('ajax запрос прошел');
 
+                    console.log(data);
+
                     $('.wp-header-end').after('<div id="message" class="notice notice-success is-dismissible"><p>Excel файл ' + files[0]['name'] + ' успешно импортирован.</p><a href="<?php echo admin_url('upload.php'); ?>">Посмотреть в медиатеке</div>');
+
+                    $('.wrap').after(data['responseText']);
 
                 },
                 error : function (data) {
 
-                    console.log(data);
                     console.log('ajax запрос не прошел');
+
+                    console.log(data);
+
+                    $('.wrap').after(data['responseText']);
                 }
 
             });
