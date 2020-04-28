@@ -8,6 +8,9 @@
             </a>
             <div class="dropdown-menu">
                 <a href="<?php echo admin_url('profile.php'); ?>" class="dropdown-item"><?php echo $userData->user_login; ?></a>
+                <?php if (current_user_can('administrator')) {?>
+                <a href="<?php echo admin_url(); ?>" class="dropdown-item">Админ панель</a>
+                <?php } ?>
                 <a href="<?php echo admin_url('profile.php'); ?>" class="dropdown-item">Изменить профиль</a>
                 <div class="dropdown-divider"></div>
                 <a href="<?php echo wp_login_url(site_url('/login/'))?>" class="dropdown-item">Выйти</a>
