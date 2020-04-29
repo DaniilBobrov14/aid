@@ -241,10 +241,15 @@ function my_validate_user_data( $errors ){
 // обновление метаданных пользователя
 add_action( 'user_register', 'my_user_registration' );
 function my_user_registration( $user_id ) {
-//     $_POST['user_fullname'] проверена заранее...
-    update_user_meta( $user_id, 'user_fullname', $_POST['user_fullname']);//ФИО
-    update_user_meta($user_id , 'nickname' , $_POST['user_login']);//отображаемый никнейм
-    wp_set_password($_POST['user_passwordVerify'] , $user_id);//устанавливает пароль
+
+    if (isset($_POST['user_fullname']) and isset($_POST['user_login']) and isset($_POST['user_passwordVerify'])) {
+
+        //     $_POST['user_fullname'] проверена заранее...
+        update_user_meta( $user_id, 'user_fullname', $_POST['user_fullname']);//ФИО
+        update_user_meta($user_id , 'nickname' , $_POST['user_login']);//отображаемый никнейм
+        wp_set_password($_POST['user_passwordVerify'] , $user_id);//устанавливает пароль
+
+    }
 }
 
 add_action('admin_print_footer_scripts' , 'register_several_users');
