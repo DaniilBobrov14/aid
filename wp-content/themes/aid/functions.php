@@ -401,9 +401,9 @@ function register_user_callback() {
  * Added new column for users.php.
  */
 
-add_filter('manage_users_columns' , 'add_new_user_column');
+add_filter('manage_users_columns' , 'add_new_user_column_view');
 
-function add_new_user_column ($columns) {
+function add_new_user_column_view ($columns) {
 
     $columns['full_name'] = 'ФИО';
 
