@@ -392,3 +392,35 @@ function register_user_callback() {
     }
 
 }
+
+/**
+ * Added new column for users.php.
+ */
+
+add_filter('manage_users_columns' , 'add_new_user_column');
+
+function add_new_user_column ($columns) {
+
+    $columns['full_name'] = 'ФИО';
+
+    return $columns ;
+}
+
+add_filter ('manage_users_custom_column' , 'add_new_user_column_content' , 10 , 3);
+
+function add_new_user_column_content ($content , $column, $user_id) {
+
+    if ('full_name' === $column) {
+
+        $array = get_metadata('user', $user_id , 'user_fullname');
+
+        foreach ($array as $fullname) {
+
+            $content = $fullname;
+
+        }
+    }
+
+    return $content ;
+
+}
