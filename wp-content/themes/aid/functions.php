@@ -252,6 +252,10 @@ function my_user_registration( $user_id ) {
     }
 }
 
+/**
+ * Register several users in input type fields
+ */
+
 add_action('admin_print_footer_scripts' , 'register_several_users');
 function register_several_users () {
 
