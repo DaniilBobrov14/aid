@@ -344,8 +344,6 @@ function register_script_several_users_single_and_from_excel () {
 
                     console.log('ajax запрос прошел');
 
-                    console.log(data);
-
                     $('.wp-header-end').after('<div id="message" class="notice notice-success is-dismissible"><p>Excel файл ' + files[0]['name'] + ' успешно импортирован.</p><a href="<?php echo admin_url('upload.php'); ?>">Посмотреть в медиатеке</a><br><a href="<?php echo admin_url('users.php'); ?>">Обновить страницу</a></div>');
 
                     $('.wrap').after(data['responseText']);
