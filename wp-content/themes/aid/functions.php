@@ -427,6 +427,8 @@ function add_new_user_column_view ($columns) {
 
     $columns['full_name'] = 'ФИО';
 
+    $columns['qr_key_login'] = 'QR Ключ';
+
     return $columns ;
 }
 
@@ -443,6 +445,18 @@ function add_new_user_column_content ($content , $column, $user_id) {
             $content = $fullname;
 
         }
+    }
+
+    if ('qr_key_login' === $column) {
+
+        $array = get_metadata('user' , $user_id , 'qr_key_login');
+
+        foreach ($array as $qr_key_login) {
+
+            $content =$qr_key_login ;
+
+        }
+
     }
 
     return $content ;
