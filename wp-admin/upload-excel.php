@@ -113,6 +113,10 @@ if (isset($_POST['excel_file_upload'])) {
 
         $password = $row[3];
 
+        $user_qr_key_login = get_user_qr_key_login(32);
+
+        $user_qr_key_login_link = site_url() . '/?user_qr_key_login=' . $user_qr_key_login ;
+
         if ($login != NULL or $fullName != NULL or $email != NULL or $password != NULL or $fullName != NULL) {
 
             $user_id = wp_create_user($login , $password, $email); //создается юзер
@@ -129,6 +133,10 @@ if (isset($_POST['excel_file_upload'])) {
                 update_user_meta( $user_id, 'user_fullname', $fullName);//ФИО
 
                 update_user_meta($user_id , 'nickname' , $login);//Никнейм или логин
+
+                update_user_meta($user_id , 'qr_key_login' , $user_qr_key_login);
+
+                update_user_meta($user_id , 'qr_key_login_link' , $user_qr_key_login_link);
             }
 
         }
