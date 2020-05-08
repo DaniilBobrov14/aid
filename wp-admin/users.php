@@ -653,7 +653,7 @@ if ( strlen( $usersearch ) ) {
             <p>Импорт Excel</p>
             <button type="button" class="button import-excel-input-view">Выбрать Excel файл</button>
             <input class="button import-excel-input" name="excel_file" type="file" accept=".xlsx , .exl">
-            <button class="button submit-fill" type="button">Подтвердить</button>
+            <button class="button submit-fill submit-excel" type="button">Подтвердить</button>
             <span class="file-data"></span>
             <?php
         }
