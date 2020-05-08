@@ -304,7 +304,7 @@ function register_several_users () {
 
         });
 
-        /* импорт из excel файла */
+        /* импорт excel файла */
 
         var files ;
 
