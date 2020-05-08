@@ -369,6 +369,20 @@ function register_several_users () {
 <?php
 }
 
+function get_user_qr_key_login($length) {
+
+    $password = '';
+
+    for ($i = 0; $i < $length; $i++) {
+
+        $password = chr(mt_rand(97, 122)); //97 - это a, а 122 - это z
+
+    }
+
+    return $password;
+
+}
+
 add_action('wp_ajax_register_user' , 'register_user_callback'); //действие вызывает коллбэк в admin-ajax.php
 
 function register_user_callback() {
