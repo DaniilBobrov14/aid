@@ -304,6 +304,8 @@ function register_several_users () {
 
         });
 
+        /* импорт из excel файла */
+
         var files ;
 
         $('.import-excel-input').on('change' , function () {
