@@ -19,7 +19,22 @@
   margin-top: 1rem;
 }
 
-.submit-excel {
+.submit-fill {
   background-color: #016087 !important;
   color: $white !important;
+}
+
+.user_qr_key_login {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13px;
+  min-height: 30px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-appearance: none;
+  white-space: nowrap;
+  box-sizing: border-box;
 }

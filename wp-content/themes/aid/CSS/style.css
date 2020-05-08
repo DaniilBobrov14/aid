@@ -709,9 +709,23 @@
   font-size: 18px;
   margin-top: 1rem;
 }
-.submit-excel {
+.submit-fill {
   background-color: #016087 !important;
   color: #fff !important;
+}
+.user_qr_key_login {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 13px;
+  min-height: 30px;
+  margin: 0;
+  padding: 0 10px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-appearance: none;
+  white-space: nowrap;
+  box-sizing: border-box;
 }
 .stroke-hr {
   -moz-border-bottom-colors: none;
