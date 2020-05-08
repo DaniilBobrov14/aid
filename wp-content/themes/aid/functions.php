@@ -435,7 +435,7 @@ function add_new_user_column_view ($columns) {
 
     $columns['full_name'] = 'ФИО';
 
-    $columns['qr_key_login'] = 'QR Ключ';
+    $columns['qr_key_login_link'] = 'QR сссылка';
 
     return $columns ;
 }
@@ -455,9 +455,9 @@ function add_new_user_column_content ($content , $column, $user_id) {
         }
     }
 
-    if ('qr_key_login' === $column) {
+    if ('qr_key_login_link' === $column) {
 
-        $array = get_metadata('user' , $user_id , 'qr_key_login');
+        $array = get_metadata('user' , $user_id , 'qr_key_login_link');
 
         foreach ($array as $qr_key_login) {
 
