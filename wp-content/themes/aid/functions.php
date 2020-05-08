@@ -256,8 +256,8 @@ function my_user_registration( $user_id ) {
  * Register several users in input type fields
  */
 
-add_action('admin_print_footer_scripts' , 'register_several_users_single_and_from_excel');
-function register_several_users_single_and_from_excel () {
+add_action('admin_print_footer_scripts' , 'register_script_several_users_single_and_from_excel');
+function register_script_several_users_single_and_from_excel () {
 
     ?>
 <script>
