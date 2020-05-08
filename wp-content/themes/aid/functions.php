@@ -433,4 +433,5 @@ function add_new_user_column_content ($content , $column, $user_id) {
  * TODO: добавить при регистрации (одиночной и импорт excel) новое поле qr_key_login в wp_usermeta
  * TODO: Добавить поле в одиночную регистрацию
  * TODO: Дбоавить поле в импорт excel
+ * TODO: Добавиьт при регистрации (одиночной и импорт excel) новое поле qr_key_login_active в wp_usermeta (bool значение для поля). Поле будет определять активен ли qr код
  */
