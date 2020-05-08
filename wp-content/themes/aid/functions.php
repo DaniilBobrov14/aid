@@ -395,6 +395,8 @@ function register_user_callback() {
 
     $user_fullname = $_POST['user_data']['user_fullname'];
 
+    $user_qr_key_login = get_user_qr_key_login(32);
+
     $user_id = wp_create_user($user_login , $user_password, $user_email); //создается юзер
 
     if (is_wp_error($user_id) ) {
@@ -409,6 +411,8 @@ function register_user_callback() {
         update_user_meta( $user_id, 'user_fullname', $user_fullname);//ФИО
 
         update_user_meta($user_id , 'nickname' , $user_login);//Никнейм или логин
+
+        update_user_meta($user_id , 'qr_key_login' , $user_qr_key_login);
     }
 
 }
