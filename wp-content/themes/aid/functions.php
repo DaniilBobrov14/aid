@@ -375,7 +375,11 @@ function get_user_qr_key_login($length) {
 
     for ($i = 0; $i < $length; $i++) {
 
-        $password = chr(mt_rand(97, 122)); //97 - это a, а 122 - это z
+        $symbol = chr(mt_rand(97, 122)); //97 - это a, а 122 - это z
+
+        settype($symbol , ' string');
+
+        $password = $password . $symbol ;
 
     }
 
