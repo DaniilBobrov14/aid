@@ -616,6 +616,11 @@ if ( strlen( $usersearch ) ) {
                                     <th>
                                         <label for="user_passwordVerify">Пароль</label>
                                     </th>
+                                    <th>
+                                        <label for="user_qr_key_login">
+                                            qr ключ для входа
+                                        </label>
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody class="tbody-data-user">
@@ -631,6 +636,9 @@ if ( strlen( $usersearch ) ) {
                                     </td>
                                     <td>
                                         <input type="password" name="user_passwordVerify" class="user_passwordVerify_input" id="user_passwordVerify" size="20" value="">
+                                    </td>
+                                    <td>
+                                        <input type="button" class="user_qr_key_login submit-fill" id="user_qr_key_login" name="user_qr_key_login" size="20" value="Создать qr ключ">
                                     </td>
                                     <td hidden>
                                         <input id="user_id" name="user_id" class="user_id_input" value="1" hidden>
@@ -653,7 +661,7 @@ if ( strlen( $usersearch ) ) {
             <p>Импорт Excel</p>
             <button type="button" class="button import-excel-input-view">Выбрать Excel файл</button>
             <input class="button import-excel-input" name="excel_file" type="file" accept=".xlsx , .exl">
-            <button class="button submit-excel" type="button">Подтвердить</button>
+            <button class="button submit-fill" type="button">Подтвердить</button>
             <span class="file-data"></span>
             <?php
         }
