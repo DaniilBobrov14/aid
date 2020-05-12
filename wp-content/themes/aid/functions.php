@@ -530,7 +530,7 @@ function add_new_user_column_content ($content , $column, $user_id) {
 
             elseif ($qr_key_login_active === 'true') {
 
-                $content = 'аквивная';
+                $content = 'активная';
 
             }
 
