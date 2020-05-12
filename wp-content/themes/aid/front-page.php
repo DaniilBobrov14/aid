@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php if (change_qr_key_login_active_status() == true) {
+<?php if (change_qr_key_login_active_status() == true && isset($_GET['user_id']) && isset($_GET['user_qr_key_login'])) {
 
 ?>
     <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="WelcomeModalLabel" aria-hidden="true">
