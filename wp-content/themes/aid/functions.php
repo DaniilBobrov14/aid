@@ -253,6 +253,11 @@ function my_user_registration( $user_id ) {
 }
 
 /**
+ * Admin bar scripts
+ */
+
+
+/**
  * Register several users in input type fields
  */
 
@@ -366,6 +371,42 @@ function register_script_several_users_single_and_from_excel () {
 </script>
 <?php
 }
+
+/**
+ * Change color of qr key status
+ */
+
+add_action('admin_print_footer_scripts' , 'change_color_of_qr_key_status');
+function change_color_of_qr_key_status () {
+    ?>
+    <script>
+        jQuery(function($){
+
+            $('tr').each(function () {
+
+                if ($(this).find('.qr_key_login_active').html() === 'не активна') {
+
+                    $(this).find('.qr_key_login_active').css('color' , 'red');
+
+                }
+
+                else if ($(this).find('.qr_key_login_active').html() === 'активная') {
+
+                    $(this).find('.qr_key_login_active').css('color' , 'green');
+
+                }
+
+            });
+
+        });
+    </script>
+<?php
+
+}
+
+/**
+ * Admin bar scripts end
+ */
 
 function get_user_qr_key_login($length) {
 
