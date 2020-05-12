@@ -373,55 +373,6 @@ function register_script_several_users_single_and_from_excel () {
 }
 
 /**
- * WP Ajax functions
- */
-
-add_action('wp_ajax_register_user' , 'register_user_callback'); //действие вызывает коллбэк в admin-ajax.php
-
-function register_user_callback() {
-
-    $user_login = $_POST['user_data']['user_login'];
-
-    $user_password = $_POST['user_data']['user_password'];
-
-    $user_email = $_POST['user_data']['user_email'];
-
-    $user_fullname = $_POST['user_data']['user_fullname'];
-
-    $user_qr_key_login = get_user_qr_key_login(32);
-
-    $qr_key_login_active = 'false' ; //значение активации qr кода по умолчанию
-
-    $user_id = wp_create_user($user_login , $user_password, $user_email); //создается юзер
-
-    $user_qr_key_login_link = site_url() . '/?user_qr_key_login=' . $user_qr_key_login . '&user_id=' . $user_id  ; //ссылка по которой пользователи могут переходить для активации
-
-    if (is_wp_error($user_id) ) {
-
-        echo $user_id->get_error_message();
-    }
-
-    else {
-
-        ##После успешной регистрации обновляются мета данные юзера
-
-        update_user_meta( $user_id, 'user_fullname', $user_fullname);//ФИО
-
-        update_user_meta($user_id , 'nickname' , $user_login);//Никнейм или логин
-
-        update_user_meta($user_id , 'qr_key_login' , $user_qr_key_login);
-
-        update_user_meta($user_id , 'qr_key_login_link' , $user_qr_key_login_link);
-
-        update_user_meta($user_id , 'qr_key_login_active' , $qr_key_login_active);
-
-    }
-
-}
-
-add_action('wp_ajax_change_qr_login_active_status' , 'ajax_change_qr_login_active_status');
-
-/**
  * Change color of qr key status
  */
 
@@ -474,6 +425,55 @@ function get_user_qr_key_login($length) {
     return $password;
 
 }
+
+/**
+ * WP Ajax functions
+ */
+
+add_action('wp_ajax_register_user' , 'register_user_callback'); //действие вызывает коллбэк в admin-ajax.php
+
+function register_user_callback() {
+
+    $user_login = $_POST['user_data']['user_login'];
+
+    $user_password = $_POST['user_data']['user_password'];
+
+    $user_email = $_POST['user_data']['user_email'];
+
+    $user_fullname = $_POST['user_data']['user_fullname'];
+
+    $user_qr_key_login = get_user_qr_key_login(32);
+
+    $qr_key_login_active = 'false' ; //значение активации qr кода по умолчанию
+
+    $user_id = wp_create_user($user_login , $user_password, $user_email); //создается юзер
+
+    $user_qr_key_login_link = site_url() . '/?user_qr_key_login=' . $user_qr_key_login . '&user_id=' . $user_id  ; //ссылка по которой пользователи могут переходить для активации
+
+    if (is_wp_error($user_id) ) {
+
+        echo $user_id->get_error_message();
+    }
+
+    else {
+
+        ##После успешной регистрации обновляются мета данные юзера
+
+        update_user_meta( $user_id, 'user_fullname', $user_fullname);//ФИО
+
+        update_user_meta($user_id , 'nickname' , $user_login);//Никнейм или логин
+
+        update_user_meta($user_id , 'qr_key_login' , $user_qr_key_login);
+
+        update_user_meta($user_id , 'qr_key_login_link' , $user_qr_key_login_link);
+
+        update_user_meta($user_id , 'qr_key_login_active' , $qr_key_login_active);
+
+    }
+
+}
+
+add_action('wp_ajax_change_qr_login_active_status' , 'ajax_change_qr_login_active_status');
 
 /**
  * Added new column for users.php.
