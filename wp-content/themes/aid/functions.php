@@ -538,6 +538,19 @@ function add_new_user_column_content ($content , $column, $user_id) {
 
 }
 
+function change_qr_key_login_active_status ($user_id) {
+
+    if (isset($_GET['user_qr_key_login']) && $_GET['user_qr_key_login'] == get_user_meta($user_id, 'qr_key_login')) {
+
+        update_user_meta($user_id , 'qr_key_login_active', 'true');
+
+    }
+
+    return true;
+
+}
+
 /**
- * TODO: Добавить при регистрации (одиночной и импорт excel) новое поле qr_key_login_active в wp_usermeta (bool значение для поля). Поле будет определять активен ли qr код
+ * TODO: Проверить состояние ссылки qr_key_login_active при входе. Изменить статус wp_user_meta если зашли по ссылке
+ * TODO: Установить временный таймер на значение true для qr_key_login_active исходя из продолжительности мероприятия
  */
