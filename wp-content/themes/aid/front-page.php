@@ -11,12 +11,20 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    ...
-                </div>
+<!--                <div class="modal-body">-->
+<!--                </div>-->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    <a href="<?php echo get_permalink(26); ?>">
+                        <button class="btn btn-success">
+                            Перейти к мероприятиям
+                        </button>
+                    </a>
+                    <a href="<?php echo admin_url('profile.php') ?>">
+                        <button class="btn profile-btn">
+                            Личный профиль
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
