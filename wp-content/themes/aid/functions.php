@@ -473,8 +473,6 @@ function register_user_callback() {
 
 }
 
-add_action('wp_ajax_change_qr_login_active_status' , 'ajax_change_qr_login_active_status');
-
 /**
  * Added new column for users.php.
  */
