@@ -1,3 +1,20 @@
+#welcomeModal {
+
+  .modal-title {
+    font-family: $montserrat;
+    font-weight: $regularWeight;
+  }
+
+  .modal-content {
+    .modal-footer {
+      .profile-btn {
+        background-color: $redMain;
+        color: $white;
+      }
+    }
+  }
+
+}
 .content-slider {
   margin-top: 6rem;
   .slider-slick-wrapper {

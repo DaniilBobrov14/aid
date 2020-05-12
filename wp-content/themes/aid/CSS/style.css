@@ -99,6 +99,18 @@
   font-weight: normal;
   font-size: 20px;
 }
+#welcomeModal .modal-title {
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+#welcomeModal .modal-content .modal-footer .event-btn {
+  background-color: #f54337;
+  color: #fff;
+}
+#welcomeModal .modal-content .modal-footer .profile-btn {
+  background-color: #f54337;
+  color: #fff;
+}
 .content-slider {
   margin-top: 6rem;
 }
