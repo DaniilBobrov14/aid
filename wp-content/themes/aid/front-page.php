@@ -30,7 +30,33 @@
         </div>
     </div>
 
-    <?php }?>
+    <?php
+}
+elseif (change_color_of_qr_key_status() == false && isset($_GET['user_id']) && isset($_GET['user_qr_key_login']) ) {?>
+
+    <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="WelcomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="WelcomeModalLabel">Допущена ошибка в QR ссылке. Просконируйте еще раз!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    В параметрах указан неверно user_id или user_qr_key_login. Укажите корректный url в адресной строке
+                </div>
+                <div class="modal-footer">
+                    <a href="<?php site_url() ?>">
+                        <button class="btn btn-outline-warning">
+                            Обновить
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php } ?>
 <section class="content-slider">
     <div class="container">
         <div class="row">
