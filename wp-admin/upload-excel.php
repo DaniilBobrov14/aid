@@ -115,13 +115,13 @@ if (isset($_POST['excel_file_upload'])) {
 
         $user_qr_key_login = get_user_qr_key_login(32); //создание qr ключа для авторизации
 
-        $user_qr_key_login_link = site_url() . '/?user_qr_key_login=' . $user_qr_key_login ; //ссылка для qr кода
-
         $qr_key_login_active = 'false' ; //значение активации qr кода по умолчанию
 
         if ($login != NULL or $fullName != NULL or $email != NULL or $password != NULL or $fullName != NULL) {
 
             $user_id = wp_create_user($login , $password, $email); //создается юзер
+
+            $user_qr_key_login_link = site_url() . '/?user_qr_key_login=' . $user_qr_key_login . '&user_id' . $user_id  ; //ссылка по которой пользователи могут переходить для активации
 
             if (is_wp_error($user_id) ) {
 
