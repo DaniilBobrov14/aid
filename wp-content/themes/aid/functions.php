@@ -440,6 +440,8 @@ function add_new_user_column_view ($columns) {
 
     $columns['qr_key_login_link'] = 'QR сссылка';
 
+    $columns['qr_key_login_active'] = 'Статус ссылки';
+
     return $columns ;
 }
 
@@ -465,6 +467,27 @@ function add_new_user_column_content ($content , $column, $user_id) {
         foreach ($array as $qr_key_login) {
 
             $content =$qr_key_login ;
+
+        }
+
+    }
+
+    if ('qr_key_login_active' === $column) {
+
+        $array = get_metadata('user' , $user_id , 'qr_key_login_active');
+
+        foreach ($array as $qr_key_login_active) {
+
+            if ($qr_key_login_active === 'false') {
+
+                $content = 'не активна';
+            }
+
+            elseif ($qr_key_login_active === 'true') {
+
+                $content = 'аквивная';
+
+            }
 
         }
 
