@@ -1,5 +1,5 @@
 jQuery(function ($) {
 
-    $('#exampleModal').modal('show');
+    $('#welcomeModal').modal('show');
 
 });
