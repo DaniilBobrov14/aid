@@ -566,6 +566,15 @@ function change_qr_key_login_active_status () {
 
 }
 
+function get_user_fullname_in_welcome_modal() {
+
+    $user_id = $_GET['user_id'];
+
+    $fullname = get_user_meta($user_id, 'user_fullname');
+
+    return $fullname[0];
+
+}
 /**
  * TODO: Добавить модальное окно для функции change_qr_key_login_active_status
  * TODO: Установить временный таймер на значение true для qr_key_login_active исходя из продолжительности мероприятия
