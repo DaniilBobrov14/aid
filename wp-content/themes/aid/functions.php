@@ -558,11 +558,17 @@ function change_qr_key_login_active_status () {
 
             update_user_meta($user_id , 'qr_key_login_active', 'true');
 
+            return true;
+
+        }
+
+        else {
+
+            return false;
+
         }
 
     }
-
-    return true;
 
 }
 
