@@ -142,7 +142,7 @@ function aid_scripts() {
 
 	wp_enqueue_script('aid-slider-js' , get_template_directory_uri() . '/assets/js/slider.js');
 
-	wp_enqueue_script('aid-welcome-window-modal-js', get_template_directory() . '/assets/js/welcomeWindowModal.js');
+	wp_enqueue_script('aid-welcome-window-modal-js', get_template_directory_uri() . '/assets/js/welcomeWindowModal.js');
 
 //	wp_enqueue_script('aid-formValidate-js' , get_template_directory_uri() . '/assets/js/formValidate.js');
 
