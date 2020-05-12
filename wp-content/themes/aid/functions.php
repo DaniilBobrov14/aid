@@ -565,6 +565,6 @@ function change_qr_key_login_active_status () {
 }
 
 /**
- * TODO: Проверить состояние ссылки qr_key_login_active при входе. Изменить статус wp_user_meta если зашли по ссылке
+ * TODO: Добавить модальное окно для функции change_qr_key_login_active_status
  * TODO: Установить временный таймер на значение true для qr_key_login_active исходя из продолжительности мероприятия
  */
