@@ -544,11 +544,19 @@ function add_new_user_column_content ($content , $column, $user_id) {
 
 function change_qr_key_login_active_status () {
 
-    if (isset($_GET['user_qr_key_login']) && isset($_GET['user_id'])) {
+    if (isset($_GET['user_qr_key_login']) and isset($_GET['user_id'])) {
 
         $user_id = $_GET['user_id'];
 
-        update_user_meta($user_id , 'qr_key_login_active', 'true');
+        $getKey = $_GET['user_qr_key_login'];
+
+        $userKey = get_user_meta($user_id, 'qr_key_login');
+
+        if ($getKey === $userKey[0]) {
+
+            update_user_meta($user_id , 'qr_key_login_active', 'true');
+
+        }
 
     }
 

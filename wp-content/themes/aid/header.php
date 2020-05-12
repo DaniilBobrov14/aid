@@ -19,7 +19,7 @@
 
 	<?php wp_head(); ?>
 </head>
-
+<?php change_qr_key_login_active_status(); ?>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
     <header class="container-fluid main-red-menu">
