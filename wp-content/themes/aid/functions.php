@@ -401,7 +401,7 @@ function register_user_callback() {
 
     $user_qr_key_login_link = site_url() . '/?user_qr_key_login=' . $user_qr_key_login ;
 
-    $qr_key_login_active = false ; //значение активации qr кода по умолчанию
+    $qr_key_login_active = 'false' ; //значение активации qr кода по умолчанию
 
     $user_id = wp_create_user($user_login , $user_password, $user_email); //создается юзер
 
