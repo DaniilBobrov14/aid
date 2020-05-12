@@ -113,9 +113,9 @@ if (isset($_POST['excel_file_upload'])) {
 
         $password = $row[3];
 
-        $user_qr_key_login = get_user_qr_key_login(32);
+        $user_qr_key_login = get_user_qr_key_login(32); //создание qr ключа для авторизации
 
-        $user_qr_key_login_link = site_url() . '/?user_qr_key_login=' . $user_qr_key_login ;
+        $user_qr_key_login_link = site_url() . '/?user_qr_key_login=' . $user_qr_key_login ; //ссылка для qr кода
 
         if ($login != NULL or $fullName != NULL or $email != NULL or $password != NULL or $fullName != NULL) {
 
