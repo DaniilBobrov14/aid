@@ -426,6 +426,10 @@ function get_user_qr_key_login($length) {
 
 }
 
+/**
+ * Ajax functions
+ */
+
 add_action('wp_ajax_register_user' , 'register_user_callback'); //действие вызывает коллбэк в admin-ajax.php
 
 function register_user_callback() {
@@ -468,6 +472,8 @@ function register_user_callback() {
     }
 
 }
+
+add_action('wp_ajax_change_qr_login_active_status' , 'ajax_change_qr_login_active_status');
 
 /**
  * Added new column for users.php.
@@ -538,9 +544,11 @@ function add_new_user_column_content ($content , $column, $user_id) {
 
 }
 
-function change_qr_key_login_active_status ($user_id) {
+function change_qr_key_login_active_status () {
 
-    if (isset($_GET['user_qr_key_login']) && $_GET['user_qr_key_login'] == get_user_meta($user_id, 'qr_key_login')) {
+    if (isset($_GET['user_qr_key_login']) && isset($_GET['user_id'])) {
+
+        $user_id = $_GET['user_id'];
 
         update_user_meta($user_id , 'qr_key_login_active', 'true');
 
