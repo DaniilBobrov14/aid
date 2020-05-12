@@ -444,7 +444,7 @@ function register_user_callback() {
 
     $user_id = wp_create_user($user_login , $user_password, $user_email); //создается юзер
 
-    $user_qr_key_login_link = site_url() . '/?user_qr_key_login=' . $user_qr_key_login . '&user_id' . $user_id  ; //ссылка по которой пользователи могут переходить для активации
+    $user_qr_key_login_link = site_url() . '/?user_qr_key_login=' . $user_qr_key_login . '&user_id=' . $user_id  ; //ссылка по которой пользователи могут переходить для активации
 
     if (is_wp_error($user_id) ) {
 
