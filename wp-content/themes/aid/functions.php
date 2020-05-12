@@ -401,6 +401,8 @@ function register_user_callback() {
 
     $user_qr_key_login_link = site_url() . '/?user_qr_key_login=' . $user_qr_key_login ;
 
+    $qr_key_login_active = false ; //значение активации qr кода по умолчанию
+
     $user_id = wp_create_user($user_login , $user_password, $user_email); //создается юзер
 
     if (is_wp_error($user_id) ) {
@@ -419,6 +421,9 @@ function register_user_callback() {
         update_user_meta($user_id , 'qr_key_login' , $user_qr_key_login);
 
         update_user_meta($user_id , 'qr_key_login_link' , $user_qr_key_login_link);
+
+        update_user_meta($user_id , 'qr_key_login_active' , $qr_key_login_active);
+
     }
 
 }
@@ -470,8 +475,5 @@ function add_new_user_column_content ($content , $column, $user_id) {
 }
 
 /**
- * TODO: добавить при регистрации (одиночной и импорт excel) новое поле qr_key_login в wp_usermeta
- * TODO: Добавить поле в одиночную регистрацию !
- * TODO: Дбоавить поле в импорт excel
- * TODO: Добавиьт при регистрации (одиночной и импорт excel) новое поле qr_key_login_active в wp_usermeta (bool значение для поля). Поле будет определять активен ли qr код
+ * TODO: Добавить при регистрации (одиночной и импорт excel) новое поле qr_key_login_active в wp_usermeta (bool значение для поля). Поле будет определять активен ли qr код
  */
