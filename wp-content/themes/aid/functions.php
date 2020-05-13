@@ -355,6 +355,8 @@ function register_script_several_users_single_and_from_excel () {
 
                     $('.wrap').after(data['responseText']);
 
+                    $('.submit-excel').html('Подтвердить');
+
                 },
                 error : function (data) {
 
@@ -363,8 +365,10 @@ function register_script_several_users_single_and_from_excel () {
                     console.log(data);
 
                     $('.wrap').after(data['responseText']);
+                },
+                beforeSend  : function () {
+                    $('.submit-excel').html('Загрузка...');
                 }
-
             });
 
         });
