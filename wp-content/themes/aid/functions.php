@@ -418,7 +418,7 @@ function get_user_qr_key_login($length) {
 
         $symbol = chr(mt_rand(97, 122)); //97 - это a, а 122 - это z
 
-        settype($symbol , ' string');
+        settype($symbol , "string");
 
         $password = $password . $symbol ;
 
@@ -581,7 +581,3 @@ function get_user_fullname_in_welcome_modal() {
     return $fullname[0];
 
 }
-/**
- * TODO: Добавить модальное окно для функции change_qr_key_login_active_status
- * TODO: Установить временный таймер на значение true для qr_key_login_active исходя из продолжительности мероприятия
- */
