@@ -26,6 +26,40 @@ $contentPage = $post->post_content;
         <div class="row">
             <div class="col-lg-12">
                 <?php echo $contentPage; ?>
+                <!-- table template -->
+                <!-- <table class="table table-striped">
+                    <tbody>
+                    <tr class="table-row">
+                        <td class="date-cell">
+                            13 мая
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="time-cell">
+                            10:00 - 12:00
+                        </td>
+                        <td class="content-cell">
+                            какое-то событие
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="time-cell">
+                            12:00 - 13:00
+                        </td>
+                        <td class="content-cell">
+                            какое-то событие
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="time-cell">
+                            13:00 - 15:00
+                        </td>
+                        <td class="content-cell">
+                            какое-то событие
+                        </td>
+                    </tr>
+                    </tbody>
+                </table> -->
             </div>
         </div>
     </div>
