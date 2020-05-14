@@ -24,6 +24,12 @@ jQuery(function ($) {
            return true ;
 
        }
+
+       else {
+
+           return false ;
+
+       }
    }
 
     /*
