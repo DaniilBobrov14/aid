@@ -115,10 +115,22 @@ jQuery(function ($) {
 
    }
 
+    /*
+      Отменить цветом success строку с текущей датой
+      */
+
+    function markTargetRow (targetRow) {
+
+
+
+    }
+
    addDataAttributes();
 
    var currentDate = getCurrentDate();
 
-   getTargetRow(currentDate);
+   var targetRow = getTargetRow(currentDate);
+
+   markTargetRow(targetRow);
 
 });
