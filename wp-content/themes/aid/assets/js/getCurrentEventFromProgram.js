@@ -84,7 +84,7 @@ jQuery(function ($) {
 
    }
 
-   function markTargetRow () {
+   function getTargetRow (currentDate, targetRow) {
 
 
 
@@ -94,7 +94,7 @@ jQuery(function ($) {
 
    getCurrentDate();
 
-   markTargetRow();
+   getTargetRow()
 
 
 });
