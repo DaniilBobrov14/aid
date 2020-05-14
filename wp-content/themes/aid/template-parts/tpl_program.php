@@ -27,7 +27,7 @@ $contentPage = $post->post_content;
             <div class="col-lg-12">
                 <?php echo $contentPage; ?>
                 <!-- table template -->
-                <table class="table table-striped table-bordered">
+                <table class="table table-striped table-bordered table-program">
                     <tbody>
                     <tr class="table-row">
                         <td class="date-cell">
