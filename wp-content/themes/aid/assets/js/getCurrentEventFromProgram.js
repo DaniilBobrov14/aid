@@ -139,11 +139,23 @@ jQuery(function ($) {
 
     }
 
-    function markTargetTimeRows (targetTimeRows) {
+    function markTargetTimeRow (targetTimeRows) {
 
         console.log(targetTimeRows);
 
         targetTimeRows.each(function () {
+
+            if ($(this).children().hasClass('time-cell')) {
+
+                console.log($(this).find('.time-cell').html());
+
+            }
+
+            else {
+
+                return false ;
+
+            }
 
         });
 
@@ -162,6 +174,6 @@ jQuery(function ($) {
 
    var targetTimeRows = getTargetTimeRows(targetDateRow);
 
-   markTargetTimeRows(targetTimeRows);
+   markTargetTimeRow(targetTimeRows);
 
 });
