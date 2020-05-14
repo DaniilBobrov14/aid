@@ -91,6 +91,18 @@ jQuery(function ($) {
 
    function getTargetRow (currentDate, targetRow) {
 
+       if (currentDate) {
+
+           $('.date-cell').each(function () {
+
+               var dataAttribute = $(this).data('date');
+
+               var dataAttributeClear = dataAttribute.replace(/\s+/g, ' ').trim();
+
+           });
+
+       }
+
        return targetRow ;
 
    }
@@ -100,6 +112,5 @@ jQuery(function ($) {
    var currentDate = getCurrentDate();
 
    getTargetRow(currentDate);
-
 
 });
