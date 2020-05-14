@@ -84,17 +84,22 @@ jQuery(function ($) {
 
    }
 
+    /*
+     Получить необходимую строку исходя из текущей даты.
+     Получаемый параметр в формате jquery
+     */
+
    function getTargetRow (currentDate, targetRow) {
 
-
+       return targetRow ;
 
    }
 
    addDataAttributes();
 
-   getCurrentDate();
+   var currentDate = getCurrentDate();
 
-   getTargetRow()
+   getTargetRow(currentDate);
 
 
 });
