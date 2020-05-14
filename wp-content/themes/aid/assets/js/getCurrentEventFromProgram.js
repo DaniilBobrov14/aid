@@ -165,7 +165,7 @@ jQuery(function ($) {
       Поменить цветом текущее время события по текущей дате
       */
 
-    function markTargetTimeRow (targetTimeRows) {
+    function markTargetTimeRow (targetTimeRows, currentTime) {
 
         console.log(targetTimeRows);
 
@@ -206,6 +206,6 @@ jQuery(function ($) {
 
    var targetTimeRows = getTargetTimeRows(targetDateRow);
 
-   markTargetTimeRow(targetTimeRows);
+   markTargetTimeRow(targetTimeRows, currentTime);
 
 });
