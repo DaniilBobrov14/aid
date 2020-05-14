@@ -72,7 +72,9 @@ jQuery(function ($) {
 
            var currentDate = dayNow + monthsKeys[monthNowNumber + 1];
 
-           return currentDate;
+           var currentDateClear = currentDate.replace(/(\d+)/g, '$1 ');
+
+           return currentDateClear;
 
        }
 
