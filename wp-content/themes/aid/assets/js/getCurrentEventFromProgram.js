@@ -139,6 +139,18 @@ jQuery(function ($) {
 
     }
 
+    function markTargetTimeRows (targetTimeRows) {
+
+        targetTimeRows.each(function () {
+
+            $(this).find('.time-cell').addClass('table-primary');
+
+        });
+
+        return true ;
+
+    }
+
 
    addDataAttributes();
 
