@@ -141,9 +141,9 @@ jQuery(function ($) {
 
     function markTargetTimeRows (targetTimeRows) {
 
-        targetTimeRows.each(function () {
+        console.log(targetTimeRows);
 
-            $(this).find('.time-cell').addClass('table-primary');
+        targetTimeRows.each(function () {
 
         });
 
@@ -161,5 +161,7 @@ jQuery(function ($) {
    markTargetDateRow(targetDateRow);
 
    var targetTimeRows = getTargetTimeRows(targetDateRow);
+
+   markTargetTimeRows(targetTimeRows);
 
 });
