@@ -133,6 +133,8 @@ jQuery(function ($) {
 
     function getTargetTimeRows (targetDateRow, targetTimeRows) {
 
+        targetTimeRows = targetDateRow.next();
+
         return targetTimeRows ;
 
     }
@@ -145,5 +147,7 @@ jQuery(function ($) {
    var targetDateRow = getTargetDateRow(currentDate);
 
    markTargetDateRow(targetDateRow);
+
+   getTargetTimeRows(targetDateRow);
 
 });
