@@ -133,7 +133,7 @@ jQuery(function ($) {
 
     function getTargetTimeRows (targetDateRow, targetTimeRows) {
 
-        targetTimeRows = targetDateRow.next();
+        targetTimeRows = targetDateRow.nextAll();
 
         return targetTimeRows ;
 
