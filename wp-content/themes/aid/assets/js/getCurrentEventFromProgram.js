@@ -139,6 +139,10 @@ jQuery(function ($) {
 
     }
 
+    /*
+      Поменить цветом текущее время события по текущей дате
+      */
+
     function markTargetTimeRow (targetTimeRows) {
 
         console.log(targetTimeRows);
