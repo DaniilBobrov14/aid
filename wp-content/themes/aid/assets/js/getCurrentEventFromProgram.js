@@ -141,8 +141,8 @@ jQuery(function ($) {
 
    var currentDate = getCurrentDate();
 
-   var targetRow = getTargetDateRow(currentDate);
+   var targetDateRow = getTargetDateRow(currentDate);
 
-   markTargetRow(targetRow);
+   markTargetRow(targetDateRow);
 
 });
