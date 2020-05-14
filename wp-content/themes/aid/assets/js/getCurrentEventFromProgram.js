@@ -148,6 +148,6 @@ jQuery(function ($) {
 
    markTargetDateRow(targetDateRow);
 
-   getTargetTimeRows(targetDateRow);
+   var targetTimeRows = getTargetTimeRows(targetDateRow);
 
 });
