@@ -121,7 +121,9 @@ jQuery(function ($) {
 
     function markTargetRow (targetRow) {
 
+        targetRow.addClass('table-success');
 
+        return true ;
 
     }
 
