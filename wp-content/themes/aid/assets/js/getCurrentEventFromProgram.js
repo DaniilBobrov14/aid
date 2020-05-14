@@ -127,6 +127,16 @@ jQuery(function ($) {
 
     }
 
+    /*
+      Вернуть все строки table-row после targetRow
+      */
+
+    function getTargetTimeRows () {
+
+
+    }
+
+
    addDataAttributes();
 
    var currentDate = getCurrentDate();
