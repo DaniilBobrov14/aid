@@ -103,7 +103,8 @@ jQuery(function ($) {
 
                if (currentDate == dataAttributeClear) {
 
-                   $(this).parent().addClass('table-success'); //временная маркировка
+                   targetRow = $(this).parent();
+
                }
 
            });
