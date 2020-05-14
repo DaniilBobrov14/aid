@@ -119,7 +119,7 @@ jQuery(function ($) {
       Отменить цветом success строку с текущей датой
       */
 
-    function markTargetRow (targetRow) {
+    function markTargetDateRow (targetRow) {
 
         targetRow.addClass('table-success');
 
@@ -144,6 +144,6 @@ jQuery(function ($) {
 
    var targetDateRow = getTargetDateRow(currentDate);
 
-   markTargetRow(targetDateRow);
+   markTargetDateRow(targetDateRow);
 
 });
