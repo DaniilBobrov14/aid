@@ -144,6 +144,8 @@ function aid_scripts() {
 
 	wp_enqueue_script('aid-welcome-window-modal-js', get_template_directory_uri() . '/assets/js/welcomeWindowModal.js');
 
+	wp_enqueue_script('aid-getCurrentEventFromProgram-js' , get_template_directory_uri() . '/assets/js/getCurrentEventFromProgram.js');
+
 //	wp_enqueue_script('aid-formValidate-js' , get_template_directory_uri() . '/assets/js/formValidate.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
