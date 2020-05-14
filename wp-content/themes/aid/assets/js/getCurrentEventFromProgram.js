@@ -147,7 +147,11 @@ jQuery(function ($) {
 
             if ($(this).children().hasClass('time-cell')) {
 
-                console.log($(this).find('.time-cell').html());
+                var dataAttribute = $(this).find('.time-cell').attr('data-time');
+
+                var dataAttributeClear = dataAttribute.replace(/\s+/g, ' ').trim();
+
+                console.log(dataAttributeClear);
 
             }
 
