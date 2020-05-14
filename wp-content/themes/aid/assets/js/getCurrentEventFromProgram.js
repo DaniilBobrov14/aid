@@ -87,6 +87,28 @@ jQuery(function ($) {
    }
 
     /*
+     Получить текущее время.
+     */
+
+   function getCurrentTime () {
+
+       if (addDataAttributes() == true) {
+
+           var dateTimeNow = new Date();
+
+           var hourNow = dateTimeNow.getHours().toLocaleString('ru');
+
+           var minutesNow = dateTimeNow.getMinutes().toLocaleString('ru');
+
+           var currentTime = hourNow + minutesNow ;
+
+           return currentTime ;
+
+       }
+
+   }
+
+    /*
      Получить необходимую строку с датой исходя из текущей даты.
      Получаемый параметр в формате jquery
      */
@@ -175,6 +197,8 @@ jQuery(function ($) {
    addDataAttributes();
 
    var currentDate = getCurrentDate();
+
+   var currentTime = getCurrentTime();
 
    var targetDateRow = getTargetDateRow(currentDate);
 
