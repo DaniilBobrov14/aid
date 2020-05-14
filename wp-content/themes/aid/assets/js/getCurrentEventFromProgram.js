@@ -101,6 +101,11 @@ jQuery(function ($) {
 
                var dataAttributeClear = dataAttribute.replace(/\s+/g, ' ').trim();
 
+               if (currentDate == dataAttributeClear) {
+
+                   $(this).parent().addClass('table-success'); //временная маркировка
+               }
+
            });
 
        }
