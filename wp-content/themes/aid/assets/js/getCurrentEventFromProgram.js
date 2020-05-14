@@ -131,8 +131,9 @@ jQuery(function ($) {
       Вернуть все строки table-row после targetRow
       */
 
-    function getTargetTimeRows () {
+    function getTargetTimeRows (targetDateRow, targetTimeRows) {
 
+        return targetTimeRows ;
 
     }
 
