@@ -46,6 +46,8 @@ jQuery(function ($) {
 
            var monthNow = dateTimeNow.getUTCMonth().toLocaleString('ru');
 
+           var monthNowNumber = Number(monthNow);
+
            var monthsKeys = {
 
                1 : 'января',
@@ -62,6 +64,21 @@ jQuery(function ($) {
                12 : 'декабря'
 
            };
+
+           /*
+           * какой-то баг связанный с месяцом.
+           * Приходится добавлять на +1
+           * */
+
+           var currentDate = dayNow + monthsKeys[monthNowNumber + 1];
+
+           return currentDate;
+
+       }
+
+       else {
+
+           return false ;
 
        }
 
