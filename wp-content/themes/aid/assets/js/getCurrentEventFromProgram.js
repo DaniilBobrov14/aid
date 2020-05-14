@@ -91,7 +91,7 @@ jQuery(function ($) {
      Получаемый параметр в формате jquery
      */
 
-   function getTargetRow (currentDate, targetRow) {
+   function getTargetDateRow (currentDate, targetRow) {
 
        if (currentDate) {
 
@@ -141,7 +141,7 @@ jQuery(function ($) {
 
    var currentDate = getCurrentDate();
 
-   var targetRow = getTargetRow(currentDate);
+   var targetRow = getTargetDateRow(currentDate);
 
    markTargetRow(targetRow);
 
