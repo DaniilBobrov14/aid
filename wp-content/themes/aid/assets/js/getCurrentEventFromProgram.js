@@ -86,6 +86,22 @@ jQuery(function ($) {
 
    }
 
+   /*
+    Добавить ноль к началу числу во времени.
+    */
+
+   function addZeroToTime (time) {
+
+     if (time < 10) {
+
+       time = '0' + time ;
+
+     }
+
+     return time ;
+
+   }
+
     /*
      Получить текущее время.
      */
