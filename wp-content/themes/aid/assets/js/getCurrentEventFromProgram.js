@@ -197,9 +197,13 @@ jQuery(function ($) {
 
                 var timeOnlyNumbersExp = /\D/gm;
 
+                var currentTimeOnlyNumbersExp = /\D/gm;
+
                 var subst = '';
 
                 var timeOnlyNumbers = dataAttributeClear.replace(timeOnlyNumbersExp, subst);
+
+                var currentTimeWithoutColon = currentTime.replace(currentTimeOnlyNumbersExp, subst);
 
                 var time = {
                   hoursStart : timeOnlyNumbers[0] + timeOnlyNumbers[1],
@@ -207,8 +211,6 @@ jQuery(function ($) {
                   minutesStart : timeOnlyNumbers[2] + timeOnlyNumbers[3],
                   minutesEnd : timeOnlyNumbers[6] + timeOnlyNumbers[7]
                 };
-
-                console.log(time);
 
             }
 
