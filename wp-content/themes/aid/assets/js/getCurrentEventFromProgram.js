@@ -187,8 +187,6 @@ jQuery(function ($) {
 
     function markTargetTimeRow (targetTimeRows, currentTime) {
 
-        console.log(targetTimeRows);
-
         targetTimeRows.each(function () {
 
             if ($(this).children().hasClass('time-cell')) {
@@ -197,15 +195,19 @@ jQuery(function ($) {
 
                 var dataAttributeClear = dataAttribute.replace(/\s+/g, ' ').trim(); //значение атрибута data-time
 
-                var startTimeExp = new RegExp("^....."); //регулярное выражение для начала старта события
+                var timeOnlyNumbersExp = /\D/gm;
 
-                var endTimeExp = new RegExp(".....$"); //регулярное выражение для начала окончания события
+                var subst = '';
 
-                var startTime = dataAttributeClear.match(startTimeExp); //конечное время начала события
+                var timeOnlyNumbers = dataAttributeClear.replace(timeOnlyNumbersExp, subst);
 
-                var endTime = dataAttributeClear.match(endTimeExp); //конечное время конца события
+                var hoursStart = timeOnlyNumbers[0] + timeOnlyNumbers[1];
 
-                console.log(currentTime);
+                var hoursEnd = timeOnlyNumbers[4] + timeOnlyNumbers[5];
+
+                var minutesStart = timeOnlyNumbers[2] + timeOnlyNumbers[3];
+
+                var minutesEnd = timeOnlyNumbers[6] + timeOnlyNumbers[7];
 
             }
 
