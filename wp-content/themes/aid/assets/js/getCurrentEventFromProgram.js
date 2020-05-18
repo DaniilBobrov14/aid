@@ -175,9 +175,15 @@ jQuery(function ($) {
 
                 var dataAttribute = $(this).find('.time-cell').attr('data-time');
 
-                var dataAttributeClear = dataAttribute.replace(/\s+/g, ' ').trim();
+                var dataAttributeClear = dataAttribute.replace(/\s+/g, ' ').trim(); //значение атрибута data-time
 
-                console.log(dataAttributeClear);
+                var startTimeExp = new RegExp("^....."); //регулярное выражение для начала старта события
+
+                var endTimeExp = new RegExp(".....$"); //регулярное выражение для начала окончания события
+
+                var startTime = dataAttributeClear.match(startTimeExp); //конечное время начала события
+
+                var endTime = dataAttributeClear.match(endTimeExp); //конечное время конца события
 
             }
 
@@ -207,5 +213,8 @@ jQuery(function ($) {
    var targetTimeRows = getTargetTimeRows(targetDateRow);
 
    markTargetTimeRow(targetTimeRows, currentTime);
+
+   //TODO: проверить у targetTimeRows время и сверить его с текущим.
+    //TODO: Если текущее время будет совпадать с временем таблицы, то подчеркнуть строку
 
 });
