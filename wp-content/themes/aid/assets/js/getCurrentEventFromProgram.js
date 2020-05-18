@@ -201,13 +201,14 @@ jQuery(function ($) {
 
                 var timeOnlyNumbers = dataAttributeClear.replace(timeOnlyNumbersExp, subst);
 
-                var hoursStart = timeOnlyNumbers[0] + timeOnlyNumbers[1];
+                var time = {
+                  hoursStart : timeOnlyNumbers[0] + timeOnlyNumbers[1],
+                  hoursEnd : timeOnlyNumbers[4] + timeOnlyNumbers[5],
+                  minutesStart : timeOnlyNumbers[2] + timeOnlyNumbers[3],
+                  minutesEnd : timeOnlyNumbers[6] + timeOnlyNumbers[7]
+                };
 
-                var hoursEnd = timeOnlyNumbers[4] + timeOnlyNumbers[5];
-
-                var minutesStart = timeOnlyNumbers[2] + timeOnlyNumbers[3];
-
-                var minutesEnd = timeOnlyNumbers[6] + timeOnlyNumbers[7];
+                console.log(time);
 
             }
 
