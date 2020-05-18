@@ -112,9 +112,9 @@ jQuery(function ($) {
 
            var dateTimeNow = new Date();
 
-           var hourNow = dateTimeNow.getHours().toLocaleString('ru');
+           var hourNow = addZeroToTime(dateTimeNow.getHours().toLocaleString('ru'));
 
-           var minutesNow = dateTimeNow.getMinutes().toLocaleString('ru');
+           var minutesNow = addZeroToTime(dateTimeNow.getMinutes().toLocaleString('ru'));
 
            var currentTime = hourNow + minutesNow ;
 
