@@ -219,14 +219,14 @@ jQuery(function ($) {
 
                 var timeOnlyNumbers = dataAttributeClear.replace(timeOnlyNumbersExp, subst);
 
-                var currentTimeWithoutColon = currentTime.replace(currentTimeOnlyNumbersExp, subst);
-
                 var time = {
                   hoursStart : timeOnlyNumbers[0] + timeOnlyNumbers[1],
                   hoursEnd : timeOnlyNumbers[4] + timeOnlyNumbers[5],
                   minutesStart : timeOnlyNumbers[2] + timeOnlyNumbers[3],
                   minutesEnd : timeOnlyNumbers[6] + timeOnlyNumbers[7]
                 };
+
+                console.log(currentTime);
 
             }
 
@@ -257,7 +257,7 @@ jQuery(function ($) {
 
    var targetTimeRows = getTargetTimeRows(targetDateRow);
 
-   markTargetTimeRow(targetTimeRows, currentTimeWithColon);
+   markTargetTimeRow(targetTimeRows, currentTime);
 
    //TODO: проверить у targetTimeRows время и сверить его с текущим.
     //TODO: Если текущее время будет совпадать с временем таблицы, то подчеркнуть строку
