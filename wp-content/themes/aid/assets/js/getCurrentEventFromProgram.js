@@ -114,13 +114,15 @@ jQuery(function ($) {
 
     function addToCurrentTimeColon (currentTime, currentTimeWithColon) {
 
-        var regex = /[0-9]/gm ;
+        var hoursExp = new RegExp("^..");
 
-        var subst = '';
+        var minutesExp = new RegExp("..$");
 
-        currentTimeWithColon = currentTime.replace(regex, subst);
+        var hours = currentTime.match(hoursExp);
 
-        console.log(currentTimeWithColon);
+        var minutes = currentTime.match(minutesExp);
+
+        currentTimeWithColon = hours + ':' + minutes;
 
         return currentTimeWithColon
 
