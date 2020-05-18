@@ -52,7 +52,7 @@ $contentPage = $post->post_content;
                     </tr>
                     <tr class="table-row">
                         <td class="time-cell">
-                            13:00 - 15:00
+                            13:00 - 18:00
                         </td>
                         <td class="content-cell">
                             какое-то событие

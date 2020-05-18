@@ -226,7 +226,17 @@ jQuery(function ($) {
                   minutesEnd : timeOnlyNumbers[6] + timeOnlyNumbers[7]
                 };
 
-                console.log(currentTime);
+                var currentTimeSplit = {
+                  hours : currentTime[0] + currentTime[1],
+                  minutes : currentTime[2] + currentTime[3]
+                };
+
+                if (currentTimeSplit.hours >= time.hoursStart && currentTimeSplit.hours <= time.hoursEnd) {
+                  $(this).addClass('table-primary');
+                }
+
+                else {
+                }
 
             }
 
