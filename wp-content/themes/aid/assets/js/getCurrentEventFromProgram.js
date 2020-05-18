@@ -109,6 +109,24 @@ jQuery(function ($) {
    }
 
     /*
+      Добавить к текущему времени знак :.
+      */
+
+    function addToCurrentTimeColon (currentTime, currentTimeWithColon) {
+
+        var regex = /[0-9]/gm ;
+
+        var subst = '';
+
+        currentTimeWithColon = currentTime.replace(regex, subst);
+
+        console.log(currentTimeWithColon);
+
+        return currentTimeWithColon
+
+    }
+
+    /*
      Получить необходимую строку с датой исходя из текущей даты.
      Получаемый параметр в формате jquery
      */
@@ -205,6 +223,8 @@ jQuery(function ($) {
    var currentDate = getCurrentDate();
 
    var currentTime = getCurrentTime();
+
+   var currentTimeWithColon = addToCurrentTimeColon(currentTime);
 
    var targetDateRow = getTargetDateRow(currentDate);
 
