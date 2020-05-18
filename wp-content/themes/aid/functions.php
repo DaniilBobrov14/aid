@@ -144,6 +144,8 @@ function aid_scripts() {
 
 	wp_enqueue_script('aid-welcome-window-modal-js', get_template_directory_uri() . '/assets/js/welcomeWindowModal.js');
 
+	wp_enqueue_script('aid-getCurrentEventFromProgram-js' , get_template_directory_uri() . '/assets/js/getCurrentEventFromProgram.js');
+
 //	wp_enqueue_script('aid-formValidate-js' , get_template_directory_uri() . '/assets/js/formValidate.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -355,6 +357,8 @@ function register_script_several_users_single_and_from_excel () {
 
                     $('.wrap').after(data['responseText']);
 
+                    $('.submit-excel').html('Подтвердить');
+
                 },
                 error : function (data) {
 
@@ -363,8 +367,10 @@ function register_script_several_users_single_and_from_excel () {
                     console.log(data);
 
                     $('.wrap').after(data['responseText']);
+                },
+                beforeSend  : function () {
+                    $('.submit-excel').html('Загрузка...');
                 }
-
             });
 
         });
@@ -418,7 +424,7 @@ function get_user_qr_key_login($length) {
 
         $symbol = chr(mt_rand(97, 122)); //97 - это a, а 122 - это z
 
-        settype($symbol , ' string');
+        settype($symbol , "string");
 
         $password = $password . $symbol ;
 
@@ -581,7 +587,3 @@ function get_user_fullname_in_welcome_modal() {
     return $fullname[0];
 
 }
-/**
- * TODO: Добавить модальное окно для функции change_qr_key_login_active_status
- * TODO: Установить временный таймер на значение true для qr_key_login_active исходя из продолжительности мероприятия
- */
