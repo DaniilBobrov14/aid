@@ -203,6 +203,8 @@ jQuery(function ($) {
 
                 var endTime = dataAttributeClear.match(endTimeExp); //конечное время конца события
 
+                console.log(currentTime);
+
             }
 
             else {
@@ -232,7 +234,7 @@ jQuery(function ($) {
 
    var targetTimeRows = getTargetTimeRows(targetDateRow);
 
-   markTargetTimeRow(targetTimeRows, currentTime);
+   markTargetTimeRow(targetTimeRows, currentTimeWithColon);
 
    //TODO: проверить у targetTimeRows время и сверить его с текущим.
     //TODO: Если текущее время будет совпадать с временем таблицы, то подчеркнуть строку

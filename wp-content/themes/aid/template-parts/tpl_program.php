@@ -31,7 +31,7 @@ $contentPage = $post->post_content;
                     <tbody>
                     <tr class="table-row">
                         <td class="date-cell">
-                            13 мая
+                            18 мая
                         </td>
                     </tr>
                     <tr class="table-row">
@@ -60,7 +60,7 @@ $contentPage = $post->post_content;
                     </tr>
                     <tr class="table-row">
                         <td class="date-cell">
-                            14 мая
+                            19 мая
                         </td>
                     </tr>
                     <tr class="table-row">
@@ -89,7 +89,7 @@ $contentPage = $post->post_content;
                     </tr>
                     <tr class="table-row">
                         <td class="date-cell">
-                            15 мая
+                            20 мая
                         </td>
                     </tr>
                     <tr class="table-row">
