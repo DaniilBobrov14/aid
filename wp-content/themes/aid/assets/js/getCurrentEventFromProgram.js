@@ -194,6 +194,25 @@ jQuery(function ($) {
 
                 var minutesEnd = timeOnlyNumbers[6] + timeOnlyNumbers[7];
 
+                if (currentTime.hour >= hoursStart && currentTime.hour <= hoursEnd) {
+
+                    console.log('успех');
+
+                    if (currentTime.minute >= minutesStart && currentTime.minute <= minutesEnd) {
+
+                        console.log(currentTime.minute + '' + minutesStart);
+
+                        $(this).addClass('table-primary');
+
+                    }
+
+                    else {
+
+                    }
+
+
+                }
+
             }
 
             else {
