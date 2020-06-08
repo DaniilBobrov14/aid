@@ -114,26 +114,6 @@ jQuery(function ($) {
    }
 
     /*
-      Добавить к текущему времени знак :.
-      */
-
-    function addToCurrentTimeColon (currentTime, currentTimeWithColon) {
-
-        var hoursExp = new RegExp("^..");
-
-        var minutesExp = new RegExp("..$");
-
-        var hours = currentTime.match(hoursExp);
-
-        var minutes = currentTime.match(minutesExp);
-
-        currentTimeWithColon = hours + ':' + minutes;
-
-        return currentTimeWithColon
-
-    }
-
-    /*
      Получить необходимую строку с датой исходя из текущей даты.
      Получаемый параметр в формате jquery
      */
@@ -235,15 +215,13 @@ jQuery(function ($) {
 
    var currentTime = getCurrentTime();
 
-   var currentTimeWithColon = addToCurrentTimeColon(currentTime);
-
    var targetDateRow = getTargetDateRow(currentDate);
 
    markTargetDateRow(targetDateRow);
 
    var targetTimeRows = getTargetTimeRows(targetDateRow);
 
-   markTargetTimeRow(targetTimeRows, currentTimeWithColon);
+   markTargetTimeRow(targetTimeRows, currentTime);
 
    //TODO: проверить у targetTimeRows время и сверить его с текущим.
     //TODO: Если текущее время будет совпадать с временем таблицы, то подчеркнуть строку
