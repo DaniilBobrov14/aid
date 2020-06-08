@@ -100,7 +100,12 @@ jQuery(function ($) {
 
            var minutesNow = dateTimeNow.getMinutes().toLocaleString('ru');
 
-           var currentTime = hourNow + minutesNow ;
+           var currentTime = {
+
+               hour : hourNow,
+               minute : minutesNow
+
+           };
 
            return currentTime ;
 
