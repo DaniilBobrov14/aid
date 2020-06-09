@@ -200,11 +200,23 @@ jQuery(function ($) {
 
                     if (Number(currentTime.hour) <= Number(hoursEnd)) {
 
-                        if (Number(currentTime.minute) >= Number(minutesEnd)) {
+                        if (Number(currentTime.minute) >= Number(minutesStart)) {
 
-                            $(this).addClass('table-primary');
+                            if (Number(currentTime.minute) <= Number(minutesEnd)) {
 
-                            return true ;
+                                $(this).addClass('table-primary');
+
+                                return true ;
+
+                            }
+
+                            else {
+
+                                console.log(Number(currentTime.minute));
+
+                                console.log(Number(minutesEnd));
+
+                            }
 
                         }
 
@@ -221,8 +233,6 @@ jQuery(function ($) {
             }
 
         });
-
-        return true ;
 
     }
 
