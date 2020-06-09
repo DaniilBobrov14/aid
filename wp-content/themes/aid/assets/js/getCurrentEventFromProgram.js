@@ -194,22 +194,21 @@ jQuery(function ($) {
 
                 var minutesEnd = timeOnlyNumbers[6] + timeOnlyNumbers[7];
 
-                if (currentTime.hour >= hoursStart && currentTime.hour <= hoursEnd) {
+                console.log(currentTime);
 
-                    console.log('успех');
+                if (Number(currentTime.hour) >= Number(hoursStart)) {
 
-                    if (currentTime.minute >= minutesStart && currentTime.minute <= minutesEnd) {
+                    if (Number(currentTime.hour) <= Number(hoursEnd)) {
 
-                        console.log(currentTime.minute + '' + minutesStart);
+                        if (Number(currentTime.minute) >= Number(minutesEnd)) {
 
-                        $(this).addClass('table-primary');
+                            $(this).addClass('table-primary');
+
+                            return true ;
+
+                        }
 
                     }
-
-                    else {
-
-                    }
-
 
                 }
 
