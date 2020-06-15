@@ -236,6 +236,18 @@ jQuery(function ($) {
 
     }
 
+    /*
+      Вернуть готовый html страницы
+      */
+
+    function getHtmlFromPage (table) {
+
+        console.log($(table).html());
+
+        return $(table).html() ;
+
+    }
+
 
    addDataAttributes();
 
@@ -250,6 +262,8 @@ jQuery(function ($) {
    var targetTimeRows = getTargetTimeRows(targetDateRow);
 
    markTargetTimeRow(targetTimeRows, currentTime);
+
+   getHtmlFromPage('.table-program');
 
    //TODO: проверить у targetTimeRows время и сверить его с текущим.
     //TODO: Если текущее время будет совпадать с временем таблицы, то подчеркнуть строку
