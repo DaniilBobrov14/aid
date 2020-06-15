@@ -86,6 +86,22 @@ jQuery(function ($) {
 
    }
 
+   /*
+    Добавить ноль к началу числу во времени.
+    */
+
+   function addZeroToTime (time) {
+
+     if (time < 10) {
+
+       time = '0' + time ;
+
+     }
+
+     return time ;
+
+   }
+
     /*
      Получить текущее время.
      */
@@ -96,9 +112,9 @@ jQuery(function ($) {
 
            var dateTimeNow = new Date();
 
-           var hourNow = dateTimeNow.getHours().toLocaleString('ru');
+           var hourNow = addZeroToTime(dateTimeNow.getHours().toLocaleString('ru'));
 
-           var minutesNow = dateTimeNow.getMinutes().toLocaleString('ru');
+           var minutesNow = addZeroToTime(dateTimeNow.getMinutes().toLocaleString('ru'));
 
            var currentTime = {
 
@@ -182,17 +198,30 @@ jQuery(function ($) {
 
                 var timeOnlyNumbersExp = /\D/gm;
 
+                var currentTimeOnlyNumbersExp = /\D/gm;
+
                 var subst = '';
 
                 var timeOnlyNumbers = dataAttributeClear.replace(timeOnlyNumbersExp, subst);
 
-                var hoursStart = timeOnlyNumbers[0] + timeOnlyNumbers[1];
+                var time = {
+                  hoursStart : timeOnlyNumbers[0] + timeOnlyNumbers[1],
+                  hoursEnd : timeOnlyNumbers[4] + timeOnlyNumbers[5],
+                  minutesStart : timeOnlyNumbers[2] + timeOnlyNumbers[3],
+                  minutesEnd : timeOnlyNumbers[6] + timeOnlyNumbers[7]
+                };
 
-                var hoursEnd = timeOnlyNumbers[4] + timeOnlyNumbers[5];
+                var currentTimeSplit = {
+                  hours : currentTime[0] + currentTime[1],
+                  minutes : currentTime[2] + currentTime[3]
+                };
 
-                var minutesStart = timeOnlyNumbers[2] + timeOnlyNumbers[3];
+                if (currentTimeSplit.hours >= time.hoursStart && currentTimeSplit.hours <= time.hoursEnd) {
+                  $(this).addClass('table-primary');
+                }
 
-                var minutesEnd = timeOnlyNumbers[6] + timeOnlyNumbers[7];
+                else {
+                }
 
                 console.log(currentTime);
 
