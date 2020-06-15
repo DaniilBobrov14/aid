@@ -41,7 +41,7 @@
  @media screen and (-webkit-min-device-pixel-ratio:0) {
  @font-face {
  font-family: 'fontello';
- src: url('../font/fontello.svg?2392086#fontello') format('svg');
+ src: url('../font/fontello.svg?69650717#fontello') format('svg');
  }
  }
  */
@@ -49,7 +49,7 @@
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
-  speak: none;
+  speak: never;
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
@@ -72,18 +72,22 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-.icon-down-dir:before {
+.icon-left-circle:before {
   content: '\e800';
 }
 /* '' */
-.icon-left-circle:before {
+.icon-users:before {
   content: '\e801';
 }
 /* '' */
-.icon-users:before {
+.icon-login:before {
   content: '\e802';
 }
 /* '' */
+.icon-down-dir:before {
+  content: '\e803';
+}
+/* '' */
 .site-footer {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -102,10 +106,6 @@
 #welcomeModal .modal-title {
   font-family: 'Montserrat';
   font-weight: normal;
-}
-#welcomeModal .modal-content .modal-footer .event-btn {
-  background-color: #f54337;
-  color: #fff;
 }
 #welcomeModal .modal-content .modal-footer .profile-btn {
   background-color: #f54337;
@@ -233,6 +233,11 @@
   z-index: 9999;
   min-height: 4rem;
 }
+@media screen and (max-width: 991px) {
+  .main-red-menu {
+    min-height: unset;
+  }
+}
 .main-red-menu .menu-menu-1-container {
   min-height: 4rem;
   display: flex;
@@ -261,9 +266,27 @@
   padding: 1rem;
   text-decoration: none;
 }
+@media (min-width: 1200px) and (max-width: 1337px) {
+  .main-red-menu .menu-menu-1-container .menu .menu-item a {
+    font-size: 15px;
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 960px) and (max-width: 1199px) {
+  .main-red-menu .menu-menu-1-container .menu .menu-item a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
 .main-red-menu .menu-menu-1-container .menu .menu-item a:hover {
   transition: 0.2s ease-in;
   color: #fff;
+}
+@media screen and (max-width: 991px) {
+  .main-red-menu .menu-menu-1-container .menu .menu-item-object-page {
+    display: none;
+  }
 }
 .main-red-menu .menu-menu-1-container .menu .current_page_item a {
   color: #fff !important;
@@ -348,6 +371,11 @@
   font-size: 16px;
   text-transform: uppercase;
   border: 1px solid #fff;
+}
+@media screen and (max-width: 991px) {
+  .main-red-menu .login-in .registration-link {
+    display: none;
+  }
 }
 .main-red-menu .login-in .registration-link .icon-login {
   color: #fff;

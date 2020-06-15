@@ -64,8 +64,6 @@ if (isset($_POST['excel_file_upload'])) {
 
     wp_update_attachment_metadata($attach_id , $attach_data); //обновление метаданных в mysql
 
-//    die( json_encode( $data ) );
-
     /** Прочтение данных из Excel файла */
 
     $inputFileType = 'Xlsx';

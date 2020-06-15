@@ -116,33 +116,18 @@ jQuery(function ($) {
 
            var minutesNow = addZeroToTime(dateTimeNow.getMinutes().toLocaleString('ru'));
 
-           var currentTime = hourNow + minutesNow ;
+           var currentTime = {
+
+               hour : hourNow,
+               minute : minutesNow
+
+           };
 
            return currentTime ;
 
        }
 
    }
-
-    /*
-      Добавить к текущему времени знак :.
-      */
-
-    function addToCurrentTimeColon (currentTime, currentTimeWithColon) {
-
-        var hoursExp = new RegExp("^..");
-
-        var minutesExp = new RegExp("..$");
-
-        var hours = currentTime.match(hoursExp);
-
-        var minutes = currentTime.match(minutesExp);
-
-        currentTimeWithColon = hours + ':' + minutes;
-
-        return currentTimeWithColon
-
-    }
 
     /*
      Получить необходимую строку с датой исходя из текущей даты.
@@ -238,6 +223,36 @@ jQuery(function ($) {
                 else {
                 }
 
+                console.log(currentTime);
+
+                if (Number(currentTime.hour) >= Number(hoursStart)) {
+
+                    if (Number(currentTime.hour) <= Number(hoursEnd)) {
+
+                        if (Number(currentTime.minute) >= Number(minutesStart)) {
+
+                            if (Number(currentTime.minute) <= Number(minutesEnd)) {
+
+                                $(this).addClass('table-primary');
+
+                                return true ;
+
+                            }
+
+                            else {
+
+                                console.log(Number(currentTime.minute));
+
+                                console.log(Number(minutesEnd));
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
             }
 
             else {
@@ -248,18 +263,25 @@ jQuery(function ($) {
 
         });
 
-        return true ;
-
     }
 
+    /*
+      Вернуть готовый html страницы
+      */
+
+    function getHtmlFromPage (table) {
+
+        console.log($(table).html());
+
+        return $(table).html() ;
+
+    }
 
    addDataAttributes();
 
    var currentDate = getCurrentDate();
 
    var currentTime = getCurrentTime();
-
-   var currentTimeWithColon = addToCurrentTimeColon(currentTime);
 
    var targetDateRow = getTargetDateRow(currentDate);
 
@@ -269,7 +291,6 @@ jQuery(function ($) {
 
    markTargetTimeRow(targetTimeRows, currentTime);
 
-   //TODO: проверить у targetTimeRows время и сверить его с текущим.
-    //TODO: Если текущее время будет совпадать с временем таблицы, то подчеркнуть строку
+   getHtmlFromPage('.table-program');
 
 });

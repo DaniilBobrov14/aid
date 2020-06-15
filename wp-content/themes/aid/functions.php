@@ -161,6 +161,8 @@ function aid_admin_scripts()
 {
     wp_enqueue_script('aid-users-js', get_template_directory_uri() . '/assets/js/admin-bar/users.js');
 
+    wp_enqueue_script('aid-get-html-from-file-for-table-js' , get_template_directory_uri() . '/assets/js/admin-bar/getHtmlFromFileForTable.js');
+
     wp_enqueue_style('aid-admin-bar-extended-style' , get_template_directory_uri() . '/css/style.css');
 }
 
