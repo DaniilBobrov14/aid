@@ -248,7 +248,6 @@ jQuery(function ($) {
 
     }
 
-
    addDataAttributes();
 
    var currentDate = getCurrentDate();
@@ -264,8 +263,5 @@ jQuery(function ($) {
    markTargetTimeRow(targetTimeRows, currentTime);
 
    getHtmlFromPage('.table-program');
-
-   //TODO: проверить у targetTimeRows время и сверить его с текущим.
-    //TODO: Если текущее время будет совпадать с временем таблицы, то подчеркнуть строку
 
 });
