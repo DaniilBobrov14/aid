@@ -5,6 +5,10 @@
   position: fixed;
   z-index: 9999;
   min-height: 4rem;
+  @media screen and (max-width: 991px)
+  {
+    min-height: unset;
+  }
   .menu-menu-1-container {
     min-height: 4rem;
     display: flex;
@@ -31,10 +35,27 @@
           font-weight: $regularWeight;
           padding: 1rem;
           text-decoration: none;
+          @media (min-width: 1200px) and (max-width:1337px)
+          {
+            font-size: 15px;
+            padding: 0.5rem;
+          }
+          @media (min-width: 960px) and (max-width: 1199px)
+          {
+            display: block;
+            width: 100%;
+            text-align: center;
+          }
         }
         a:hover {
           transition: 0.2s ease-in;
           color: $white;
+        }
+      }
+      .menu-item-object-page {
+        @media screen and (max-width: 991px)
+        {
+          display: none;
         }
       }
       .current_page_item {
@@ -117,6 +138,10 @@
       font-size: 16px;
       text-transform: uppercase;
       border: 1px solid $white;
+      @media screen and (max-width: 991px)
+      {
+        display: none;
+      }
       .icon-login {
         color: $white;
         font-size: 18px;
@@ -124,6 +149,12 @@
       .icon-login:hover {
         transition: 0.2s ease-in;
         color: $redMain;
+      }
+    }
+    .registration-link-mobile {
+      @media screen and (max-width: 991px)
+      {
+
       }
     }
     .registration-link:hover {
